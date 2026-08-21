@@ -4,13 +4,13 @@ This pragmatic, 4-step Systematic Literature Review (SLR) protocol is designed f
 
 To define the scope of your investigation, you must transform your need for information into an answerable question. Use the **PICOC criteria** to ensure the question is meaningful to both practitioners and researchers.
 
-|Criterion|Definition|Reusable SE Template|
-|:--|:--|:--|
-|**Population**|The target group or application area affected by the problem.|Which types of software projects or engineering teams are under study?|
-|**Intervention**|The software engineering artifact, technology, or method being investigated.|What specific tool, notation, or process is being evaluated?|
-|**Comparison**|The baseline or traditional "control" method used for contrast.|What is the alternative or current "industry standard" practice?|
-|**Outcomes**|The specific metrics for improvement or performance.|What are the success factors (e.g., reduced effort, increased quality, accuracy)?|
-|**Context**|The real-world setting or conditions of practice.|Is this an industrial setting, an open-source project, or a lab experiment?|
+| Criterion        | Definition                                                                   | Reusable SE Template                                                              |
+| :--------------- | :--------------------------------------------------------------------------- | :-------------------------------------------------------------------------------- |
+| **Population**   | The target group or application area affected by the problem.                | Which types of software projects or engineering teams are under study?            |
+| **Intervention** | The software engineering artifact, technology, or method being investigated. | What specific tool, notation, or process is being evaluated?                      |
+| **Comparison**   | The baseline or traditional "control" method used for contrast.              | What is the alternative or current "industry standard" practice?                  |
+| **Outcomes**     | The specific metrics for improvement or performance.                         | What are the success factors (e.g., reduced effort, increased quality, accuracy)? |
+| **Context**      | The real-world setting or conditions of practice.                            | Is this an industrial setting, an open-source project, or a lab experiment?       |
 
 **Solo Strategy:** Frame your question as an **Improvement Problem**: "Improve `<a problem context>` by `<designing/using an artifact>` that satisfies `<requirements>` so that `<stakeholder goals>` are achieved".
 

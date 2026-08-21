@@ -47,3 +47,6 @@ Thumbs.db
 
 # Xlsx locks
 .~lock.*
+
+.stignore
+.stfolder

@@ -11,8 +11,6 @@ Implementing the UNS on top of messaging technologies such as MQTT brokers enabl
 
 However, centralizing communications in a single message broker introduces availability vulnerabilities. In response, industrial software architecture is evolving from a centralized, monolithic model toward a Fractal UNS pattern [cite: 8]. The Fractal UNS architecture replaces the single centralized broker with a topology of self-similar namespaces distributed across each operational level (cell, line, area, site) [cite: 8]. Each level operates its own broker autonomously, which guarantees fault isolation, contains the blast radius in the event of security compromises or network outages, defines clear boundaries of data sovereignty, and delivers predictable performance by resolving critical telemetry locally before selectively replicating aggregates to higher levels [cite: 8].
 
---------------------------------------------------------------------------------
-
 ## Analysis of Architectural Components
 
 ### Low-Code Connectivity and Ingestion Layer
@@ -195,8 +193,6 @@ In real industrial deployments with sensors distributed across geographically di
 2. **Reorder Buffer (Buffer Windows):** Reserves intermediate memory areas where incoming metrics are held and chronologically sorted before being permanently persisted to disk storage blocks [cite: 41]. 
 3. **Merge-on-Read:** Eases disk write overhead by storing late, out-of-order records in adjacent append-only sequential files [cite: 41]. During query operations, the database engine dynamically merges the temporary out-of-order records with the already consolidated main blocks [cite: 41]. This shifts the computational cost of physically reorganizing information to background processes (_compaction_), keeping the fast data ingestion path clear [cite: 41].
 
----
-
 ## Common Software Engineering Challenges in This Domain
 
 ### Temporal Consistency and Clock Synchronization
@@ -294,8 +290,6 @@ To secure an operational-level automation zone, a dedicated software connector i
 
 Operator authentication is resolved centrally at the perimeter access gateway through least-privilege policies and multi-factor authentication (MFA) before granting command redirection [cite: 50, 51]. This neutralizes automated vulnerability-scanning attacks, denial-of-service attacks against PLCs, and illegitimate lateral movement, so that plant-floor components remain invisible and protected against unauthorized access [cite: 27, 51].
 
---------------------------------------------------------------------------------
-
 ## Conclusions
 
 The transformation of traditional SCADA systems into modern, interconnected, service-oriented architectures requires the rigorous adoption of software decoupling principles and semantic data modeling [cite: 1, 4]. By replacing direct, hierarchical point-to-point integrations with a Unified Namespace (UNS) pattern, ideally under a Fractal UNS topology, industrial organizations drastically reduce integration complexity and eliminate operational information silos [cite: 1, 3, 8]. The adoption of descriptive data standards, such as Sparkplug B and OPC UA Part 14 Pub/Sub with UADP binary encoding, guarantees semantic interoperability without overloading infrastructure bandwidth [cite: 11, 22, 25].
@@ -304,7 +298,7 @@ At the interface and user-experience level, low-code design strategies enable th
 
 Finally, to ensure analytical consistency in the face of massive real-time and historical data ingestion in remote environments vulnerable to disconnections, the industrial storage backend architecture must structure a parallel flow based on Lambda or Kappa patterns [cite: 37, 38, 40]. This processing is coordinated with strict backpressure control mechanisms, temporal watermarking, and deferred merge-on-read write strategies to efficiently assimilate late telemetry without corrupting the integrity of system indexes [cite: 9, 41]. These software engineering practices, aligned with the application of segmentation under the ISA/IEC 62443 standard and the implementation of zero-trust reverse access, ensure the viability, scalability, and resilience of next-generation SCADA systems [cite: 26, 48, 51].
 
---------------------------------------------------------------------------------
+## References
 
 1. The Architect's Guide to Unified Namespace (UNS): Implementation Roadmap | Proxus Blog, [https://proxus.io/blog/unified-namespace-architecture-guide/](https://www.google.com/url?sa=E&q=https%3A%2F%2Fproxus.io%2Fblog%2Funified-namespace-architecture-guide%2F)
 2. Purdue model & Zero Trust: modernising OT segmentation - Brixio, [https://brixio.io/blog/purdue-model-zero-trust-ot/](https://www.google.com/url?sa=E&q=https%3A%2F%2Fbrixio.io%2Fblog%2Fpurdue-model-zero-trust-ot%2F)
