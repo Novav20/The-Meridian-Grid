@@ -1,5 +1,6 @@
 # Project-Specific
 temp/
+docs/01-PM-Project-Management/Search-Exports
 
 # Obsidian Local Workspace (Prevents committing UI layout/tabs)
 .obsidian/workspace
@@ -48,5 +49,9 @@ Thumbs.db
 # Xlsx locks
 .~lock.*
 
+# Syncthing
 .stignore
 .stfolder
+
+# Raw PDFs
+*.pdf
