@@ -2,7 +2,7 @@
 """
 Scopus CSV Enrichment Script — The Meridian Grid (TMG)
 Reads Titles from Search-Log.xlsx, fuzzy-matches them against a Scopus CSV export,
-generates Semantic Paper IDs, and populates the missing metadata.
+generates Semantic Paper IDs, and populates bibliographic metadata (including Abstract).
 """
 
 import os
@@ -22,7 +22,7 @@ def normalize_author_name(authors_str: str) -> tuple[str, bool]:
     if not authors_str or pd.isna(authors_str):
         return "Unknown", False
     authors_str = str(authors_str).strip()
-    first_author_block = authors_str.split(",")[0].strip()
+    first_author_block = authors_str.split(";")[0].split(",")[0].strip()
     first_author_name = first_author_block.split(" ")[0]
     clean_name = (
         unicodedata.normalize("NFKD", first_author_name)
@@ -57,7 +57,7 @@ def generate_paper_id(authors_str: str, year: any, existing_ids: set) -> str:
 
 def fuzzy_match_row(target_title: str, csv_df: pd.DataFrame):
     titles = csv_df["Title"].dropna().astype(str).tolist()
-    matches = difflib.get_close_matches(target_title, titles, n=1, cutoff=0.85)
+    matches = difflib.get_close_matches(target_title, titles, n=1, cutoff=0.80)
     if matches:
         matched_title = matches[0]
         return csv_df[csv_df["Title"] == matched_title].iloc[0]
@@ -81,19 +81,23 @@ def enrich_excel(csv_path: str, query_id: str, excel_path: str):
     sheet = wb[TARGET_SHEET_NAME]
     headers = {cell.value: idx + 1 for idx, cell in enumerate(sheet[1]) if cell.value}
 
-    # Ensure expected columns exist (add Keywords to your Excel file)
-    for expected in [
+    # Verified schema definition
+    expected_columns = [
         "Paper_ID",
         "Query_ID",
+        "Title",
         "Authors",
+        "Abstract",
+        "Keywords",
         "Year",
         "DOI",
         "Selection_Status",
-        "Keywords",
-    ]:
+        "Justification",
+    ]
+    for expected in expected_columns:
         if expected not in headers:
             print(
-                f"[ERROR] Column '{expected}' not found in sheet '{TARGET_SHEET_NAME}'. Please add it to row 1."
+                f"[ERROR] Column '{expected}' not found in sheet '{TARGET_SHEET_NAME}'. Please check row 1 headers."
             )
             sys.exit(1)
 
@@ -108,17 +112,21 @@ def enrich_excel(csv_path: str, query_id: str, excel_path: str):
     for row in range(2, sheet.max_row + 1):
         title_val = sheet.cell(row=row, column=headers["Title"]).value
         author_val = sheet.cell(row=row, column=headers["Authors"]).value
+        abstract_val = sheet.cell(row=row, column=headers["Abstract"]).value
 
-        # If row has a Title but Authors is empty, it needs enrichment
-        if title_val and not author_val:
+        # Backfill if Title exists and either Authors or Abstract is missing
+        if title_val and (not author_val or not abstract_val):
             match = fuzzy_match_row(str(title_val), df)
             if match is not None:
                 authors = str(match.get("Authors", "")).strip()
                 year = match.get("Year", "")
+
                 doi = str(match.get("DOI", "")).strip()
                 doi = "" if doi.lower() == "nan" else doi
 
-                # Handle Scopus keyword column variations
+                abstract = str(match.get("Abstract", "")).strip()
+                abstract = "" if abstract.lower() == "nan" else abstract
+
                 keywords = ""
                 if "Author Keywords" in match:
                     keywords = str(match["Author Keywords"]).strip()
@@ -126,11 +134,17 @@ def enrich_excel(csv_path: str, query_id: str, excel_path: str):
                     keywords = str(match["Keywords"]).strip()
                 keywords = "" if keywords.lower() == "nan" else keywords
 
-                paper_id = generate_paper_id(authors, year, existing_ids)
+                # Retain existing ID if already populated; generate if absent
+                current_pid = sheet.cell(row=row, column=headers["Paper_ID"]).value
+                if current_pid:
+                    paper_id = current_pid
+                else:
+                    paper_id = generate_paper_id(authors, year, existing_ids)
+                    sheet.cell(row=row, column=headers["Paper_ID"], value=paper_id)
 
-                sheet.cell(row=row, column=headers["Paper_ID"], value=paper_id)
                 sheet.cell(row=row, column=headers["Query_ID"], value=query_id)
                 sheet.cell(row=row, column=headers["Authors"], value=authors)
+                sheet.cell(row=row, column=headers["Abstract"], value=abstract)
                 sheet.cell(row=row, column=headers["Year"], value=year)
                 sheet.cell(row=row, column=headers["DOI"], value=doi)
                 sheet.cell(row=row, column=headers["Keywords"], value=keywords)
@@ -143,9 +157,9 @@ def enrich_excel(csv_path: str, query_id: str, excel_path: str):
                     )
 
                 updated_count += 1
-                print(f"  [+] Enriched: {paper_id} - {title_val[:50]}...")
+                print(f"  [+] Enriched: {paper_id} - {title_val[:45]}...")
             else:
-                print(f"  [!] No CSV match found for: {title_val[:50]}...")
+                print(f"  [!] No CSV match found for: {title_val[:45]}...")
 
     wb.save(excel_path)
     print(f"\n[SUCCESS] Enriched {updated_count} rows in '{TARGET_SHEET_NAME}'.")
