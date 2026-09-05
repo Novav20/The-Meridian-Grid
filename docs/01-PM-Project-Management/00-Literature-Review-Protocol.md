@@ -30,10 +30,10 @@ A solo researcher must balance completeness with limited resources. Use an autom
 
 Use a multi-stage screening process to rapidly filter out irrelevant abstracts.
 
-|Criteria Level|Inclusion Criteria (Keep if...)|Exclusion Criteria (Discard if...)|
-|:--|:--|:--|
-|**Primary (Stage 1: Title/Abstract)**|1. Directly addresses the Intervention.2. Matches the defined Population.3. Published within the target timeframe.|1. Clearly irrelevant to the research question.2. Duplicates of previously screened papers.3. PowerPoint slides or extended abstracts only.|
-|**Secondary (Stage 2: Full-Text)**|1. Reports a primary study with direct measurements.2. Provides data needed for synthesis (Outcomes).3. Written in English.|1. "Grey literature" without a clear peer-review source.2. Low-quality reporting (fails basic quality checklist).3. Opinions/Anecdotes without empirical evidence.|
+| Criteria Level                        | Inclusion Criteria (Keep if...)                                                                                                                                        | Exclusion Criteria (Discard if...)                                                                                                                                                                            |
+| :------------------------------------ | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Primary (Stage 1: Title/Abstract)** | <ol><br><li>Directly addresses the Intervention.</li><br><li>Matches the defined Population.</li><br><li>Published within the target timeframe.</li><br></ol>          | <ol><br><li>Clearly irrelevant to the research question.</li><br><li>Duplicates of previously screened papers.</li><br><li>PowerPoint slides or extended abstracts only.</li><br></ol>                        |
+| **Secondary (Stage 2: Full-Text)**    | <ol><br><li>Reports a primary study with direct measurements.</li><br><li>Provides data needed for synthesis (Outcomes).</li><br><li>Written in English.</li><br></ol> | <ol><br><li>"Grey literature" without a clear peer-review source.</li><br><li>Low-quality reporting (fails basic quality checklist).</li><br><li>Opinions/Anecdotes without empirical evidence.</li><br></ol> |
 
 **Solo Consistency Check:** Use a **test-retest** approach. Re-screen a random sample of 10% of your excluded papers after a time delay to ensure your criteria haven't drifted.
 
@@ -41,11 +41,11 @@ Use a multi-stage screening process to rapidly filter out irrelevant abstracts.
 
 Once papers are selected, use this template to extract the "Knowledge Context" necessary for designing a solution.
 
-|Data Category|Extraction Elements|DDD/Design Science Alignment|
-|:--|:--|:--|
-|**Ubiquitous Language**|Extract specialized business terminology and mental models used by domain experts.|Identify one-and-only-one meanings for terms to eliminate ambiguity.|
-|**Domain Rules**|Extract business logic, invariants (rules to be protected), and cause-effect relationships.|Define the "mechanisms" that produce observed system-level phenomena.|
-|**Architectural Constraints**|Extract physical boundaries, composition relations (how systems interact), and communication patterns.|Identify "bounded contexts" where a specific model or language is valid.|
-|**Context Assumptions**|Extract conditions of practice, participant demographics, and technical settings.|Note where the artifact interacts with specific problem environments.|
+| Data Category                 | Extraction Elements                                                                                    | DDD/Design Science Alignment                                             |
+| :---------------------------- | :----------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------- |
+| **Ubiquitous Language**       | Extract specialized business terminology and mental models used by domain experts.                     | Identify one-and-only-one meanings for terms to eliminate ambiguity.     |
+| **Domain Rules**              | Extract business logic, invariants (rules to be protected), and cause-effect relationships.            | Define the "mechanisms" that produce observed system-level phenomena.    |
+| **Architectural Constraints** | Extract physical boundaries, composition relations (how systems interact), and communication patterns. | Identify "bounded contexts" where a specific model or language is valid. |
+| **Context Assumptions**       | Extract conditions of practice, participant demographics, and technical settings.                      | Note where the artifact interacts with specific problem environments.    |
 
 **Validation for the Solo Engineer:** Store all extracted text segments with page numbers to ensure **traceability** back to the primary source, allowing for a repeatable audit trail of your conclusions.

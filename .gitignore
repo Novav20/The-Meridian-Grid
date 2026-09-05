@@ -1,6 +1,7 @@
 # Project-Specific
 temp/
 docs/01-PM-Project-Management/Search-Exports
+docs/01-PM-Project-Management/prompts
 
 # Obsidian Local Workspace (Prevents committing UI layout/tabs)
 .obsidian/workspace
@@ -53,5 +54,6 @@ Thumbs.db
 .stignore
 .stfolder
 
-# Raw PDFs
+# Raw files
 *.pdf
+*.md.bak

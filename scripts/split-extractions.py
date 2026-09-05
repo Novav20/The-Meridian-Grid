@@ -101,7 +101,19 @@ def build_frontmatter(
     authors = str(row.get("Authors", "")).strip().replace('"', '\\"')
     year = str(row.get("Year", "")).strip()
     doi = str(row.get("DOI", "")).strip()
-    keywords = str(row.get("Keywords", "")).strip().replace('"', '\\"')
+
+    # Parse delimited keywords (semicolon or comma) into a clean YAML list
+    raw_kw = str(row.get("Keywords", "")).strip()
+    kw_list = []
+    if raw_kw and raw_kw.lower() != "nan":
+        delimiter = ";" if ";" in raw_kw else ","
+        kw_list = [
+            k.strip().replace('"', '\\"')
+            for k in raw_kw.split(delimiter)
+            if k.strip()
+        ]
+
+    kw_yaml = "[" + ", ".join(f'"{k}"' for k in kw_list) + "]"
 
     yaml = [
         "---",
@@ -111,7 +123,7 @@ def build_frontmatter(
         f'authors: "{authors}"',
         f"year: {year}",
         f'doi: "{doi}"',
-        f'keywords: "{keywords}"',
+        f"keywords: {kw_yaml}",
         f'source_pdf: "{source_pdf}"',
         f'extraction_date: "{today}"',
         "---\n",
@@ -123,7 +135,7 @@ def main():
     parser = argparse.ArgumentParser(
         description="Correlate LLM extractions with Search-Log.xlsx and output canonical Markdown notes."
     )
-    parser.add_argument("raw_file", help="Path to the raw extraction markdown file.")
+    parser.add_argument("raw_file", help="Raw extraction markdown filename or full path.")
     parser.add_argument("query_id", help="The Query ID (e.g., Q01).")
     parser.add_argument(
         "-o",
@@ -144,8 +156,14 @@ def main():
     )
     args = parser.parse_args()
 
-    raw_file = os.path.normpath(args.raw_file)
     output_dir = os.path.normpath(args.output_dir)
+    raw_input = args.raw_file.strip()
+
+    # Resolve filename inside output_dir if not found as direct path
+    if os.path.exists(raw_input):
+        raw_file = os.path.normpath(raw_input)
+    else:
+        raw_file = os.path.normpath(os.path.join(output_dir, raw_input))
     raw_sources_dir = os.path.join(DEFAULT_RAW_SOURCES_BASE, args.query_id)
     today = datetime.now().strftime("%Y-%m-%d")
 
