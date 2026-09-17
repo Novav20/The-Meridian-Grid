@@ -8,6 +8,7 @@ doi: "10.1016/j.mfglet.2022.07.016"
 keywords: ["Digital Factory", "Digital Twin", "IIoT", "Industrial Internet of Things", "IT/OT integration", "Legacy Machines"]
 source_pdf: "Streaming Machine Generated Data via the MQTT Sparkplug B Protocol for Smart Factory Operations.pdf"
 extraction_date: "2026-09-04"
+stage2_status: "Included_Stage2"
 ---
 
 ### 1. Ubiquitous Language
@@ -55,3 +56,4 @@ extraction_date: "2026-09-04"
 
 - **Assumption**: Network Port Inbound Restrictions
 - **Evidence**: "IIoT enabled by MQTT utilizes the pub/sub architecture that secures devices from accessing through network ports. Any authenticated device can subscribe and publish to a topic." (p. 67)
+

@@ -8,6 +8,7 @@ doi: "10.3390/fi11030066"
 keywords: ["Automation", "IIoT", "MODBUS", "MQTT", "Publish-subscribe", "Request-response", "SCADA"]
 source_pdf: "Communication protocols of an industrial internet of things environment: A comparative study.pdf"
 extraction_date: "2026-09-04"
+stage2_status: "Included_Stage2"
 ---
 
 ### 1. Ubiquitous Language

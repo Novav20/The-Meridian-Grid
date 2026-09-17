@@ -8,6 +8,7 @@ doi: "10.1016/j.mfglet.2025.06.145"
 keywords: ["Digital twin", "Industrial metaverse", "Low-code", "Machine communication", "MQTT Sparkplug B", "Node-RED", "Omniverse"]
 source_pdf: "Industrial metaverse meets IIoT: low-code platforms for machine-to-machine and human-to-machine integration.pdf"
 extraction_date: "2026-09-04"
+stage2_status: "Included_Stage2"
 ---
 
 ### 1. Ubiquitous Language
@@ -63,3 +64,4 @@ extraction_date: "2026-09-04"
 
 - **Assumption**: Low-latency and highly reliable local area industrial networks
 > **Evidence**: "Network reliability is essential for real-time data exchange via MQTT and ROS2. Latency issues could affect synchronization in distributed manufacturing environments." (p. 1263)
+

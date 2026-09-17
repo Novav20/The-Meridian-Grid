@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Stage 2 Status Sync Script — The Meridian Grid (TMG)
-Reads Selection_Status from Search-Log.xlsx and updates the YAML frontmatter
+Reads Stage2_Status from Search-Log.xlsx and updates the YAML frontmatter
 in docs/02-SI-Requirements/Domain-Research/extractions/<Paper_ID>.md files.
 
 Usage:
@@ -37,16 +37,16 @@ def update_md_frontmatter(md_path: str, status: str):
     frontmatter_text = fm_match.group(1)
     body_text = fm_match.group(2)
 
-    # Check if selection_status key already exists in frontmatter
-    if re.search(r"^selection_status:", frontmatter_text, re.MULTILINE):
+    # Check if stage2_status key already exists in frontmatter
+    if re.search(r"^stage2_status:", frontmatter_text, re.MULTILINE):
         new_fm = re.sub(
-            r"^selection_status:.*$",
-            f'selection_status: "{status}"',
+            r"^stage2_status:.*$",
+            f'stage2_status: "{status}"',
             frontmatter_text,
             flags=re.MULTILINE,
         )
     else:
-        new_fm = frontmatter_text.strip() + f'\nselection_status: "{status}"'
+        new_fm = frontmatter_text.strip() + f'\nstage2_status: "{status}"'
 
     new_content = f"---\n{new_fm}\n---\n\n{body_text}\n"
 
@@ -65,6 +65,14 @@ def sync_stage2_status(query_id: str, excel_path: str, extractions_dir: str):
     sheet = wb[TARGET_SHEET_NAME]
     data = list(sheet.values)
     headers = [str(h).strip() if h is not None else "" for h in data[0]]
+
+    if "Stage2_Status" not in headers:
+        print(
+            f"[ERROR] Column 'Stage2_Status' not found in '{TARGET_SHEET_NAME}'.",
+            file=sys.stderr,
+        )
+        sys.exit(1)
+
     df = pd.DataFrame(data[1:], columns=headers)
 
     df_filtered = df[df["Query_ID"].astype(str).str.strip() == query_id.strip()]
@@ -77,14 +85,17 @@ def sync_stage2_status(query_id: str, excel_path: str, extractions_dir: str):
 
     for _, row in df_filtered.iterrows():
         paper_id = str(row.get("Paper_ID", "")).strip()
-        status = str(row.get("Selection_Status", "")).strip()
+        status = str(row.get("Stage2_Status", "")).strip()
 
+        # Skip if Paper_ID is empty or Stage2_Status is empty/NaN
         if not paper_id or paper_id.lower() == "none":
+            continue
+        if not status or status.lower() == "nan":
             continue
 
         md_file = os.path.join(extractions_dir, f"{paper_id}.md")
         if update_md_frontmatter(md_file, status):
-            print(f"  [+] Updated {paper_id}.md -> selection_status: '{status}'")
+            print(f"  [+] Updated {paper_id}.md -> stage2_status: '{status}'")
             updated_count += 1
 
     print(f"\n[SUCCESS] Updated frontmatter in {updated_count} extraction notes.")
@@ -92,7 +103,7 @@ def sync_stage2_status(query_id: str, excel_path: str, extractions_dir: str):
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Sync Selection_Status from Search-Log.xlsx to extraction .md YAML frontmatter."
+        description="Sync Stage2_Status from Search-Log.xlsx to extraction .md YAML frontmatter."
     )
     parser.add_argument("query_id", help="Query ID to sync (e.g., Q01).")
     parser.add_argument(

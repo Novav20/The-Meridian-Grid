@@ -8,6 +8,7 @@ doi: "10.1016/j.iot.2025.101734"
 keywords: ["Communication protocols", "Control architectures", "Cyber-physical production systems", "Industrial internet of things", "Interoperability", "MQTT", "OPC-UA", "UNS"]
 source_pdf: "OPC UA and MQTT performance analysis within a unified namespace context.pdf"
 extraction_date: "2026-09-04"
+stage2_status: "Included_Stage2"
 ---
 
 ### 1. Ubiquitous Language
@@ -67,3 +68,4 @@ extraction_date: "2026-09-04"
 
 - **Assumption**: Heterogeneous brownfield environments where legacy PLCs lack native modern protocol support.
 > **Evidence**: "A gateway was used, as is common practice in industrial applications when the PLC does not run natively the desired communication protocol, to recover the data from the FAS-200 into the chosen configuration." (p. 8)
+

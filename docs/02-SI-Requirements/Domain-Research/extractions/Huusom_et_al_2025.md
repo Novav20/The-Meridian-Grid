@@ -8,6 +8,7 @@ doi: "10.1016/j.dche.2025.100269"
 keywords: ["Digital infrastructure", "Digitalization", "Pilot plant", "Real-time data", "SCADA", "Unit operation"]
 source_pdf: "Building a scalable digital infrastructure for a (bio)chemical engineering pilot plant: A case study from DTU.pdf"
 extraction_date: "2026-09-04"
+stage2_status: "Included_Stage2"
 ---
 
 ### 1. Ubiquitous Language

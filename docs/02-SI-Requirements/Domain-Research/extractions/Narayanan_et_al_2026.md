@@ -8,6 +8,7 @@ doi: "10.3390/jcp6010011"
 keywords: ["DNP3", "encryption", "IEC 61850", "IEC 62351", "Industrial Control Systems (ICS)", "IPsec", "MACsec", "smart grid", "TLS", "Virtual Private Networks (VPN)"]
 source_pdf: "Encryption for Industrial Control Systems: A Survey of Application-Level and Network-Level Approaches in Smart Grids.pdf"
 extraction_date: "2026-09-04"
+stage2_status: "Included_Stage2"
 ---
 
 ### 1. Ubiquitous Language
@@ -59,3 +60,4 @@ extraction_date: "2026-09-04"
 
 - **Assumption**: Extended longevity and operational lifecycles of deployed hardware assets
 - **Evidence**: "Given the long life cycles of ICS equipment, systems deployed today may still be in operation when quantum computers become practical." (p. 17)
+

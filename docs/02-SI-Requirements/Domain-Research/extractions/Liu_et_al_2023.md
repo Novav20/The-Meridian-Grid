@@ -8,6 +8,7 @@ doi: "10.1007/s10586-022-03788-9"
 keywords: ["Fault tolerance", "Industrial Internet of Things", "MQTT", "Publish-subscribe", "Quality of service", "SCADA"]
 source_pdf: "Slow Subscribers: a novel IoT-MQTT based denial of service attack.pdf"
 extraction_date: "2026-09-04"
+stage2_status: "Included_Stage2"
 ---
 
 ### 1. Ubiquitous Language

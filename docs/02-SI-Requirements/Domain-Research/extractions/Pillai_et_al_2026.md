@@ -8,6 +8,7 @@ doi: "10.3390/machines14020252"
 keywords: ["CNC fault detection", "cobots", "digital twins", "food and beverage optimisation", "Industry 4.0", "machine learning", "MedTech applications", "motor fault prediction", "predictive maintenance", "real-time data analytics", "robots", "variable speed drives", "virtual inspections"]
 source_pdf: "Role of Unified Namespace (UNS) and Digital Twins in Predictive and Adaptive Industrial Systems.pdf"
 extraction_date: "2026-09-04"
+stage2_status: "Included_Stage2"
 ---
 
 ### 1. Ubiquitous Language
@@ -59,3 +60,4 @@ extraction_date: "2026-09-04"
 
 - **Assumption**: Regulated Environment Deployment Constraint
 - **Evidence**: "Therefore, model retraining, recalibration of thresholds, and additional domain-specific features would be required before deploying the UNS-based system in such highly regulated or ultra-precise industrial settings." (p. 13)
+

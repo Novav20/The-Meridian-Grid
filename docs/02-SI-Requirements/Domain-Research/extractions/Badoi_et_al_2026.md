@@ -8,6 +8,7 @@ doi: "10.3390/app16020645"
 keywords: ["5G/6G", "Azure", "device twins", "digital twins", "edge computing", "edge-cloud integration", "IIoT", "industrial automation", "IoT Hub", "modular automation", "MQTT", "predictive maintenance", "scalable manufacturing", "ZigBee"]
 source_pdf: "A Hierarchical Framework Leveraging IIoT Networks, IoT Hub, and Device Twins for Intelligent Industrial Automation.pdf"
 extraction_date: "2026-09-04"
+stage2_status: "Included_Stage2"
 ---
 
 ### 1. Ubiquitous Language
@@ -47,4 +48,5 @@ extraction_date: "2026-09-04"
 
 - **Assumption**: Bounded buffering capacity and message retention limits during cloud connectivity outages.
 > **Evidence**: "During cloud connectivity outages, the Central Edge Controller/Gateway relies on Azure IoT Hub’s cloud-to-device message retention, which can be configured with a time-to-live (TTL) of up to 48 h per device queue, together with the Azure IoT Edge store-and-forward mechanism for device-to-cloud messages." (p. 11)
+
 

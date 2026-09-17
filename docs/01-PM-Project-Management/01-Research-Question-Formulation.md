@@ -8,12 +8,12 @@
 
 ### Synthesized Research Questions
 
-**Overarching RQ:**
+#### **Overarching RQ:**
 "Improve `Distributed Industrial SCADA Systems` by `designing an event-driven IIoT architecture` that satisfies `strict decoupling`, `real-time performance`, and `semantic interoperability` so that `the 'integration tax' is eliminated and real-time operational data is securely democratized across the enterprise`."
 
-**Sub-RQ 1 (Data Transport & Semantics - Bounded Context of the Backend):**
+#### **Sub-RQ 1 (Data Transport & Semantics - Bounded Context of the Backend):**
 "Improve `telemetry ingestion from heterogeneous edge devices` by implementing `MQTT Sparkplug B within a Unified Namespace (UNS)` that satisfies `network zoning constraints (ISA 62443), report-by-exception, and backpressure management` so that `reliable state synchronization is achieved without rigid point-to-point coupling`."
 
-**Sub-RQ 2 (Visualization & UI - Bounded Context of the Frontend):**
+#### **Sub-RQ 2 (Visualization & UI - Bounded Context of the Frontend):**
 "Improve `operational situational awareness in standard web browsers` by designing `a schema-driven, low-code rendering engine` that satisfies `ISA-101 high-performance HMI standards and continuous 60 FPS rendering under high-frequency updates` so that `operators receive reliable, real-time telemetry without requiring monolithic desktop client installations`."
 

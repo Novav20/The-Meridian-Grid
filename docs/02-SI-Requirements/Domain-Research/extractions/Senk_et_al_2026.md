@@ -8,6 +8,7 @@ doi: "10.3390/electronics15153441"
 keywords: ["brownfield integration", "edge gateway", "ESP32", "IIoT", "intelligent industrial systems", "legacy PLC", "mechatronics", "MQTT", "Sparkplug B", "Unified Namespace"]
 source_pdf: "ESP32-Based Sparkplug B Gateway Framework for Brownfield PLC Integration into an IIoT Unified Namespace: A Data Foundation for Intelligent Industrial Systems.pdf"
 extraction_date: "2026-09-04"
+stage2_status: "Included_Stage2"
 ---
 
 ### 1. Ubiquitous Language
@@ -51,3 +52,4 @@ extraction_date: "2026-09-04"
 
 - **Assumption**: Shared Infrastructure Single Points of Failure
 - **Evidence**: "However, shared infrastructure components, including the Wi-Fi access point, MQTT broker, common power supply, and Ignition server, remain potential common points of failure." (p. 7)
+
