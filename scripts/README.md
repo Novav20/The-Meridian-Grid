@@ -11,16 +11,16 @@ Utility scripts to automate the Evidence-Based Software Engineering (EBSE) liter
 ---
 
 ## 1. `ingest-scopus-csv.py`
-Enriches the `Filtered_Results` sheet in `Search-Log.xlsx`. It takes titles approved during LLM screening, fuzzy-matches them against the raw Scopus CSV, generates collision-proof semantic IDs (`Author_et_al_Year`), and populates bibliographic metadata.
+Enriches the `Filtered_Results` sheet in `Search-Log.xlsx`. It takes titles approved during LLM screening, fuzzy-matches them against raw Scopus CSV exports (single file or a directory containing split batches), generates collision-proof semantic IDs (`Author_et_al_Year`), prevents cross-query duplicate enrichment, and populates bibliographic metadata.
 
 **Usage:**
 ```bash
-python scripts/ingest-scopus-csv.py <path_to_csv> <Query_ID>
-```
+# 1. Standard usage (implicitly resolves to docs/01-PM-Project-Management/Search-Exports/<Query_ID>/)
+python scripts/ingest-scopus-csv.py Q03
 
-**Example:**
-```bash
-python scripts/ingest-scopus-csv.py docs/01-PM-Project-Management/Search-Exports/scopus_q01.csv Q01
+# 2. Explicit custom file or directory (backward-compatible)
+python scripts/ingest-scopus-csv.py docs/01-PM-Project-Management/Search-Exports/Q01/scopus_q01.csv Q01
+python scripts/ingest-scopus-csv.py Q03 --source path/to/custom_dir/
 ```
 
 ---

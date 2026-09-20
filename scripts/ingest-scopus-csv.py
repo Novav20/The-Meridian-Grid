@@ -1,8 +1,12 @@
 #!/usr/bin/env python3
 """
 Scopus CSV Enrichment Script — The Meridian Grid (TMG)
-Reads Titles from Search-Log.xlsx, fuzzy-matches them against a Scopus CSV export,
-generates Semantic Paper IDs, and populates bibliographic metadata (including Abstract).
+Reads Titles from Search-Log.xlsx, fuzzy-matches them against one or multiple Scopus CSV exports,
+generates Semantic Paper IDs, and populates bibliographic metadata.
+
+Usage:
+  python scripts/ingest-scopus-csv.py Q03
+  python scripts/ingest-scopus-csv.py <custom_path> Q03
 """
 
 import os
@@ -15,7 +19,15 @@ import openpyxl
 import difflib
 
 DEFAULT_EXCEL_PATH = "docs/01-PM-Project-Management/Search-Log.xlsx"
+DEFAULT_EXPORTS_BASE = "docs/01-PM-Project-Management/Search-Exports"
 TARGET_SHEET_NAME = "Filtered_Results"
+
+
+def normalize_title(title_str: str) -> str:
+    if not title_str or pd.isna(title_str):
+        return ""
+    clean = re.sub(r"[^\w\s]", "", str(title_str).lower())
+    return " ".join(clean.split())
 
 
 def normalize_author_name(authors_str: str) -> tuple[str, bool]:
@@ -55,6 +67,64 @@ def generate_paper_id(authors_str: str, year: any, existing_ids: set) -> str:
     return final_id
 
 
+def resolve_scopus_path(
+    primary_arg: str, secondary_arg: str, source_flag: str
+) -> tuple[str, str]:
+    if secondary_arg:
+        target_path = primary_arg
+        query_id = secondary_arg
+    else:
+        query_id = primary_arg
+        if source_flag:
+            target_path = source_flag
+        else:
+            default_dir = os.path.join(DEFAULT_EXPORTS_BASE, query_id)
+            default_file = os.path.join(DEFAULT_EXPORTS_BASE, f"{query_id}.csv")
+            if os.path.isdir(default_dir):
+                target_path = default_dir
+            elif os.path.isfile(default_file):
+                target_path = default_file
+            else:
+                target_path = default_dir  # let load_scopus_data handle error
+
+    return os.path.normpath(target_path), query_id.strip()
+
+
+def load_scopus_data(target_path: str) -> pd.DataFrame:
+    files_to_load = []
+    if os.path.isdir(target_path):
+        for root, _, files in os.walk(target_path):
+            for f in files:
+                if f.lower().endswith(".csv"):
+                    files_to_load.append(os.path.join(root, f))
+    elif os.path.isfile(target_path):
+        files_to_load.append(target_path)
+    else:
+        print(f"[ERROR] Scopus export path not found: {target_path}", file=sys.stderr)
+        sys.exit(1)
+
+    if not files_to_load:
+        print(f"[ERROR] No CSV files found at: {target_path}", file=sys.stderr)
+        sys.exit(1)
+
+    dfs = []
+    for fpath in files_to_load:
+        try:
+            temp_df = pd.read_csv(fpath, encoding="utf-8-sig")
+            dfs.append(temp_df)
+            print(f"  [+] Loaded: {os.path.basename(fpath)} ({len(temp_df)} records)")
+        except Exception as e:
+            print(f"  [!] Failed to read {fpath}: {e}", file=sys.stderr)
+
+    if not dfs:
+        sys.exit(1)
+
+    combined_df = pd.concat(dfs, ignore_index=True)
+    combined_df.drop_duplicates(subset=["Title"], inplace=True)
+    print(f"[*] Total unique source records in pool: {len(combined_df)}")
+    return combined_df
+
+
 def fuzzy_match_row(target_title: str, csv_df: pd.DataFrame):
     titles = csv_df["Title"].dropna().astype(str).tolist()
     matches = difflib.get_close_matches(target_title, titles, n=1, cutoff=0.80)
@@ -64,24 +134,19 @@ def fuzzy_match_row(target_title: str, csv_df: pd.DataFrame):
     return None
 
 
-def enrich_excel(csv_path: str, query_id: str, excel_path: str):
-    print(f"[*] Reading Scopus export: {csv_path}")
-    try:
-        df = pd.read_csv(csv_path, encoding="utf-8-sig")
-    except Exception as e:
-        print(f"[ERROR] Failed to read CSV: {e}")
-        sys.exit(1)
+def enrich_excel(target_path: str, query_id: str, excel_path: str):
+    print(f"[*] Ingesting Scopus dataset for Query '{query_id}' from: {target_path}")
+    df_pool = load_scopus_data(target_path)
 
-    print(f"[*] Opening Excel tracking log: {excel_path}")
+    print(f"[*] Opening Excel master log: {excel_path}")
     if not os.path.exists(excel_path):
-        print(f"[ERROR] Excel file not found: {excel_path}")
+        print(f"[ERROR] Excel file not found: {excel_path}", file=sys.stderr)
         sys.exit(1)
 
     wb = openpyxl.load_workbook(excel_path)
     sheet = wb[TARGET_SHEET_NAME]
     headers = {cell.value: idx + 1 for idx, cell in enumerate(sheet[1]) if cell.value}
 
-    # Verified schema definition
     expected_columns = [
         "Paper_ID",
         "Query_ID",
@@ -94,18 +159,24 @@ def enrich_excel(csv_path: str, query_id: str, excel_path: str):
         "Selection_Status",
         "Justification",
     ]
-    for expected in expected_columns:
-        if expected not in headers:
-            print(
-                f"[ERROR] Column '{expected}' not found in sheet '{TARGET_SHEET_NAME}'. Please check row 1 headers."
-            )
+    for col in expected_columns:
+        if col not in headers:
+            print(f"[ERROR] Required column '{col}' missing in sheet.", file=sys.stderr)
             sys.exit(1)
 
     existing_ids = set()
-    for row in range(2, sheet.max_row + 1):
-        pid = sheet.cell(row=row, column=headers["Paper_ID"]).value
+    enriched_titles = {}
+
+    for row_idx in range(2, sheet.max_row + 1):
+        pid = sheet.cell(row=row_idx, column=headers["Paper_ID"]).value
+        t_val = sheet.cell(row=row_idx, column=headers["Title"]).value
+        q_val = sheet.cell(row=row_idx, column=headers["Query_ID"]).value
+        a_val = sheet.cell(row=row_idx, column=headers["Authors"]).value
+
         if pid:
             existing_ids.add(str(pid))
+        if t_val and a_val:
+            enriched_titles[normalize_title(t_val)] = (row_idx, pid, q_val)
 
     updated_count = 0
 
@@ -114,13 +185,30 @@ def enrich_excel(csv_path: str, query_id: str, excel_path: str):
         author_val = sheet.cell(row=row, column=headers["Authors"]).value
         abstract_val = sheet.cell(row=row, column=headers["Abstract"]).value
 
-        # Backfill if Title exists and either Authors or Abstract is missing
         if title_val and (not author_val or not abstract_val):
-            match = fuzzy_match_row(str(title_val), df)
+            norm_t = normalize_title(title_val)
+
+            if norm_t in enriched_titles:
+                orig_row, orig_pid, orig_qid = enriched_titles[norm_t]
+                print(
+                    f"  [!] Duplicate detected at row {row}: Already enriched at row {orig_row} as '{orig_pid}' under {orig_qid}. Skipping."
+                )
+                sheet.cell(
+                    row=row,
+                    column=headers["Selection_Status"],
+                    value="Excluded_Duplicate",
+                )
+                sheet.cell(
+                    row=row,
+                    column=headers["Justification"],
+                    value=f"Duplicate of {orig_pid} ({orig_qid})",
+                )
+                continue
+
+            match = fuzzy_match_row(str(title_val), df_pool)
             if match is not None:
                 authors = str(match.get("Authors", "")).strip()
                 year = match.get("Year", "")
-
                 doi = str(match.get("DOI", "")).strip()
                 doi = "" if doi.lower() == "nan" else doi
 
@@ -134,7 +222,6 @@ def enrich_excel(csv_path: str, query_id: str, excel_path: str):
                     keywords = str(match["Keywords"]).strip()
                 keywords = "" if keywords.lower() == "nan" else keywords
 
-                # Retain existing ID if already populated; generate if absent
                 current_pid = sheet.cell(row=row, column=headers["Paper_ID"]).value
                 if current_pid:
                     paper_id = current_pid
@@ -156,22 +243,30 @@ def enrich_excel(csv_path: str, query_id: str, excel_path: str):
                         value="Included_Stage1",
                     )
 
+                enriched_titles[norm_t] = (row, paper_id, query_id)
                 updated_count += 1
                 print(f"  [+] Enriched: {paper_id} - {title_val[:45]}...")
             else:
-                print(f"  [!] No CSV match found for: {title_val[:45]}...")
+                print(f"  [!] No pool match found for: {title_val[:45]}...")
 
     wb.save(excel_path)
     print(f"\n[SUCCESS] Enriched {updated_count} rows in '{TARGET_SHEET_NAME}'.")
 
 
-if __name__ == "__main__":
+def main():
     parser = argparse.ArgumentParser(
-        description="Enrich LLM-filtered Excel log with Scopus CSV data."
+        description="Enrich LLM-filtered Excel log with Scopus CSV data (supports directory or file)."
     )
-    parser.add_argument("csv_file", help="Path to the raw Scopus CSV export file.")
     parser.add_argument(
-        "query_id", help="The Query ID to tag these records with (e.g., Q01)."
+        "arg1", help="Query ID (e.g. Q03) OR explicit path to CSV file/dir."
+    )
+    parser.add_argument(
+        "arg2", nargs="?", default=None, help="Query ID if arg1 was an explicit path."
+    )
+    parser.add_argument(
+        "--source",
+        default=None,
+        help="Explicit override path to CSV file or directory.",
     )
     parser.add_argument(
         "--excel",
@@ -180,4 +275,9 @@ if __name__ == "__main__":
     )
 
     args = parser.parse_args()
-    enrich_excel(args.csv_file, args.query_id, args.excel)
+    target_path, query_id = resolve_scopus_path(args.arg1, args.arg2, args.source)
+    enrich_excel(target_path, query_id, args.excel)
+
+
+if __name__ == "__main__":
+    main()
