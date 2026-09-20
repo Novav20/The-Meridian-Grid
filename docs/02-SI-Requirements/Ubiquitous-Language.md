@@ -147,3 +147,220 @@ This document defines the ubiquitous language for the **Data Transport & Semanti
 ## Bounded Context: Visualization & Low-Code HMI (Sub-RQ 2) 
 ### Rendering & Visual Models 
 ### Dynamic Layout & Declarative Schemas
+---
+
+## Bounded Context: Visualization & Low-Code HMI (Sub-RQ 2)
+
+### Rendering & Vector Graphics Models
+
+- **Custom Widget Template**
+  - *Definition:* An SVG-based graphic design created using an editor that can be uploaded to the platform and instantiated into interactive, event-driven dashboard widgets or complex synoptics by connecting reading and writing variables to WebSockets.
+  - *Aliases / Related:* N/A
+  - *Traceability:* [[Bellini_et_al_2022]]
+
+- **Grid Display Method**
+  - *Definition:* A 2D grid visualization mode adopted for monitoring mobile robots and AGVs on web interfaces to minimize browser computing resource consumption compared to 3D virtual reality.
+  - *Aliases / Related:* 2D Grid
+  - *Traceability:* [[Guo_et_al_2022]]
+
+- **Conventional Graphical Symbols (CGS)**
+  - *Definition:* Graphical representations of equipment connected according to the main electrical diagram, whose visual properties change based on input signals from associated equipment.
+  - *Aliases / Related:* CGS
+  - *Traceability:* [[Dobrokhotov_et_al_2025]]
+
+- **Mnemonic Diagram**
+  - *Definition:* Main elements of automated workstations that display the primary equipment and operating conditions of an electrical installation.
+  - *Aliases / Related:* Synoptic
+  - *Traceability:* [[Dobrokhotov_et_al_2025]]
+
+- **Protocol-Coupling Map Symbol**
+  - *Definition:* A map symbol model integrating vector graphic data, metadata of sensor data, and a mapping profile to enable a single symbol to visually express multiple internal states of a remote geo-device.
+  - *Aliases / Related:* N/A
+  - *Traceability:* [[Jiao_et_al_2018]]
+
+### Declarative UI & Low-Code Composition
+
+- **Snap4Industry**
+  - *Definition:* An IoT development environment and framework extending Snap4City for implementing the control and supervision of complex industrial plants with multiple DCS/SCADA systems and supply chains under the Industry 4.0 paradigm.
+  - *Aliases / Related:* N/A
+  - *Traceability:* [[Bellini_et_al_2022]]
+
+- **Optimized Production Planner**
+  - *Definition:* A Python-based optimization algorithm implementing mathematical and chemical formulas to compute feasible production settings, predictions, and plans for 24 to 48 hours in advance.
+  - *Aliases / Related:* N/A
+  - *Traceability:* [[Bellini_et_al_2022]]
+
+- **WYSIWYG Web-based SCADA**
+  - *Definition:* A web-based supervisory system where users construct application screens using drag-and-drop instrument icons and parameter configuration areas.
+  - *Aliases / Related:* Drag-and-drop interface
+  - *Traceability:* [[Guo_et_al_2022]]
+
+- **Substation Configuration Description (SCD) File**
+  - *Definition:* A text file created using substation configuration language (SCL) in XML format that contains the description of primary equipment, its location, connections, control and protection functions, and signals.
+  - *Aliases / Related:* SCD File
+  - *Traceability:* [[Dobrokhotov_et_al_2025]]
+
+- **SyTrack SCADA System**
+  - *Definition:* A SCADA system utilizing SVG format for describing mnemonic diagrams and dynamicizing their elements based on signal connections.
+  - *Aliases / Related:* N/A
+  - *Traceability:* [[Dobrokhotov_et_al_2025]]
+
+- **Pipeline**
+  - *Definition:* A continuous processing and automation graph executed in a dedicated thread to evaluate alarms, convert raw values into physical quantities, and execute control logic on sensor streams.
+  - *Aliases / Related:* N/A
+  - *Traceability:* [[Grigat_et_al_2026]]
+
+- **Doberview**
+  - *Definition:* A web-based graphical user interface built on Node.js and Bootstrap providing live visualization, historical data inspection, and interactive configuration tools.
+  - *Aliases / Related:* N/A
+  - *Traceability:* [[Grigat_et_al_2026]]
+
+- **IMetaData Interface**
+  - *Definition:* An object-oriented interface declared in the symbol system that extracts metadata information from protocol driver classes during symbol construction.
+  - *Aliases / Related:* N/A
+  - *Traceability:* [[Jiao_et_al_2018]]
+
+- **IDataParser Interface**
+  - *Definition:* An object-oriented interface executing on the server side that deserializes incoming raw geo-sensor data frames into lightweight JSON format for real-time processing and visualization.
+  - *Aliases / Related:* N/A
+  - *Traceability:* [[Jiao_et_al_2018]]
+
+- **Local HMI**
+  - *Definition:* A supervisory interface developed to provide direct read access to PLC memory and animated process visualizations.
+  - *Aliases / Related:* N/A
+  - *Traceability:* [[Villamar_et_al_2025]]
+
+- **Remote HMI**
+  - *Definition:* A web-based supervisory interface that mirrors local monitoring by retrieving process state from a database via REST APIs.
+  - *Aliases / Related:* N/A
+  - *Traceability:* [[Villamar_et_al_2025]]
+
+### Situational Awareness & Cognitive Ergonomics
+
+- **Information Presentation Speed**
+  - *Definition:* The movement velocity (measured in degrees of visual angle per second, °/s) of dynamic visual elements and graphics across a supervisory control and data acquisition interface display.
+  - *Aliases / Related:* N/A
+  - *Traceability:* [[Tong_et_al_2026]]
+
+- **Situation Awareness Rating Technique (SART)**
+  - *Definition:* A subjective self-assessment rating scale that evaluates an operator's situational awareness across attentional demand, attentional supply, and understanding dimensions.
+  - *Aliases / Related:* SART
+  - *Traceability:* [[Tong_et_al_2026]]
+
+- **Blink Rate**
+  - *Definition:* An ocular metric calculating the number of eye blinks per minute to assess operator visual fatigue and attentional strain during dynamic visual monitoring.
+  - *Aliases / Related:* N/A
+  - *Traceability:* [[Tong_et_al_2026]]
+
+- **Critical Flicker Fusion (CFF)**
+  - *Definition:* A physiological threshold measuring the temporal resolution of the visual system that decreases as visual fatigue accumulates during display tasks.
+  - *Aliases / Related:* CFF
+  - *Traceability:* [[Tong_et_al_2026]]
+
+- **ALARMS**
+  - *Definition:* A modular multi-agent framework mapping Endsley’s Situational Awareness levels and IDA macrocognition to specialized cognitive agents drawing on Signal Detection Theory and vigilance research.
+  - *Aliases / Related:* N/A
+  - *Traceability:* [[Verdejo_et_al_2026]]
+
+- **Cognitive Mirror**
+  - *Definition:* An AI agent paradigm designed to explicitly support human metacognition, reflect and challenge operator reasoning, and maintain human oversight to prevent deskilling and automation bias.
+  - *Aliases / Related:* N/A
+  - *Traceability:* [[Verdejo_et_al_2026]]
+
+- **Analysis Agent**
+  - *Definition:* An agent implementing Level 1 and lower-Level 2 situation awareness by transforming heterogeneous sensor and log data into a machine- and human-consumable 5W+H situation model.
+  - *Aliases / Related:* N/A
+  - *Traceability:* [[Verdejo_et_al_2026]]
+
+- **Locutor Agent**
+  - *Definition:* The primary human-AI interface operating as a cognitive mirror, combining LLM-based natural language understanding/generation and XAI to generate situation reports and challenge operator assumptions.
+  - *Aliases / Related:* N/A
+  - *Traceability:* [[Verdejo_et_al_2026]]
+
+- **Anticipation Agent**
+  - *Definition:* An agent implementing Level 3 situation awareness and weak-signal analysis by learning baselines of normal behavior and detecting explicit anomalies as well as absences of expected events.
+  - *Aliases / Related:* N/A
+  - *Traceability:* [[Verdejo_et_al_2026]]
+
+- **Risk Manager Agent**
+  - *Definition:* An agent embodying decision support by mapping events and anomalies onto critical assets, computing probabilistic risk, and generating structured mitigation recommendations.
+  - *Aliases / Related:* N/A
+  - *Traceability:* [[Verdejo_et_al_2026]]
+
+- **Simulation Agent**
+  - *Definition:* An agent operationalizing operational testing, what-if analysis, and operator training using discrete-event, agent-based, or digital-twin simulation.
+  - *Aliases / Related:* N/A
+  - *Traceability:* [[Verdejo_et_al_2026]]
+
+### Web Runtime & Communication Architecture
+
+- **IoT App**
+  - *Definition:* Node.js processes developed in Node-RED using Snap4City MicroServices that run on IoT Edge, Cloud, or mobile devices to execute data ingestion, workflows, data analytics, and user interface business logic.
+  - *Aliases / Related:* N/A
+  - *Traceability:* [[Bellini_et_al_2022]]
+
+- **MQTT Protocol**
+  - *Definition:* A lightweight Publish/Subscribe messaging protocol designed for IoT environments with low power consumption and limited network bandwidth that routes messages through a central broker.
+  - *Aliases / Related:* MQ telemetry transport
+  - *Traceability:* [[Guo_et_al_2022]]
+
+- **Four-Level MQTT Topic Structure**
+  - *Definition:* A hierarchical topic taxonomy comprising MQTT serial number, Device name, Input/output direction, and Data type layers to organize multi-controller messages.
+  - *Aliases / Related:* N/A
+  - *Traceability:* [[Guo_et_al_2022]]
+
+- **Doberman**
+  - *Definition:* A lightweight, modular, and open-source slow control system designed for small- to medium-scale physics experiments.
+  - *Aliases / Related:* N/A
+  - *Traceability:* [[Grigat_et_al_2026]]
+
+- **Monitor**
+  - *Definition:* The fundamental software building block in Doberman that manages multiple threads executing tasks independently and sleeping for configurable intervals.
+  - *Aliases / Related:* N/A
+  - *Traceability:* [[Grigat_et_al_2026]]
+
+- **Hypervisor**
+  - *Definition:* The central coordinating Monitor process that supervises component health, routes inter-component commands via publish-subscribe messaging, and mediates sensor data distribution.
+  - *Aliases / Related:* N/A
+  - *Traceability:* [[Grigat_et_al_2026]]
+
+- **Geo-Sensor Message Broker**
+  - *Definition:* A server-side communication middleware providing data acquisition and transfer services to bridge remote geo-sensors and map clients for real-time data visualization.
+  - *Aliases / Related:* N/A
+  - *Traceability:* [[Jiao_et_al_2018]]
+
+- **Spatial-Communication Protocol**
+  - *Definition:* A full-duplex JSON-based communication protocol operating over Socket or WebSocket that synchronizes map clients and the message broker through bounding box updates and filtered sensor data pushes.
+  - *Aliases / Related:* N/A
+  - *Traceability:* [[Jiao_et_al_2018]]
+
+- **Digital Twin (DT)**
+  - *Definition:* An up-to-date virtual representation of a physical object or process with two-way data communication used for monitoring, simulation, and optimization.
+  - *Aliases / Related:* DT
+  - *Traceability:* [[Koltsova_et_al_2026]]
+
+- **Composite Architecture**
+  - *Definition:* A software architecture constructed from a set of loosely coupled, independently developed, deployed, and scalable components that interact exclusively through clearly defined interfaces.
+  - *Aliases / Related:* N/A
+  - *Traceability:* [[Koltsova_et_al_2026]]
+
+- **Unified Data Exchange Subsystem**
+  - *Definition:* An architectural component serving as an API gateway that abstracts disparate systems, introduces persistent versioned contracts, and ensures a consistent interaction environment without taking ownership of subject data.
+  - *Aliases / Related:* N/A
+  - *Traceability:* [[Koltsova_et_al_2026]]
+
+- **High Internal Cohesion and Loose External Coupling**
+  - *Definition:* Architectural principles where a component internally groups functions sharing a common responsibility and lifecycle, while externally interacting through a limited set of explicit contracts independent of internal implementations.
+  - *Aliases / Related:* N/A
+  - *Traceability:* [[Koltsova_et_al_2026]]
+
+- **Cyber-Physical Production Systems (CPPS)**
+  - *Definition:* Smart manufacturing environments where digital technologies integrate to enable autonomous decision-making and adaptive control.
+  - *Aliases / Related:* CPPS
+  - *Traceability:* [[Villamar_et_al_2025]]
+
+- **Hybrid IIoT Architecture**
+  - *Definition:* An architecture coupling a virtual process simulation with physical industrial equipment driven by a PLC to enable modular monitoring and control.
+  - *Aliases / Related:* N/A
+  - *Traceability:* [[Villamar_et_al_2025]]
+

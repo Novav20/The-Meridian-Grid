@@ -1,7 +1,7 @@
 # Project-Specific
 temp/
 docs/01-PM-Project-Management/Search-Exports
-docs/01-PM-Project-Management/prompts
+docs/01-PM-Project-Management/Prompts
 
 # Obsidian Local Workspace (Prevents committing UI layout/tabs)
 .obsidian/workspace

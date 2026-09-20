@@ -64,6 +64,7 @@ def parse_raw_blocks(content: str) -> list[dict]:
     for i in range(1, len(chunks), 2):
         frontmatter = chunks[i].strip()
         body = chunks[i + 1].strip() if i + 1 < len(chunks) else ""
+        body = body.rstrip("`").strip()
 
         # Extract title key from block header
         title_match = re.search(
@@ -78,9 +79,11 @@ def parse_raw_blocks(content: str) -> list[dict]:
 
 def match_paper(title: str, df: pd.DataFrame) -> pd.Series:
     known_titles = df["Title"].dropna().astype(str).tolist()
-    matches = difflib.get_close_matches(title, known_titles, n=1, cutoff=0.65)
+    known_titles_lower = [t.lower() for t in known_titles]
+    matches = difflib.get_close_matches(title.lower(), known_titles_lower, n=1, cutoff=0.65)
     if matches:
-        return df[df["Title"] == matches[0]].iloc[0]
+        index = known_titles_lower.index(matches[0])
+        return df[df["Title"] == known_titles[index]].iloc[0]
     return None
 
 
