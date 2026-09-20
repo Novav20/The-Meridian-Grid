@@ -144,10 +144,6 @@ This document defines the ubiquitous language for the **Data Transport & Semanti
   - *Traceability:* [[Narayanan_et_al_2026]]
 
 ---
-## Bounded Context: Visualization & Low-Code HMI (Sub-RQ 2) 
-### Rendering & Visual Models 
-### Dynamic Layout & Declarative Schemas
----
 
 ## Bounded Context: Visualization & Low-Code HMI (Sub-RQ 2)
 
