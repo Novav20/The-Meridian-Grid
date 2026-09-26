@@ -16,7 +16,7 @@ import unicodedata
 import openpyxl
 from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
 
-DEFAULT_PROMPTS_DIR = "docs/01-PM-Project-Management/prompts"
+DEFAULT_PROMPTS_DIR = "docs/01-PM-Project-Management/Prompts"
 DEFAULT_EXCEL_PATH = "docs/01-PM-Project-Management/LLM-Prompt-Log.xlsx"
 SHEET_NAME = "Prompt_Log"
 

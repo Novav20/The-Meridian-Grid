@@ -10,7 +10,7 @@
 
 ## 2. LLM Prompt Governance Policy
 
-A prompt MUST be saved as a Markdown file in `prompts/*.md` and tracked in `LLM-Prompt-Log.xlsx` IF AND ONLY IF it satisfies at least one criterion:
+A prompt MUST be saved as a Markdown file in `Prompts/*.md` and tracked in `LLM-Prompt-Log.xlsx` IF AND ONLY IF it satisfies at least one criterion:
 - **Artifact Generation:** Produces an ISO 29110 work product (Extractions, Ubiquitous Language, Context Maps, ADRs, Schemas).
 - **Quality Gate / Audit:** Executes a formal verification, screening, or grounding check.
 - **Reusable Automation:** Designed for repeated execution across iterations (e.g., Sub-RQ 1, Sub-RQ 2).
