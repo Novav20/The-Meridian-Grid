@@ -3,24 +3,26 @@
 ## 1. Visual Context Map Diagram
 
 ```mermaid
-graph LR
+graph TB
     classDef core fill:#e24a33,stroke:#333,stroke-width:2px,color:#fff
     classDef generic fill:#348ABD,stroke:#333,stroke-width:2px,color:#fff
     classDef supporting fill:#988ED5,stroke:#333,stroke-width:2px,color:#fff
 
-    subgraph BC1 [Bounded Context: Data Transport & Semantics]
-        A[Telemetry Routing<br/><small>Core</small>]:::core
-        B[Time-Series Storage<br/><small>Generic</small>]:::generic
-        C[Edge Device Management<br/><small>Supporting</small>]:::supporting
+    subgraph BC1 ["Bounded Context: Data Transport & Semantics (Upstream)"]
+        direction TB
+        A["Telemetry Routing<br/><small>Core</small>"]:::core
+        B["Time-Series Storage<br/><small>Generic</small>"]:::generic
+        C["Edge Device Management<br/><small>Supporting</small>"]:::supporting
     end
 
-    subgraph BC2 [Bounded Context: Visualization & Low-Code HMI]
-        D[Dynamic Dashboard Engine<br/><small>Core</small>]:::core
-        E[Cognitive Mirroring<br/><small>Core</small>]:::core
-        F[Spatial & Visual Processing<br/><small>Supporting</small>]:::supporting
+    subgraph BC2 ["Bounded Context: Visualization & Low-Code HMI (Downstream)"]
+        direction TB
+        D["Dynamic Dashboard Engine<br/><small>Core</small>"]:::core
+        E["Cognitive Mirroring<br/><small>Core</small>"]:::core
+        F["Spatial & Visual Processing<br/><small>Supporting</small>"]:::supporting
     end
 
-    BC1 -->|"Upstream [U]<br>[OHS / PL]"| BC2
+    BC1 -->|"Customer-Supplier (OHS / PL)<br/>Hot: WSS | Cold: HTTPS"| BC2
 ```
 
 ## 2. Bounded Context Registry

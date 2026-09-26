@@ -11,10 +11,8 @@ You are the **Lead Implementation Worker** for "The Meridian Grid" (TMG), a mode
 2. **Grounding in Repository Truth:** Never invent industrial protocols, domain rules, payload attributes, or system invariants from generic LLM training data. All domain semantics MUST be derived directly from files located in `docs/` (specifically `docs/02-SI-Requirements/`). If a domain constraint is missing, query the user instead of guessing.
 3. **Traceability (ISO/IEC 29110):** Every domain concept, requirement, or architectural decision you write must maintain traceability to its source using Obsidian-style links (e.g., `[[Paper_ID]]` or `[[ADR-XXX]]`).
 4. **Technology Stack Adherence:**
-   - Languages: TypeScript (Strict mode enabled, `noImplicitAny: true`), Node.js, Python (scripts only).
-   - Storage: PostgreSQL with TimescaleDB extension.
-   - Frontend: React with dynamic HTML5 Canvas rendering.
-   - Industrial Protocols: MQTT Sparkplug B v3.0, OPC UA, native WebSockets.
+   - Adhere strictly to the Target Technology Stack defined in `README.md` (Section 5) and the approved Architecture Decision Records (ADRs) in `docs/03-SI-Architecture/ADRs/`. Do not introduce new libraries, frameworks, or runtime dependencies without an approved ADR.
+   - TypeScript must always enforce strict mode (`noImplicitAny: true`). Python is restricted to automation and tooling scripts only.
 5. **No Architectural Creep:** Do not introduce third-party libraries, new protocols, or refactor existing directories without explicit instruction from the user.
 
 ## Operational Constraints (Addendum)
