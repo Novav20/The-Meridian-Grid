@@ -98,7 +98,31 @@ The following technologies represent the baseline architectural candidates for t
 
 ---
 
-## 6. Project Lifecycle Status
+## 6. Cross-Platform Git Setup
+
+The repository normalizes text files to LF and keeps binary files untouched through
+[`.gitattributes`](.gitattributes). This prevents line-ending-only changes when moving
+between Windows and Unix-like systems such as Fedora or Manjaro.
+
+On Windows, Git may not preserve executable-bit changes on the working tree. This
+repository therefore tracks the executable bit only for scripts that are intended to
+be launched directly. Run Python scripts explicitly with `python` as shown in
+[`scripts/README.md`](scripts/README.md).
+
+If Git reports permission-only changes after moving the repository between operating
+systems, use:
+
+```bash
+git config core.filemode false
+git status
+```
+
+Do not disable this setting globally if other repositories require executable-bit
+tracking.
+
+---
+
+## 7. Project Lifecycle Status
 
 - [x] **Phase 1: Problem Space & Domain Requirements (SI.2)**
   - Systematic Literature Reviews complete (`Q01`: Transport & Semantics, `Q02/Q03`: Visualization & HMI).
