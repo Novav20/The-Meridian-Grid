@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="720" viewBox="0 0 880 720" role="img" aria-labelledby="title desc">
+  <title id="title">MAI anatomy — light theme (Control Room / 500 lux)</title>
+  <desc id="desc">Moving Analog Indicator anatomy: normal-zone-only track, invariant neutral PV pointer, hollow setpoint chevron, deviation bracket, alarm-limit notches, ESD interlock cap and reserved Method 3 alarm slots (shape + digit) rendered only on activation.</desc>
+  <rect x="0.0" y="0.0" width="880.0" height="720.0" rx="12" fill="#D8DBE0" stroke="none" stroke-width="1" />
+  <text x="440.0" y="38.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#111827" text-anchor="middle" >Moving Analog Indicator (MAI) — Anatomy · Control Room / 500 lux</text>
+  <text x="440.0" y="59.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#4B5563" text-anchor="middle" >ANSI/ISA-101.01-2015 · Hollifield HPHMI Handbook — PT-101 Slurry Header Pressure</text>
+  <rect x="30.0" y="75.0" width="820.0" height="615.0" rx="8" fill="#E5E8EC" stroke="#B8C0CC" stroke-width="1" />
+  <rect x="435.0" y="130.0" width="10.0" height="460.0" rx="5" fill="#B8C0CC" stroke="#9CA3AF" stroke-width="1" />
+  <rect x="435.0" y="222.0" width="10.0" height="245.3" rx="2" fill="#BAE6FD" stroke="none" stroke-width="1" />
+  <rect x="433.0" y="124.0" width="14.0" height="8.0" rx="2" fill="#111827" stroke="none" stroke-width="1" />
+  <line x1="432.0" y1="544.0" x2="448.0" y2="544.0" stroke="#111827" stroke-width="2" />
+  <line x1="432.0" y1="498.0" x2="448.0" y2="498.0" stroke="#111827" stroke-width="2" />
+  <line x1="432.0" y1="197.5" x2="448.0" y2="197.5" stroke="#111827" stroke-width="2" />
+  <line x1="432.0" y1="166.8" x2="448.0" y2="166.8" stroke="#111827" stroke-width="2" />
+  <line x1="415.0" y1="590.0" x2="433.0" y2="590.0" stroke="#4B5563" stroke-width="1.5" />
+  <text x="408.0" y="595.0" font-family="Cascadia Code, SF Mono, Consolas, DejaVu Sans Mono, monospace" font-size="13" font-weight="600" fill="#111827" text-anchor="end" >0.0</text>
+  <line x1="415.0" y1="467.3" x2="433.0" y2="467.3" stroke="#4B5563" stroke-width="1.5" />
+  <text x="408.0" y="472.3" font-family="Cascadia Code, SF Mono, Consolas, DejaVu Sans Mono, monospace" font-size="13" font-weight="600" fill="#111827" text-anchor="end" >40.0</text>
+  <line x1="415.0" y1="222.0" x2="433.0" y2="222.0" stroke="#4B5563" stroke-width="1.5" />
+  <text x="408.0" y="227.0" font-family="Cascadia Code, SF Mono, Consolas, DejaVu Sans Mono, monospace" font-size="13" font-weight="600" fill="#111827" text-anchor="end" >120.0</text>
+  <text x="440.0" y="616.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#4B5563" text-anchor="middle" >Instrument scale (PSI) · 0.0 – 150.0</text>
+  <polygon points="433.0,375.3 421.3,368.1 421.3,382.5" fill="#D8DBE0" stroke="#111827" stroke-width="1.6" stroke-linejoin="round" />
+  <line x1="449.0" y1="375.3" x2="510.0" y2="375.3" stroke="#6B7280" stroke-width="1" stroke-dasharray="2 3" />
+  <path d="M504,328.4 H510 V375.3 H504" fill="none" stroke="#111827" stroke-width="1.3" />
+  <text x="518.0" y="356.9" font-family="Cascadia Code, SF Mono, Consolas, DejaVu Sans Mono, monospace" font-size="12" font-weight="600" fill="#111827" text-anchor="start" >Δ +15.3</text>
+  <polyline points="449.0,328.4 588.0,328.4" fill="none" stroke="#6B7280" stroke-width="1" stroke-linejoin="round" stroke-dasharray="4 4" opacity="0.85"/>
+  <circle cx="449.0" cy="328.4" r="2.2" fill="#6B7280" stroke="none" stroke-width="1" />
+  <circle cx="440.0" cy="328.4" r="8" fill="#111827" stroke="#FFFFFF" stroke-width="2" />
+  <line x1="449.0" y1="166.8" x2="470.0" y2="166.8" stroke="#6B7280" stroke-width="1" stroke-dasharray="2 3" />
+  <g opacity="0.32"><rect x="473.0" y="153.8" width="26" height="26" rx="4" fill="#E63946" stroke="#111827" stroke-width="1"/><text x="486.0" y="172.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="14.0" font-weight="900" fill="#FFFFFF" text-anchor="middle">1</text></g>
+  <line x1="449.0" y1="498.0" x2="470.0" y2="498.0" stroke="#6B7280" stroke-width="1" stroke-dasharray="2 3" />
+  <g opacity="0.32"><polygon points="486.0,481.1 500.3,509.5 471.7,509.5" fill="#AC5E04" stroke="#111827" stroke-width="1" stroke-linejoin="round"/><text x="486.0" y="506.8" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="14.0" font-weight="900" fill="#FFFFFF" text-anchor="middle">2</text></g>
+  <rect x="50.0" y="98.0" width="262.0" height="60.0" rx="6" fill="#F4F5F7" stroke="#6B7280" stroke-width="1" />
+  <text x="64.0" y="119.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#111827" text-anchor="start" >ESD Interlock Cap</text>
+  <text x="64.0" y="137.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#4B5563" text-anchor="start" >Automatic trip @ 150.0 PSI (SIS)</text>
+  <text x="64.0" y="153.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#4B5563" text-anchor="start" >Solid block — not an alarm color</text>
+  <polyline points="432.0,128.0 312.0,128.0" fill="none" stroke="#6B7280" stroke-width="1" stroke-linejoin="round" stroke-dasharray="4 4" opacity="0.85"/>
+  <circle cx="432.0" cy="128.0" r="2.2" fill="#6B7280" stroke="none" stroke-width="1" />
+  <rect x="50.0" y="224.0" width="262.0" height="76.0" rx="6" fill="#F4F5F7" stroke="#0284C7" stroke-width="1.5" />
+  <text x="64.0" y="245.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#0284C7" text-anchor="start" >Normal Operating Zone</text>
+  <text x="64.0" y="263.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#4B5563" text-anchor="start" >The ONLY filled band on the track</text>
+  <text x="64.0" y="280.0" font-family="Cascadia Code, SF Mono, Consolas, DejaVu Sans Mono, monospace" font-size="13" font-weight="600" fill="#111827" text-anchor="start" >40.0 – 120.0 PSI</text>
+  <polyline points="435.0,262.0 312.0,262.0" fill="none" stroke="#6B7280" stroke-width="1" stroke-linejoin="round" stroke-dasharray="4 4" opacity="0.85"/>
+  <circle cx="435.0" cy="262.0" r="2.2" fill="#6B7280" stroke="none" stroke-width="1" />
+  <rect x="50.0" y="337.3" width="262.0" height="76.0" rx="6" fill="#F4F5F7" stroke="#6B7280" stroke-width="1" />
+  <text x="64.0" y="358.3" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#111827" text-anchor="start" >Setpoint Marker (SP)</text>
+  <text x="64.0" y="376.3" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#4B5563" text-anchor="start" >Hollow chevron, opposite side to PV</text>
+  <text x="64.0" y="393.3" font-family="Cascadia Code, SF Mono, Consolas, DejaVu Sans Mono, monospace" font-size="13" font-weight="600" fill="#111827" text-anchor="start" >SP = 70.0 PSI</text>
+  <polyline points="419.0,375.3 312.0,375.3" fill="none" stroke="#6B7280" stroke-width="1" stroke-linejoin="round" stroke-dasharray="4 4" opacity="0.85"/>
+  <circle cx="419.0" cy="375.3" r="2.2" fill="#6B7280" stroke="none" stroke-width="1" />
+  <rect x="50.0" y="474.0" width="262.0" height="92.0" rx="6" fill="#F4F5F7" stroke="#6B7280" stroke-width="1" />
+  <text x="64.0" y="495.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#111827" text-anchor="start" >Alarm-Limit Notches</text>
+  <text x="64.0" y="513.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#4B5563" text-anchor="start" >Thin marks across the track —</text>
+  <text x="64.0" y="529.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#4B5563" text-anchor="start" >no red/amber bands painted</text>
+  <text x="64.0" y="546.0" font-family="Cascadia Code, SF Mono, Consolas, DejaVu Sans Mono, monospace" font-size="13" font-weight="600" fill="#111827" text-anchor="start" >LL 15 · L 30 · H 128 · HH 138</text>
+  <polyline points="432.0,498.0 352.0,498.0 312.0,512.0" fill="none" stroke="#6B7280" stroke-width="1" stroke-linejoin="round" stroke-dasharray="4 4" opacity="0.85"/>
+  <circle cx="432.0" cy="498.0" r="2.2" fill="#6B7280" stroke="none" stroke-width="1" />
+  <rect x="588.0" y="136.8" width="236.0" height="60.0" rx="6" fill="#F4F5F7" stroke="#E63946" stroke-width="1.5" stroke-dasharray="5 3"/>
+  <text x="602.0" y="157.8" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#E63946" text-anchor="start" >P1 Slot — HH 138.0</text>
+  <text x="602.0" y="175.8" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#4B5563" text-anchor="start" >Red square ‘1’ drawn only when</text>
+  <text x="602.0" y="191.8" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#4B5563" text-anchor="start" >active; pointer never recolors</text>
+  <polyline points="500.0,166.8 588.0,166.8" fill="none" stroke="#6B7280" stroke-width="1" stroke-linejoin="round" stroke-dasharray="4 4" opacity="0.85"/>
+  <circle cx="500.0" cy="166.8" r="2.2" fill="#6B7280" stroke="none" stroke-width="1" />
+  <rect x="588.0" y="284.4" width="236.0" height="104.0" rx="6" fill="#F4F5F7" stroke="#111827" stroke-width="1.5" />
+  <text x="602.0" y="305.4" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#111827" text-anchor="start" >PV Pointer (Invariant)</text>
+  <text x="602.0" y="323.4" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#4B5563" text-anchor="start" >Neutral circle: same shape/color</text>
+  <text x="602.0" y="339.4" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#4B5563" text-anchor="start" >in every state; position = value</text>
+  <text x="602.0" y="355.4" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#4B5563" text-anchor="start" >Δ = PV − SP (bracket)</text>
+  <text x="602.0" y="372.4" font-family="Cascadia Code, SF Mono, Consolas, DejaVu Sans Mono, monospace" font-size="13" font-weight="600" fill="#111827" text-anchor="start" >85.3 PSI</text>
+  <text x="810.0" y="372.4" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#0D9488" text-anchor="end" >NORMAL</text>
+  <rect x="588.0" y="468.0" width="236.0" height="60.0" rx="6" fill="#F4F5F7" stroke="#AC5E04" stroke-width="1.5" stroke-dasharray="5 3"/>
+  <text x="602.0" y="489.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#AC5E04" text-anchor="start" >P2 Slot — L 30.0</text>
+  <text x="602.0" y="507.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#4B5563" text-anchor="start" >Amber triangle ‘2’ on activation</text>
+  <text x="602.0" y="523.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#4B5563" text-anchor="start" >beside — never inside — the track</text>
+  <polyline points="500.0,498.0 588.0,498.0" fill="none" stroke="#6B7280" stroke-width="1" stroke-linejoin="round" stroke-dasharray="4 4" opacity="0.85"/>
+  <circle cx="500.0" cy="498.0" r="2.2" fill="#6B7280" stroke="none" stroke-width="1" />
+  <rect x="50.0" y="640.0" width="780.0" height="32.0" rx="4" fill="#F4F5F7" stroke="none" stroke-width="1" />
+  <text x="66.0" y="660.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#4B5563">✓ <tspan font-weight="700" fill="#111827">ISA-101.01:</tspan> normal zone only, no colored bands</text>
+  <text x="396.0" y="660.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#4B5563">✓ <tspan font-weight="700" fill="#111827">Pointer vs zone:</tspan> 13.4:1</text>
+  <text x="596.0" y="660.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#4B5563">✓ <tspan font-weight="700" fill="#111827">Digit contrast:</tspan> P1 4.2:1 · P2 4.8:1</text>
+</svg>

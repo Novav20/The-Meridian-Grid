@@ -1,0 +1,147 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1260 840" width="100%" height="100%" style="background:#16191F; font-family: Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif;">
+  <defs>
+    <marker id="arr-blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#388bfd" />
+    </marker>
+    <marker id="arr-green" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#3fb950" />
+    </marker>
+    <marker id="arr-red" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#ff7b72" />
+    </marker>
+  </defs>
+  <rect width="1260" height="840" rx="12" fill="#16191F" stroke="#30363D" stroke-width="1.5" class="bg" />
+  <text x="630" y="36" fill="#F0F6FC" font-size="19" font-weight="700" text-anchor="middle">Web SCADA Motion Governor Architecture &amp; Retinal Scaling</text>
+  <text x="630" y="58" fill="#8B949E" font-size="12" text-anchor="middle">Real-Time Telemetry Normalization, Viewport Geometry Profiling &amp; Retinal Angular Velocity Clamping</text>
+  <rect x="30" y="82" width="1200" height="240" rx="8" fill="#1E222B" stroke="#30363D" stroke-width="1.2" />
+  <rect x="46" y="96" width="340" height="26" rx="4" fill="#16191F" stroke="#388bfd" stroke-width="1.2" />
+  <text x="54" y="113" fill="#79c0ff" font-size="11" font-weight="700">1. RETINAL VELOCITY GOVERNOR PIPELINE</text>
+  <text x="400" y="113" fill="#8B949E" font-size="10.5">End-to-End Field-to-Retina Architecture</text>
+  <rect x="46" y="134" width="281" height="170" rx="6" fill="#16191F" stroke="#30363D" stroke-width="1" />
+  <rect x="56" y="144" width="261" height="22" rx="3" fill="#0D1B2A" stroke="#388bfd" stroke-width="0.8" />
+  <text x="186" y="159" fill="#79c0ff" font-size="10" font-weight="700" text-anchor="middle">STAGE 1: TELEMETRY</text>
+  <text x="58" y="182" fill="#C9D1D9" font-size="9.5" font-weight="700">• MQTT 4-Level Topics:</text>
+  <text x="62" y="198" fill="#79c0ff" font-size="8.5" font-family="monospace">01/stm32/data/agv_pose</text>
+  <text x="58" y="216" fill="#C9D1D9" font-size="9.5" font-weight="700">• Physical Field Speeds:</text>
+  <text x="62" y="232" fill="#8B949E" font-size="8.5">AGV: v = 1.8 m/s (Guo et al.)</text>
+  <text x="62" y="246" fill="#8B949E" font-size="8.5">Pipe flow: Q = 4.2 m/s</text>
+  <text x="58" y="268" fill="#C9D1D9" font-size="9.5" font-weight="700">• Protobuf / JSON Ingestion</text>
+  <text x="62" y="284" fill="#8B949E" font-size="8.5">Rate: 50 Hz streaming</text>
+  <line x1="329" y1="219" x2="339" y2="219" stroke="#388bfd" stroke-width="2" marker-end="url(#arr-blue)" />
+  <rect x="341" y="134" width="281" height="170" rx="6" fill="#16191F" stroke="#30363D" stroke-width="1" />
+  <rect x="351" y="144" width="261" height="22" rx="3" fill="#0D1B2A" stroke="#388bfd" stroke-width="0.8" />
+  <text x="481" y="159" fill="#79c0ff" font-size="10" font-weight="700" text-anchor="middle">STAGE 2: VIEWPORT PROFILER</text>
+  <text x="353" y="182" fill="#C9D1D9" font-size="9.5" font-weight="700">• Client Metrics Ingestion:</text>
+  <text x="357" y="198" fill="#8B949E" font-size="8.5">Device Pixel Ratio (DPR)</text>
+  <text x="357" y="212" fill="#8B949E" font-size="8.5">Screen Pitch: p = 0.276 mm/px</text>
+  <text x="353" y="232" fill="#C9D1D9" font-size="9.5" font-weight="700">• Viewing Distance D:</text>
+  <text x="357" y="248" fill="#8B949E" font-size="8.5">Console: D = 650 mm</text>
+  <text x="357" y="262" fill="#8B949E" font-size="8.5">Video Wall: D = 2200 mm</text>
+  <text x="353" y="284" fill="#3fb950" font-size="8.5" font-weight="700">✓ Calibrates Optical Geometry</text>
+  <line x1="624" y1="219" x2="634" y2="219" stroke="#388bfd" stroke-width="2" marker-end="url(#arr-blue)" />
+  <rect x="636" y="134" width="281" height="170" rx="6" fill="#14261C" stroke="#3fb950" stroke-width="1.4" />
+  <rect x="646" y="144" width="261" height="22" rx="3" fill="#1B3A2A" stroke="#3fb950" stroke-width="0.8" />
+  <text x="776" y="159" fill="#3fb950" font-size="10" font-weight="700" text-anchor="middle">STAGE 3: MOTION GOVERNOR</text>
+  <text x="648" y="182" fill="#E6EDF3" font-size="9.5" font-weight="700">• Retinal Velocity Filter:</text>
+  <text x="652" y="198" fill="#3fb950" font-size="8.5" font-weight="700">Clamp: 4°/s ≤ ω ≤ 12°/s</text>
+  <text x="648" y="216" fill="#E6EDF3" font-size="9.5" font-weight="700">• High-Speed Defense:</text>
+  <text x="652" y="232" fill="#C9D1D9" font-size="8.5">If ω &gt; 16°/s: Hard Clamp</text>
+  <text x="652" y="246" fill="#ff7b72" font-size="8.5" font-weight="700">Enforce Strobe Fallback</text>
+  <text x="648" y="268" fill="#E6EDF3" font-size="9.5" font-weight="700">• Non-Linear Mapping:</text>
+  <text x="652" y="284" fill="#3fb950" font-size="8.5">Logarithmic Retinal Saccade Cap</text>
+  <line x1="919" y1="219" x2="929" y2="219" stroke="#3fb950" stroke-width="2" marker-end="url(#arr-green)" />
+  <rect x="931" y="134" width="281" height="170" rx="6" fill="#16191F" stroke="#30363D" stroke-width="1" />
+  <rect x="941" y="144" width="261" height="22" rx="3" fill="#0D1B2A" stroke="#388bfd" stroke-width="0.8" />
+  <text x="1071" y="159" fill="#79c0ff" font-size="10" font-weight="700" text-anchor="middle">STAGE 4: GPU RENDER &amp; AUDIT</text>
+  <text x="943" y="182" fill="#C9D1D9" font-size="9.5" font-weight="700">• OffscreenCanvas Worker:</text>
+  <text x="947" y="198" fill="#8B949E" font-size="8.5">Zero UI Main-Thread Jitter</text>
+  <text x="943" y="216" fill="#C9D1D9" font-size="9.5" font-weight="700">• GPU CSS Transforms:</text>
+  <text x="947" y="232" fill="#79c0ff" font-size="8.5" font-family="monospace">translate3d(x, y, 0)</text>
+  <text x="943" y="254" fill="#C9D1D9" font-size="9.5" font-weight="700">• SOE Event Audit Log:</text>
+  <text x="947" y="270" fill="#8B949E" font-size="8.5">IEC 62443 Clamping Hash</text>
+  <text x="943" y="286" fill="#3fb950" font-size="8.5" font-weight="700">✓ 60 FPS Jitter-Free Canvas</text>
+  <rect x="30" y="335" width="580" height="435" rx="8" fill="#1E222B" stroke="#30363D" stroke-width="1.2" />
+  <rect x="46" y="349" width="340" height="26" rx="4" fill="#16191F" stroke="#388bfd" stroke-width="1.2" />
+  <text x="54" y="366" fill="#79c0ff" font-size="11" font-weight="700">2. TYPESCRIPT MOTION GOVERNOR ENGINE</text>
+  <text x="400" y="366" fill="#8B949E" font-size="10.5">Strict Runtime Contract</text>
+  <rect x="46" y="383" width="548" height="371" rx="6" fill="#0D1117" stroke="#30363D" stroke-width="1" />
+  <text x="58" y="403.0" fill="#58a6ff" font-size="8.8" font-family="monospace">export interface ViewportProfile {</text>
+  <text x="58" y="417.5" fill="#8b949e" font-size="8.8" font-family="monospace">  viewingDistanceMm: number; // e.g. 650 mm console</text>
+  <text x="58" y="432.0" fill="#8b949e" font-size="8.8" font-family="monospace">  pixelPitchMm: number;      // e.g. 0.276 mm/pixel</text>
+  <text x="58" y="446.5" fill="#58a6ff" font-size="8.8" font-family="monospace">}</text>
+  <text x="58" y="461.0" fill="" font-size="8.8" font-family="monospace"></text>
+  <text x="58" y="475.5" fill="#58a6ff" font-size="8.8" font-family="monospace">export class RetinalMotionGovernor {</text>
+  <text x="58" y="490.0" fill="#3fb950" font-size="8.8" font-family="monospace">  private readonly MIN_OMEGA = 4.0;  // 4°/s lower bound</text>
+  <text x="58" y="504.5" fill="#3fb950" font-size="8.8" font-family="monospace">  private readonly MAX_OMEGA = 12.0; // 12°/s upper bound</text>
+  <text x="58" y="519.0" fill="#ff7b72" font-size="8.8" font-family="monospace">  private readonly DANGER_CEIL = 16.0; // &gt;16°/s hard clamp</text>
+  <text x="58" y="533.5" fill="" font-size="8.8" font-family="monospace"></text>
+  <text x="58" y="548.0" fill="#79c0ff" font-size="8.8" font-family="monospace">  public computeClampedVelocity(</text>
+  <text x="58" y="562.5" fill="#e6edf3" font-size="8.8" font-family="monospace">    physSpeedMmPerSec: number,</text>
+  <text x="58" y="577.0" fill="#e6edf3" font-size="8.8" font-family="monospace">    profile: ViewportProfile</text>
+  <text x="58" y="591.5" fill="#79c0ff" font-size="8.8" font-family="monospace">  ): { omegaDegPerSec: number; renderPxPerSec: number; strobe: boolean } {</text>
+  <text x="58" y="606.0" fill="#c9d1d9" font-size="8.8" font-family="monospace">    const D = profile.viewingDistanceMm;</text>
+  <text x="58" y="620.5" fill="#79c0ff" font-size="8.8" font-family="monospace">    const rawOmega = (180 / Math.PI) * (physSpeedMmPerSec / D);</text>
+  <text x="58" y="635.0" fill="" font-size="8.8" font-family="monospace"></text>
+  <text x="58" y="649.5" fill="#ff7b72" font-size="8.8" font-family="monospace">    if (rawOmega &gt;= this.DANGER_CEIL) {</text>
+  <text x="58" y="664.0" fill="#8b949e" font-size="8.8" font-family="monospace">      // Fallback: Discard continuous motion; render strobe pulse</text>
+  <text x="58" y="678.5" fill="#ff7b72" font-size="8.8" font-family="monospace">      return { omegaDegPerSec: this.MAX_OMEGA, renderPxPerSec: 0, strobe: true };</text>
+  <text x="58" y="693.0" fill="#ff7b72" font-size="8.8" font-family="monospace">    }</text>
+  <text x="58" y="707.5" fill="#3fb950" font-size="8.8" font-family="monospace">    const clamped = Math.max(this.MIN_OMEGA, Math.min(this.MAX_OMEGA, rawOmega));</text>
+  <text x="58" y="722.0" fill="#3fb950" font-size="8.8" font-family="monospace">    const renderPx = (clamped * (Math.PI / 180) * D) / profile.pixelPitchMm;</text>
+  <text x="58" y="736.5" fill="#c9d1d9" font-size="8.8" font-family="monospace">    return { omegaDegPerSec: clamped, renderPxPerSec: renderPx, strobe: false };</text>
+  <text x="58" y="751.0" fill="#79c0ff" font-size="8.8" font-family="monospace">  }</text>
+  <text x="58" y="765.5" fill="#58a6ff" font-size="8.8" font-family="monospace">}</text>
+  <rect x="630" y="335" width="600" height="435" rx="8" fill="#1E222B" stroke="#30363D" stroke-width="1.2" />
+  <rect x="646" y="349" width="340" height="26" rx="4" fill="#16191F" stroke="#388bfd" stroke-width="1.2" />
+  <text x="654" y="366" fill="#79c0ff" font-size="11" font-weight="700">3. ERGONOMIC GOVERNOR FALLBACK MODES</text>
+  <text x="1000" y="366" fill="#8B949E" font-size="10.5">ANSI/ISA-101.01 Compliance</text>
+  <rect x="646" y="385" width="568" height="225" rx="6" fill="#16191F" stroke="#30363D" stroke-width="1" />
+  <rect x="646" y="385" width="568" height="28" rx="4" fill="#0D1B2A" stroke="#388bfd" stroke-width="0.8" />
+  <text x="658" y="403" fill="#79c0ff" font-size="9.5" font-weight="700">Raw Speed (ω)</text>
+  <text x="760" y="403" fill="#79c0ff" font-size="9.5" font-weight="700">Governor Action</text>
+  <text x="885" y="403" fill="#79c0ff" font-size="9.5" font-weight="700">Visual Rendering Mode</text>
+  <text x="1060" y="403" fill="#79c0ff" font-size="9.5" font-weight="700">Human Factors Rationale</text>
+  <line x1="646" y1="415" x2="1214" y2="415" stroke="#21262D" stroke-width="0.8" />
+  <circle cx="654" cy="427" r="3.5" fill="#79c0ff" />
+  <text x="664" y="431" fill="#79c0ff" font-size="9" font-weight="700">&lt; 4°/s (Slow)</text>
+  <text x="760" y="431" fill="#E6EDF3" font-size="9">Boost / Step</text>
+  <text x="885" y="431" fill="#C9D1D9" font-size="8.8">Subtle discrete step pulses</text>
+  <text x="1060" y="431" fill="#8B949E" font-size="8.5">Prevents saccadic fatigue &amp; sluggishness</text>
+  <line x1="646" y1="453" x2="1214" y2="453" stroke="#21262D" stroke-width="0.8" />
+  <circle cx="654" cy="465" r="3.5" fill="#3fb950" />
+  <text x="664" y="469" fill="#3fb950" font-size="9" font-weight="700">4° – 12°/s</text>
+  <text x="760" y="469" fill="#E6EDF3" font-size="9">Proportional</text>
+  <text x="885" y="469" fill="#C9D1D9" font-size="8.8">Continuous smooth pursuit</text>
+  <text x="1060" y="469" fill="#8B949E" font-size="8.5">Optimal accuracy (&gt;95%), normal blink rate</text>
+  <line x1="646" y1="491" x2="1214" y2="491" stroke="#21262D" stroke-width="0.8" />
+  <circle cx="654" cy="503" r="3.5" fill="#d29922" />
+  <text x="664" y="507" fill="#d29922" font-size="9" font-weight="700">12° – 16°/s</text>
+  <text x="760" y="507" fill="#E6EDF3" font-size="9">Log Dampener</text>
+  <text x="885" y="507" fill="#C9D1D9" font-size="8.8">Decelerating velocity curve</text>
+  <text x="1060" y="507" fill="#8B949E" font-size="8.5">Prevents attentional exhaustion crossover</text>
+  <line x1="646" y1="529" x2="1214" y2="529" stroke="#21262D" stroke-width="0.8" />
+  <circle cx="654" cy="541" r="3.5" fill="#ff7b72" />
+  <text x="664" y="545" fill="#ff7b72" font-size="9" font-weight="700">&gt; 16°/s (Danger)</text>
+  <text x="760" y="545" fill="#E6EDF3" font-size="9">Hard Strobe</text>
+  <text x="885" y="545" fill="#C9D1D9" font-size="8.8">Static chevron + rate badge</text>
+  <text x="1060" y="545" fill="#8B949E" font-size="8.5">Eliminates smooth pursuit blink shutdown</text>
+  <line x1="646" y1="567" x2="1214" y2="567" stroke="#21262D" stroke-width="0.8" />
+  <circle cx="654" cy="579" r="3.5" fill="#ff7b72" />
+  <text x="664" y="583" fill="#ff7b72" font-size="9" font-weight="700">&gt; 32°/s (Extreme)</text>
+  <text x="760" y="583" fill="#E6EDF3" font-size="9">Total Freeze</text>
+  <text x="885" y="583" fill="#C9D1D9" font-size="8.8">Monochrome numeric digital tag</text>
+  <text x="1060" y="583" fill="#8B949E" font-size="8.5">Prevents severe visual disorientation</text>
+  <rect x="646" y="623" width="568" height="135" rx="6" fill="#16191F" stroke="#3fb950" stroke-width="1.2" />
+  <rect x="656" y="635" width="280" height="20" rx="3" fill="#14261C" />
+  <text x="664" y="649" fill="#3fb950" font-size="10" font-weight="700">CORE ARCHITECTURAL INVARIANT #4:</text>
+  <text x="656" y="671" fill="#C9D1D9" font-size="9.5">• <tspan fill="#ff7b72" font-weight="700">Anti-Pattern Rejected:</tspan> Faithfully mimicking real physical speeds (e.g.,</text>
+  <text x="656" y="687" fill="#C9D1D9" font-size="9.5">  fast turbine rotation or high-pressure gas flow) induces cognitive errors.</text>
+  <text x="656" y="705" fill="#C9D1D9" font-size="9.5">• <tspan fill="#3fb950" font-weight="700">Invariant:</tspan> The Motion Governor strictly overrides raw animation rates,</text>
+  <text x="656" y="721" fill="#C9D1D9" font-size="9.5">  guaranteeing that operator retinal angular sweep never breaches 12°/s.</text>
+  <text x="656" y="741" fill="#79c0ff" font-size="9.5" font-weight="700">✓ Fully decoupled in Web Worker thread to preserve 60 FPS UI responsiveness.</text>
+  <rect x="30" y="794" width="1200" height="32" rx="6" fill="#1E222B" stroke="#30363D" stroke-width="1" />
+  <text x="45" y="814" fill="#3fb950" font-size="10" font-weight="700">✓ Retinal Speed Clamping</text>
+  <text x="210" y="814" fill="#8B949E" font-size="9.5">Automated normalization protects operators against saccadic exhaustion &amp; tunnel vision</text>
+  <text x="860" y="814" fill="#ff7b72" font-size="10" font-weight="700">✗ The Literal Physics Trap</text>
+  <text x="1020" y="814" fill="#8B949E" font-size="9.5">Physical equipment speeds must NEVER be mapped 1:1 to pixels</text>
+</svg>

@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="680" viewBox="0 0 1080 680" role="img" aria-labelledby="title desc">
+  <title id="title">Legacy vs High-Performance HMI</title>
+  <desc id="desc">Side-by-side comparison of legacy 'Christmas Tree' graphics (rainbow pipes, neon green running pumps, raw digital readouts, drowned alarm) versus ANSI/ISA-101.01 High-Performance HMI (grayscale discipline, MAI moving bar, neutral pointer, Method 3 alarm reservation).</desc>
+  <rect x="0.0" y="0.0" width="1080.0" height="680.0" rx="12" fill="#16191F" stroke="none" stroke-width="1" />
+  <text x="540.0" y="38.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#FDFEFE" text-anchor="middle" >Legacy 'Christmas Tree' HMI vs. ANSI/ISA-101.01 High-Performance HMI</text>
+  <text x="540.0" y="59.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#7E8B9B" text-anchor="middle" >Eradicating the 'Christmas Tree' Effect: Grayscale Discipline, Analog Context, and Salient Color Reservation</text>
+  <rect x="35.0" y="80.0" width="495.0" height="560.0" rx="8" fill="#1E222B" stroke="#E63946" stroke-width="1.5" />
+  <text x="282.5" y="108.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#E63946" text-anchor="middle" >Legacy 'Christmas Tree' HMI (ANTI-PATTERN)</text>
+  <text x="282.5" y="126.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#7E8B9B" text-anchor="middle" >Saturated Rainbow Clutter • 3D Pseudo-Gradients • Zero Context</text>
+  <line x1="51.0" y1="136.0" x2="514.0" y2="136.0" stroke="#3A4154" stroke-width="1" />
+  <rect x="51.0" y="148.0" width="463.0" height="305.0" rx="4" fill="#050B14" stroke="#E63946" stroke-width="1.2" />
+  <path d="M71,188 H181 V243 H281" fill="none" stroke="#00FFFF" stroke-width="5" />
+  <path d="M91,308 H221 V363 H361" fill="none" stroke="#FF00FF" stroke-width="5" />
+  <line x1="301.0" y1="183.0" x2="441.0" y2="183.0" stroke="#FFFF00" stroke-width="5" />
+  <rect x="181.0" y="213.0" width="80.0" height="105.0" rx="8" fill="#234567" stroke="#58A6FF" stroke-width="2" />
+  <text x="221.0" y="253.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle" >TANK T-101</text>
+  <text x="221.0" y="273.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#00FF00" text-anchor="middle" >84.2 %</text>
+  <circle cx="111.0" cy="243.0" r="18" fill="#00FF00" stroke="#FFFFFF" stroke-width="2" />
+  <text x="111.0" y="247.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="9" font-weight="800" fill="#000000" text-anchor="middle" >RUN</text>
+  <circle cx="311.0" cy="308.0" r="18" fill="#00FF00" stroke="#FFFFFF" stroke-width="2" />
+  <text x="311.0" y="312.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="9" font-weight="800" fill="#000000" text-anchor="middle" >RUN</text>
+  <circle cx="111.0" cy="338.0" r="18" fill="#FF0000" stroke="#FFFFFF" stroke-width="2" />
+  <text x="111.0" y="342.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="9" font-weight="800" fill="#FFFFFF" text-anchor="middle" >STOP</text>
+  <rect x="296.0" y="213.0" width="185.0" height="48.0" rx="4" fill="#000000" stroke="#FFFF00" stroke-width="1.2" />
+  <text x="306.0" y="233.0" font-family="Cascadia Code, SF Mono, Consolas, DejaVu Sans Mono, monospace" font-size="11" font-weight="400" fill="#FFFF00" text-anchor="start" >Pressure: 42.8 bar</text>
+  <text x="306.0" y="251.0" font-family="Cascadia Code, SF Mono, Consolas, DejaVu Sans Mono, monospace" font-size="11" font-weight="400" fill="#00FFFF" text-anchor="start" >Temp: 124.5 °C</text>
+  <rect x="296.0" y="273.0" width="185.0" height="34.0" rx="4" fill="#FF0000" stroke="#FFFF00" stroke-width="2" />
+  <text x="388.0" y="294.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="800" fill="#FFFFFF" text-anchor="middle" >⚠️ ALARM OVERHEAT</text>
+  <rect x="61.0" y="417.0" width="443.0" height="26.0" rx="3" fill="#2C1517" stroke="none" stroke-width="1" />
+  <text x="282.5" y="434.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#E63946" text-anchor="middle" >⚠️ Alarm is drowned out by neon green pumps and rainbow pipes!</text>
+  <rect x="51.0" y="468.0" width="463.0" height="148.0" rx="6" fill="#16191F" stroke="#E63946" stroke-width="1.5" />
+  <text x="65.0" y="489.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#E63946" text-anchor="start" >Fatal Cognitive Flaws (Legacy Anti-Pattern)</text>
+  <text x="65.0" y="507.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#7E8B9B" text-anchor="start" >• Normal running state uses 100% saturation neon colors (foveal fatigue).</text>
+  <text x="65.0" y="523.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#7E8B9B" text-anchor="start" >• 'Stopped' pump rendered in bright red confuses operators during emergency events.</text>
+  <text x="65.0" y="539.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#7E8B9B" text-anchor="start" >• Raw digital numbers (42.8 bar) give zero context of danger thresholds or trend.</text>
+  <text x="65.0" y="555.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#7E8B9B" text-anchor="start" >• Serial visual search required: Saccadic search time &gt; 15 seconds in plant upsets.</text>
+  <rect x="550.0" y="80.0" width="495.0" height="560.0" rx="8" fill="#1E222B" stroke="#2A9D8F" stroke-width="1.5" />
+  <text x="797.5" y="108.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#2A9D8F" text-anchor="middle" >ANSI/ISA-101.01 High-Performance HMI</text>
+  <text x="797.5" y="126.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#7E8B9B" text-anchor="middle" >Grayscale Discipline • Analog Moving Bars • Salient Color Reservation</text>
+  <line x1="566.0" y1="136.0" x2="1029.0" y2="136.0" stroke="#3A4154" stroke-width="1" />
+  <rect x="566.0" y="148.0" width="463.0" height="305.0" rx="4" fill="#16191F" stroke="#2A9D8F" stroke-width="1.2" />
+  <path d="M586,188 H696 V243 H796" fill="none" stroke="#3A4154" stroke-width="2.5" />
+  <path d="M606,308 H736 V363 H876" fill="none" stroke="#3A4154" stroke-width="2.5" />
+  <line x1="816.0" y1="183.0" x2="956.0" y2="183.0" stroke="#3A4154" stroke-width="2.5" />
+  <rect x="696.0" y="213.0" width="80.0" height="105.0" rx="4" fill="#1E222B" stroke="#5C667A" stroke-width="1.2" />
+  <text x="736.0" y="236.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#7E8B9B" text-anchor="middle" >T-101</text>
+  <rect x="714.0" y="246.0" width="14.0" height="60.0" rx="3" fill="#2A2F3D" stroke="#353B4D" stroke-width="1" />
+  <rect x="714.0" y="263.0" width="14.0" height="30.0" rx="1" fill="#0369A1" stroke="none" stroke-width="1" />
+  <circle cx="721.0" cy="258.0" r="6" fill="#FDFEFE" stroke="#16191F" stroke-width="2" />
+  <text x="738.0" y="278.0" font-family="Cascadia Code, SF Mono, Consolas, DejaVu Sans Mono, monospace" font-size="10" font-weight="600" fill="#FDFEFE" text-anchor="start" >84.2%</text>
+  <circle cx="626.0" cy="243.0" r="16" fill="#1E222B" stroke="#5C667A" stroke-width="1.2" />
+  <polygon points="622.0,236.0 632.0,243.0 622.0,250.0" fill="#FDFEFE" stroke="none" stroke-width="1" stroke-linejoin="round" />
+  <circle cx="826.0" cy="308.0" r="16" fill="#1E222B" stroke="#5C667A" stroke-width="1.2" />
+  <polygon points="822.0,301.0 832.0,308.0 822.0,315.0" fill="#FDFEFE" stroke="none" stroke-width="1" stroke-linejoin="round" />
+  <circle cx="626.0" cy="338.0" r="16" fill="#16191F" stroke="#5C667A" stroke-width="1.2" />
+  <text x="626.0" y="342.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="8" font-weight="700" fill="#7E8B9B" text-anchor="middle" >OFF</text>
+  <rect x="806.0" y="203.0" width="190.0" height="68.0" rx="4" fill="#1E222B" stroke="#3A4154" stroke-width="1" />
+  <text x="816.0" y="220.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#FDFEFE" text-anchor="start" >Reactor Pressure (PT-101)</text>
+  <rect x="816.0" y="236.0" width="140.0" height="8.0" rx="4" fill="#2A2F3D" stroke="#353B4D" stroke-width="1" />
+  <rect x="886.0" y="236.0" width="46.7" height="8.0" rx="2" fill="#0369A1" stroke="none" stroke-width="1" />
+  <polygon points="909.3,234.0 904.5,226.2 914.1,226.2" fill="#16191F" stroke="#FDFEFE" stroke-width="1.6" stroke-linejoin="round" />
+  <circle cx="915.9" cy="240.0" r="6" fill="#FDFEFE" stroke="#16191F" stroke-width="2" />
+  <text x="816.0" y="262.0" font-family="Cascadia Code, SF Mono, Consolas, DejaVu Sans Mono, monospace" font-size="11" font-weight="700" fill="#FDFEFE" text-anchor="start" >42.8 bar</text>
+  <text x="956.0" y="262.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#2A9D8F" text-anchor="end" >IN BAND</text>
+  <rect x="806.0" y="283.0" width="190.0" height="48.0" rx="4" fill="#2C1517" stroke="#E63946" stroke-width="1.5" />
+  <g><rect x="810.0" y="289.0" width="36" height="36" rx="7" fill="none" stroke="#E63946" stroke-width="1.5" stroke-dasharray="3 3"/><rect x="816.0" y="295.0" width="24" height="24" rx="4" fill="#E63946" stroke="#16191F" stroke-width="1"/><text x="828.0" y="311.8" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="13.0" font-weight="900" fill="#FFFFFF" text-anchor="middle">1</text></g>
+  <text x="850.0" y="303.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="800" fill="#E63946" text-anchor="start" >HIGH-HIGH TRIP</text>
+  <text x="850.0" y="319.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#FDFEFE" text-anchor="start" >Temp Overheat: 124.5 °C</text>
+  <rect x="576.0" y="417.0" width="443.0" height="26.0" rx="3" fill="#0F241A" stroke="none" stroke-width="1" />
+  <text x="797.5" y="434.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#2A9D8F" text-anchor="middle" >✓ Saturated color is 100% reserved for alarms: Instant Detection!</text>
+  <rect x="566.0" y="468.0" width="463.0" height="148.0" rx="6" fill="#16191F" stroke="#2A9D8F" stroke-width="1.5" />
+  <text x="580.0" y="489.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#2A9D8F" text-anchor="start" >Ergonomic Advantages (ISA-101.01 Standard)</text>
+  <text x="580.0" y="507.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#7E8B9B" text-anchor="start" >• 90% muted grayscale leaves operator visual cortex calm, resting, and vigilant.</text>
+  <text x="580.0" y="523.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#7E8B9B" text-anchor="start" >• Running machinery does NOT shout for attention; normal steady-state is quiet.</text>
+  <text x="580.0" y="539.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#7E8B9B" text-anchor="start" >• MAI provides instant spatial context: setpoint, deviation, and normal operating bounds.</text>
+  <text x="580.0" y="555.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#7E8B9B" text-anchor="start" >• Instant anomaly detection (&lt; 2 seconds) • Proven 48% reduction in human operational error.</text>
+  <rect x="35.0" y="646.0" width="1010.0" height="32.0" rx="4" fill="#16191F" stroke="none" stroke-width="1" />
+  <text x="51.0" y="666.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#7E8B9B">✓ <tspan font-weight="700" fill="#FDFEFE">Color Reservation:</tspan> saturated hues reserved strictly for alarms</text>
+  <text x="401.0" y="666.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#7E8B9B">✓ <tspan font-weight="700" fill="#FDFEFE">Grayscale Canvas:</tspan> 90% neutral slate eliminates foveal fatigue</text>
+  <text x="761.0" y="666.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#7E8B9B">✓ <tspan font-weight="700" fill="#FDFEFE">Cognitive Speed:</tspan> detection time drops from &gt; 15 s to &lt; 2 s</text>
+</svg>

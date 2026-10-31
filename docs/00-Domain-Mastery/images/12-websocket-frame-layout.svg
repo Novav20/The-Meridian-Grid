@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 780" width="100%" height="100%" style="background:#16191F; font-family: Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif;">
+  <defs>
+    <marker id="arr-blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#388bfd" />
+    </marker>
+    <marker id="arr-green" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#3fb950" />
+    </marker>
+    <marker id="arr-red" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#ff7b72" />
+    </marker>
+  </defs>
+  <rect width="1240" height="780" rx="12" fill="#16191F" stroke="#30363D" stroke-width="1.5" class="bg" />
+  <text x="620" y="36" fill="#F0F6FC" font-size="19" font-weight="700" text-anchor="middle">RFC 6455 Binary Frame Architecture &amp; Industrial Payloads</text>
+  <text x="620" y="58" fill="#8B949E" font-size="12" text-anchor="middle">Bit-Level Specification Grid vs. Concrete Byte-by-Byte Telemetry and Control Frames</text>
+  <rect x="30" y="82" width="1180" height="200" rx="8" fill="#1E222B" stroke="#30363D" stroke-width="1.2" />
+  <rect x="46" y="96" width="340" height="26" rx="4" fill="#16191F" stroke="#388bfd" stroke-width="1.2" />
+  <text x="54" y="113" fill="#79c0ff" font-size="11" font-weight="700">1. RFC 6455 BIT-LEVEL SPECIFICATION GRID</text>
+  <text x="400" y="113" fill="#8B949E" font-size="10.5">Standard 32-Bit Coordinate Wire Layout</text>
+  <rect x="50" y="130" width="1140" height="20" rx="3" fill="#0D1117" stroke="#30363D" stroke-width="0.8" />
+  <text x="53" y="144" fill="#8B949E" font-size="8.5" font-family="monospace">b0</text>
+  <text x="88" y="144" fill="#8B949E" font-size="8.5" font-family="monospace">b1</text>
+  <text x="195" y="144" fill="#8B949E" font-size="8.5" font-family="monospace">b4</text>
+  <text x="338" y="144" fill="#8B949E" font-size="8.5" font-family="monospace">b8</text>
+  <text x="373" y="144" fill="#8B949E" font-size="8.5" font-family="monospace">b9</text>
+  <text x="587" y="144" fill="#8B949E" font-size="8.5" font-family="monospace">b15</text>
+  <text x="623" y="144" fill="#8B949E" font-size="8.5" font-family="monospace">b16</text>
+  <text x="872" y="144" fill="#8B949E" font-size="8.5" font-family="monospace">b23</text>
+  <text x="908" y="144" fill="#8B949E" font-size="8.5" font-family="monospace">b24</text>
+  <text x="1157" y="144" fill="#8B949E" font-size="8.5" font-family="monospace">b31</text>
+  <rect x="50" y="154" width="1140" height="42" rx="4" fill="#16191F" stroke="#30363D" stroke-width="1" />
+  <rect x="50" y="154" width="35" height="42" fill="#0D1B2A" stroke="#388bfd" stroke-width="0.8" />
+  <text x="67" y="178" fill="#79c0ff" font-size="8.5" font-weight="700" text-anchor="middle">FIN</text>
+  <rect x="85" y="154" width="106" height="42" fill="#16191F" stroke="#30363D" stroke-width="0.8" />
+  <text x="138" y="178" fill="#8B949E" font-size="8.5" text-anchor="middle">RSV 1-3</text>
+  <rect x="191" y="154" width="142" height="42" fill="#0D1B2A" stroke="#388bfd" stroke-width="0.8" />
+  <text x="262" y="174" fill="#79c0ff" font-size="8.5" font-weight="700" text-anchor="middle">Opcode</text>
+  <text x="262" y="186" fill="#C9D1D9" font-size="7.5" text-anchor="middle">(4 Bits)</text>
+  <rect x="333" y="154" width="35" height="42" fill="#2C1517" stroke="#ff7b72" stroke-width="0.8" />
+  <text x="350" y="178" fill="#ff7b72" font-size="8" font-weight="700" text-anchor="middle">M</text>
+  <rect x="368" y="154" width="249" height="42" fill="#0D1B2A" stroke="#388bfd" stroke-width="0.8" />
+  <text x="492" y="174" fill="#79c0ff" font-size="8.5" font-weight="700" text-anchor="middle">Payload Length</text>
+  <text x="492" y="186" fill="#C9D1D9" font-size="7.5" text-anchor="middle">(7 Bits: 0–125 / 126 / 127)</text>
+  <rect x="617" y="154" width="573" height="42" fill="#16191F" stroke="#30363D" stroke-width="0.8" />
+  <text x="903" y="174" fill="#8B949E" font-size="8.5" text-anchor="middle">Extended Payload Length (Optional 16 or 64 Bits)</text>
+  <text x="903" y="186" fill="#6E7681" font-size="7.5" text-anchor="middle">Present only if Payload Length = 126 (2 Bytes) or 127 (8 Bytes)</text>
+  <rect x="50" y="202" width="1140" height="42" rx="4" fill="#16191F" stroke="#30363D" stroke-width="1" />
+  <rect x="50" y="202" width="427" height="42" fill="#2C1517" stroke="#ff7b72" stroke-width="0.8" />
+  <text x="263" y="222" fill="#ff7b72" font-size="8.5" font-weight="700" text-anchor="middle">Masking-Key (32 Bits / 4 Bytes)</text>
+  <text x="263" y="234" fill="#FFA198" font-size="7.5" text-anchor="middle">Mandatory for Client-to-Server Frames (XOR Mask)</text>
+  <rect x="477" y="202" width="713" height="42" fill="#14261C" stroke="#3fb950" stroke-width="0.8" />
+  <text x="833" y="222" fill="#3fb950" font-size="8.8" font-weight="700" text-anchor="middle">Application Payload Data (Binary / UTF-8)</text>
+  <text x="833" y="234" fill="#C9D1D9" font-size="7.5" text-anchor="middle">Sparkplug B Protobuf / Process Metrics / JSON Config / Setpoint Values</text>
+  <text x="60" y="264" fill="#79c0ff" font-size="9" font-weight="700">Frame Overhead Rule:</text>
+  <text x="190" y="264" fill="#C9D1D9" font-size="9">Server-to-client frames require strictly <tspan fill="#3fb950" font-weight="700">2 Bytes</tspan> overhead (MASK=0). Client frames require strictly <tspan fill="#ff7b72" font-weight="700">6 Bytes</tspan> (MASK=1 + 4B Key).</text>
+  <rect x="30" y="295" width="575" height="420" rx="8" fill="#1E222B" stroke="#30363D" stroke-width="1.2" />
+  <rect x="46" y="309" width="360" height="26" rx="4" fill="#16191F" stroke="#3fb950" stroke-width="1.2" />
+  <text x="54" y="326" fill="#3fb950" font-size="11" font-weight="700">2. CONCRETE SERVER PUSH: SPARKPLUG B DDATA</text>
+  <text x="420" y="326" fill="#8B949E" font-size="10.5">Opcode 0x2 (Unmasked)</text>
+  <rect x="46" y="347" width="543" height="70" rx="6" fill="#0D1117" stroke="#3fb950" stroke-width="1" />
+  <text x="56" y="369" fill="#79c0ff" font-size="9" font-weight="700">RAW ON-THE-WIRE HEXADECIMAL STREAM (Reboiler Level LT-102 = 82.4%):</text>
+  <text x="56" y="389" fill="#3fb950" font-size="12" font-family="monospace" font-weight="700">0x82 0x14 <tspan fill="#C9D1D9">0x08 0x66 0x10 0x01 0x1D 0xCD 0xCC 0xA4 0x42 ...</tspan></text>
+  <text x="56" y="405" fill="#8B949E" font-size="8.5">Byte 0: Header | Byte 1: Len | Bytes 2..21: Sparkplug B Protobuf Payload (20 Bytes)</text>
+  <rect x="46" y="427" width="543" height="175" rx="6" fill="#16191F" stroke="#30363D" stroke-width="1" />
+  <line x1="46" y1="443" x2="589" y2="443" stroke="#21262D" stroke-width="0.8" />
+  <text x="56" y="457" fill="#3fb950" font-size="9" font-family="monospace" font-weight="700">Byte 0: 0x82</text>
+  <text x="155" y="457" fill="#8B949E" font-size="8.5" font-family="monospace">1000 0010</text>
+  <text x="255" y="457" fill="#C9D1D9" font-size="8.5">FIN=1 (Final Frame) | RSV=000 | Opcode=0x2 (Binary Frame)</text>
+  <line x1="46" y1="477" x2="589" y2="477" stroke="#21262D" stroke-width="0.8" />
+  <text x="56" y="491" fill="#3fb950" font-size="9" font-family="monospace" font-weight="700">Byte 1: 0x14</text>
+  <text x="155" y="491" fill="#8B949E" font-size="8.5" font-family="monospace">0001 0100</text>
+  <text x="255" y="491" fill="#C9D1D9" font-size="8.5">MASK=0 (Unmasked Server Push) | Length = 20 Bytes</text>
+  <line x1="46" y1="511" x2="589" y2="511" stroke="#21262D" stroke-width="0.8" />
+  <text x="56" y="525" fill="#79c0ff" font-size="9" font-family="monospace" font-weight="700">Bytes 2–5</text>
+  <text x="155" y="525" fill="#8B949E" font-size="8.5" font-family="monospace">Protobuf Tags</text>
+  <text x="255" y="525" fill="#C9D1D9" font-size="8.5">Field 1: Tag ID = 102 (varint 0x66)</text>
+  <line x1="46" y1="545" x2="589" y2="545" stroke="#21262D" stroke-width="0.8" />
+  <text x="56" y="559" fill="#79c0ff" font-size="9" font-family="monospace" font-weight="700">Bytes 6–9</text>
+  <text x="155" y="559" fill="#8B949E" font-size="8.5" font-family="monospace">Protobuf Val</text>
+  <text x="255" y="559" fill="#C9D1D9" font-size="8.5">Field 2: Float Value = 82.4% (IEEE 754 0x42A4CCCD)</text>
+  <line x1="46" y1="579" x2="589" y2="579" stroke="#21262D" stroke-width="0.8" />
+  <text x="56" y="593" fill="#c9d1d9" font-size="9" font-family="monospace" font-weight="700">Bytes 10–21</text>
+  <text x="155" y="593" fill="#8B949E" font-size="8.5" font-family="monospace">Quality &amp; SOE</text>
+  <text x="255" y="593" fill="#C9D1D9" font-size="8.5">Timestamp = 1792350000ms | Quality = GOOD (192)</text>
+  <rect x="46" y="612" width="543" height="85" rx="6" fill="#16191F" stroke="#388bfd" stroke-width="1" />
+  <text x="56" y="632" fill="#79c0ff" font-size="10" font-weight="700">Browser V8 Optimization Invariants (Lesson 14 &amp; 15):</text>
+  <text x="56" y="650" fill="#C9D1D9" font-size="9">• <tspan fill="#3fb950" font-weight="700">Zero UTF-8 Validation:</tspan> Opcode 0x2 binary frames bypass string validation.</text>
+  <text x="56" y="664" fill="#C9D1D9" font-size="9">• <tspan fill="#3fb950" font-weight="700">Zero-Copy Web Worker Dispatch:</tspan> Ingests directly into `ArrayBuffer` and</text>
+  <text x="56" y="678" fill="#C9D1D9" font-size="9">  transfers to background worker thread via `postMessage([buffer], [buffer])`.</text>
+  <rect x="635" y="295" width="575" height="420" rx="8" fill="#1E222B" stroke="#30363D" stroke-width="1.2" />
+  <rect x="651" y="309" width="380" height="26" rx="4" fill="#16191F" stroke="#ff7b72" stroke-width="1.2" />
+  <text x="659" y="326" fill="#ff7b72" font-size="11" font-weight="700">3. CONCRETE CLIENT CONTROL: SETPOINT DISPATCH</text>
+  <text x="1045" y="326" fill="#8B949E" font-size="10.5">Opcode 0x2 (Masked)</text>
+  <rect x="651" y="347" width="543" height="70" rx="6" fill="#0D1117" stroke="#ff7b72" stroke-width="1" />
+  <text x="661" y="369" fill="#79c0ff" font-size="9" font-weight="700">RAW ON-THE-WIRE HEXADECIMAL STREAM (Adjust Valve FV-108 Setpoint SP = 65.0%):</text>
+  <text x="661" y="389" fill="#ff7b72" font-size="12" font-family="monospace" font-weight="700">0x82 0x88 <tspan fill="#e3b341">0x3F 0x9A 0x12 0x55</tspan> <tspan fill="#C9D1D9">0x7B 0xFE 0x94 0x11 ...</tspan></text>
+  <text x="661" y="405" fill="#8B949E" font-size="8.5">Byte 0: Header | Byte 1: Mask+Len | Bytes 2–5: XOR Key | Bytes 6–13: Masked Data</text>
+  <rect x="651" y="427" width="543" height="175" rx="6" fill="#16191F" stroke="#30363D" stroke-width="1" />
+  <line x1="651" y1="443" x2="1194" y2="443" stroke="#21262D" stroke-width="0.8" />
+  <text x="661" y="457" fill="#3fb950" font-size="9" font-family="monospace" font-weight="700">Byte 0: 0x82</text>
+  <text x="760" y="457" fill="#8B949E" font-size="8.5" font-family="monospace">1000 0010</text>
+  <text x="880" y="457" fill="#C9D1D9" font-size="8.5">FIN=1 (Final Frame) | RSV=000 | Opcode=0x2 (Binary Command)</text>
+  <line x1="651" y1="477" x2="1194" y2="477" stroke="#21262D" stroke-width="0.8" />
+  <text x="661" y="491" fill="#ff7b72" font-size="9" font-family="monospace" font-weight="700">Byte 1: 0x88</text>
+  <text x="760" y="491" fill="#8B949E" font-size="8.5" font-family="monospace">1000 1000</text>
+  <text x="880" y="491" fill="#C9D1D9" font-size="8.5">MASK=1 (Mandatory Client Mask) | Length = 8 Bytes</text>
+  <line x1="651" y1="511" x2="1194" y2="511" stroke="#21262D" stroke-width="0.8" />
+  <text x="661" y="525" fill="#e3b341" font-size="9" font-family="monospace" font-weight="700">Bytes 2–5</text>
+  <text x="760" y="525" fill="#8B949E" font-size="8.5" font-family="monospace">0x3F 0x9A 0x12 0x55</text>
+  <text x="880" y="525" fill="#C9D1D9" font-size="8.5">Random 4-Byte XOR Masking Key generated by browser</text>
+  <line x1="651" y1="545" x2="1194" y2="545" stroke="#21262D" stroke-width="0.8" />
+  <text x="661" y="559" fill="#79c0ff" font-size="9" font-family="monospace" font-weight="700">Bytes 6–9</text>
+  <text x="760" y="559" fill="#8B949E" font-size="8.5" font-family="monospace">Masked Val</text>
+  <text x="880" y="559" fill="#C9D1D9" font-size="8.5">Target Valve: FV-108 (XOR Masked in browser)</text>
+  <line x1="651" y1="579" x2="1194" y2="579" stroke="#21262D" stroke-width="0.8" />
+  <text x="661" y="593" fill="#c9d1d9" font-size="9" font-family="monospace" font-weight="700">Bytes 10–13</text>
+  <text x="760" y="593" fill="#8B949E" font-size="8.5" font-family="monospace">Masked SP</text>
+  <text x="880" y="593" fill="#C9D1D9" font-size="8.5">New Target Setpoint: SP = 65.0% (IEEE 754 Float XORed)</text>
+  <rect x="651" y="612" width="543" height="85" rx="6" fill="#16191F" stroke="#ff7b72" stroke-width="1" />
+  <text x="661" y="632" fill="#ff7b72" font-size="10" font-weight="700">Security Invariant: Proxy Cache Poisoning Defense:</text>
+  <text x="661" y="650" fill="#C9D1D9" font-size="9">• <tspan fill="#ff7b72" font-weight="700">Mandatory Client Masking:</tspan> Prevents malicious browser scripts from forging</text>
+  <text x="661" y="664" fill="#C9D1D9" font-size="9">  predictable HTTP responses on the wire to poison intermediate caching proxies.</text>
+  <text x="661" y="678" fill="#C9D1D9" font-size="9">• <tspan fill="#3fb950" font-weight="700">Gateway Demasking:</tspan> Gateway unmasks in C++: P_i = M_i ^ K_(i mod 4).</text>
+  <rect x="30" y="734" width="1180" height="32" rx="6" fill="#1E222B" stroke="#30363D" stroke-width="1" />
+  <text x="45" y="754" fill="#3fb950" font-size="10" font-weight="700">✓ Invariant: 2-Byte Server Overhead</text>
+  <text x="280" y="754" fill="#8B949E" font-size="9.5">Unmasked server-to-client frames carry strictly 2 bytes of framing overhead for payloads ≤125B</text>
+  <text x="860" y="754" fill="#ff7b72" font-size="10" font-weight="700">✗ Invariant: 6-Byte Client Overhead</text>
+  <text x="1060" y="754" fill="#8B949E" font-size="9.5">4-Byte XOR Masking Key</text>
+</svg>

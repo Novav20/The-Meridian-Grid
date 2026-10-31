@@ -1,0 +1,237 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 500" width="100%" height="100%" style="background:#16191f; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+<style>
+.title { fill: #f0f6fc; font-size: 17px; font-weight: 700; }
+.subtitle { fill: #8b949e; font-size: 11.5px; }
+.card-box { fill: #0d1117; stroke: #30363d; stroke-width: 1.2; rx: 6; }
+.hdr { font-size: 11.5px; font-weight: 700; }
+.sub-hdr { font-size: 10px; font-weight: 600; }
+.txt-body { font-size: 8.8px; fill: #8b949e; }
+.txt-code { font-family: monospace; font-size: 8.3px; }
+.pill { rx: 3; font-size: 8px; font-weight: 700; text-anchor: middle; }
+</style>
+
+<defs>
+<marker id="arrow-core" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+<path d="M 0 1 L 10 5 L 0 9 z" fill="#ff7b72" />
+</marker>
+<marker id="arrow-generic" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+<path d="M 0 1 L 10 5 L 0 9 z" fill="#58a6ff" />
+</marker>
+<marker id="arrow-supp" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+<path d="M 0 1 L 10 5 L 0 9 z" fill="#d2a8ff" />
+</marker>
+<linearGradient id="coreBg" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0%" stop-color="#2d161a" stop-opacity="0.9" />
+<stop offset="100%" stop-color="#161b22" stop-opacity="0.9" />
+</linearGradient>
+<linearGradient id="genericBg" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0%" stop-color="#13233a" stop-opacity="0.9" />
+<stop offset="100%" stop-color="#161b22" stop-opacity="0.9" />
+</linearGradient>
+<linearGradient id="suppBg" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0%" stop-color="#221938" stop-opacity="0.9" />
+<stop offset="100%" stop-color="#161b22" stop-opacity="0.9" />
+</linearGradient>
+</defs>
+
+<!-- Title & Subtitle -->
+<text x="490" y="27" class="title" text-anchor="middle">Strategic Domain-Driven Design Context Map</text>
+<text x="490" y="45" class="subtitle" text-anchor="middle">Subdomain Classification, Bounded Context Boundaries, and Cross-Context Invariants (Khononov, 2022; Koltsova et al., 2026)</text>
+
+<!-- Subdomain Legend -->
+<g transform="translate(680, 14)">
+<rect x="0" y="0" width="85" height="18" rx="3" fill="#3b1e22" stroke="#f85149" />
+<text x="42" y="12" fill="#ff7b72" font-size="8" font-weight="700" text-anchor="middle">CORE SUBDOMAIN</text>
+
+<rect x="95" y="0" width="95" height="18" rx="3" fill="#162032" stroke="#388bfd" />
+<text x="142" y="12" fill="#79c0ff" font-size="8" font-weight="700" text-anchor="middle">GENERIC SUBDOMAIN</text>
+
+<rect x="200" y="0" width="95" height="18" rx="3" fill="#211a36" stroke="#a371f7" />
+<text x="247" y="12" fill="#d2a8ff" font-size="8" font-weight="700" text-anchor="middle">SUPPORTING SUBDOMAIN</text>
+</g>
+
+<!-- ================= LEFT: EXTERNAL / LEGACY & ACL ================= -->
+<g transform="translate(20, 68)">
+<rect x="0" y="0" width="220" height="410" class="card-box" stroke="#a371f7" stroke-width="1.2" />
+<text x="14" y="22" class="hdr" fill="#d2a8ff">Brownfield Substation &amp; Ingress</text>
+<text x="14" y="36" class="txt-body">Supporting Subdomain Integration</text>
+
+<!-- Brownfield Devices Box -->
+<g transform="translate(12, 48)">
+<rect x="0" y="0" width="196" height="76" rx="4" fill="#161b22" stroke="#30363d" />
+<text x="10" y="16" fill="#e6edf3" font-size="9" font-weight="700">Legacy Operational Field</text>
+<text x="10" y="32" class="txt-body">• Modbus RTU / TCP (Registers)</text>
+<text x="10" y="45" class="txt-body">• DNP3 Outstations / IEC 60870-5-104</text>
+<text x="10" y="58" class="txt-body">• Proprietary PLC memory maps</text>
+<text x="10" y="70" class="txt-code" fill="#8b949e">Addr: 40001 (Holding Register)</text>
+</g>
+
+<!-- Down arrow with ACL badge -->
+<path d="M 110 124 L 110 148" stroke="#a371f7" stroke-width="2" marker-end="url(#arrow-supp)" />
+
+<!-- Anti-Corruption Layer (ACL) Box -->
+<g transform="translate(12, 150)">
+<rect x="0" y="0" width="196" height="126" rx="4" fill="url(#suppBg)" stroke="#a371f7" stroke-width="1.2" />
+<rect x="8" y="8" width="180" height="18" rx="2" fill="#2d2254" />
+<text x="98" y="20" fill="#d2a8ff" font-size="8.5" font-weight="700" text-anchor="middle">Anti-Corruption Layer (ACL)</text>
+
+<text x="10" y="40" class="txt-body">• Translates raw registers into UNS</text>
+<text x="10" y="53" class="txt-body">• Normalizes engineering units</text>
+<text x="10" y="66" class="txt-body">• Builds Sparkplug B DBIRTH/DDATA</text>
+<text x="10" y="79" class="txt-body">• Protects domain from vendor lock-in</text>
+
+<rect x="8" y="88" width="180" height="28" rx="2" fill="#161b22" stroke="#30363d" />
+<text x="12" y="100" class="txt-code" fill="#7ee787">Reg 40001 → Plant/Sub1/LineV</text>
+<text x="12" y="111" class="txt-code" fill="#7ee787">Scale: x * 0.1 → 13.8 kV</text>
+</g>
+
+<!-- Invariant 2: Client Isolation -->
+<g transform="translate(12, 290)">
+<rect x="0" y="0" width="196" height="106" rx="4" fill="#161b22" stroke="#f0883e" stroke-dasharray="3 3" />
+<text x="10" y="16" fill="#ffa657" font-size="9" font-weight="700">REST Client Isolation Invariant</text>
+<text x="10" y="32" class="txt-body">Remote HMI clients are strictly</text>
+<text x="10" y="44" class="txt-body">prohibited from querying PLC</text>
+<text x="10" y="56" class="txt-body">registers directly.</text>
+<text x="10" y="72" class="txt-body">• Decouples PLC CPU from load</text>
+<text x="10" y="84" class="txt-body">• Preserves OT boundary security</text>
+<text x="10" y="98" fill="#8b949e" font-size="7.8" font-style="italic">Villamar et al. (2025)</text>
+</g>
+</g>
+
+<!-- ACL to Upstream Context Arrow -->
+<path d="M 240 213 L 268 213" stroke="#a371f7" stroke-width="2.5" marker-end="url(#arrow-supp)" />
+<rect x="242" y="196" width="24" height="13" rx="2" fill="#211a36" stroke="#a371f7" />
+<text x="254" y="205" fill="#d2a8ff" font-size="7" font-weight="700" text-anchor="middle">ACL</text>
+
+<!-- ================= CENTER: UPSTREAM CONTEXT [U] ================= -->
+<g transform="translate(270, 68)">
+<rect x="0" y="0" width="340" height="410" class="card-box" fill="url(#coreBg)" stroke="#f85149" stroke-width="1.5" />
+
+<!-- Context Header -->
+<text x="16" y="22" class="hdr" fill="#ff7b72">Upstream Context [U]: Data Transport &amp; Semantics</text>
+<text x="16" y="36" class="txt-body">Core Subdomain — High Complexity / High Innovation</text>
+
+<!-- Ubiquitous Language Box -->
+<g transform="translate(14, 46)">
+<rect x="0" y="0" width="312" height="114" rx="4" fill="#0d1117" stroke="#30363d" />
+<text x="10" y="15" fill="#f0f6fc" font-size="9" font-weight="700">Ubiquitous Language (Domain Entities)</text>
+
+<g transform="translate(10, 24)">
+<text x="0" y="10" fill="#ffa657" font-size="8.5" font-family="monospace">MetricTag:</text>
+<text x="75" y="10" class="txt-body">Canonical process variable with engineering metadata</text>
+
+<text x="0" y="24" fill="#ffa657" font-size="8.5" font-family="monospace">EoNNode:</text>
+<text x="75" y="24" class="txt-body">Authoritative Edge-of-Network gateway boundary</text>
+
+<text x="0" y="38" fill="#ffa657" font-size="8.5" font-family="monospace">DeviceBirth:</text>
+<text x="75" y="38" class="txt-body">Immutable registration schema contract (NBIRTH/DBIRTH)</text>
+
+<text x="0" y="52" fill="#ffa657" font-size="8.5" font-family="monospace">SequenceNum:</text>
+<text x="75" y="52" class="txt-body">Monotonic integer ordering (0–255) for gap audit</text>
+
+<text x="0" y="66" fill="#ffa657" font-size="8.5" font-family="monospace">UNSPath:</text>
+<text x="75" y="66" class="txt-body">Hierarchical semantic address (Enterprise/Site/Area/Line)</text>
+</g>
+</g>
+
+<!-- Open-Host Service (OHS) / Published Language (PL) Box -->
+<g transform="translate(14, 168)">
+<rect x="0" y="0" width="312" height="115" rx="4" fill="#161b22" stroke="#f85149" />
+<rect x="8" y="8" width="296" height="20" rx="3" fill="#3b1e22" />
+<text x="156" y="21" fill="#ff7b72" font-size="9" font-weight="700" text-anchor="middle">Open-Host Service (OHS) &amp; Published Language (PL)</text>
+
+<text x="12" y="42" class="txt-body">• Decouples internal transport from consumer models</text>
+<text x="12" y="55" class="txt-body">• Eliminates custom downstream client translation layers</text>
+
+<!-- Sub-cards for PL -->
+<g transform="translate(10, 62)">
+<rect x="0" y="0" width="142" height="42" rx="3" fill="#0d1117" stroke="#30363d" />
+<text x="8" y="14" fill="#7ee787" font-size="8" font-weight="700">Hot Path PL:</text>
+<text x="8" y="26" class="txt-body">Sparkplug B Protobuf</text>
+<text x="8" y="36" class="txt-body">over Binary WebSocket</text>
+</g>
+<g transform="translate(156, 62)">
+<rect x="0" y="0" width="142" height="42" rx="3" fill="#0d1117" stroke="#30363d" />
+<text x="8" y="14" fill="#79c0ff" font-size="8" font-weight="700">Cold Path PL:</text>
+<text x="8" y="26" class="txt-body">Normalized JSON / REST</text>
+<text x="8" y="36" class="txt-body">Time-Series Query Spec</text>
+</g>
+</g>
+
+<!-- Invariant 1: Data Ownership Preservation -->
+<g transform="translate(14, 292)">
+<rect x="0" y="0" width="312" height="104" rx="4" fill="#0d1117" stroke="#2ea043" stroke-width="1.2" />
+<text x="12" y="16" fill="#3fb950" font-size="9" font-weight="700">Data Ownership Preservation Invariant (Koltsova et al., 2026)</text>
+<text x="12" y="32" class="txt-body">• The Message Broker and UNS exchange fabrics act solely as</text>
+<text x="12" y="44" class="txt-body">   transport and routing pipelines; they NEVER own data.</text>
+<text x="12" y="56" class="txt-body">• Emitting edge PLC / sensor remains the sole authoritative source.</text>
+<text x="12" y="68" class="txt-body">• Broker cannot alter, synthesize, or invent process state.</text>
+<text x="12" y="84" class="txt-code" fill="#7ee787">Result: Deterministic telemetry truth &amp; auditability</text>
+</g>
+</g>
+
+<!-- Customer-Supplier Connectors to Downstream Contexts -->
+<!-- Top: To Visualization HMI -->
+<path d="M 610 140 L 640 120" stroke="#f85149" stroke-width="2" marker-end="url(#arrow-core)" />
+<rect x="607" y="112" width="32" height="13" rx="2" fill="#3b1e22" stroke="#f85149" />
+<text x="623" y="121" fill="#ff7b72" font-size="7" font-weight="700" text-anchor="middle">U → D</text>
+
+<!-- Middle: To Alarm Engine -->
+<path d="M 610 260 L 640 260" stroke="#f85149" stroke-width="2" marker-end="url(#arrow-core)" />
+<rect x="612" y="248" width="32" height="13" rx="2" fill="#3b1e22" stroke="#f85149" />
+<text x="628" y="257" fill="#ff7b72" font-size="7" font-weight="700" text-anchor="middle">U → D</text>
+
+<!-- Bottom: To Time-Series Storage -->
+<path d="M 610 375 L 640 400" stroke="#58a6ff" stroke-width="2" marker-end="url(#arrow-generic)" />
+<rect x="607" y="392" width="32" height="13" rx="2" fill="#162032" stroke="#388bfd" />
+<text x="623" y="401" fill="#79c0ff" font-size="7" font-weight="700" text-anchor="middle">U → D</text>
+
+<!-- ================= RIGHT: DOWNSTREAM CONTEXTS [D] ================= -->
+<!-- 1. Visualization & Low-Code HMI (Core) -->
+<g transform="translate(645, 68)">
+<rect x="0" y="0" width="315" height="124" class="card-box" fill="url(#coreBg)" stroke="#f85149" stroke-width="1.2" />
+<text x="12" y="18" class="hdr" fill="#ff7b72">Downstream Context [D]: Visualization &amp; Low-Code HMI</text>
+<text x="12" y="30" class="txt-body">Core Subdomain — Operator Presentation &amp; Supervisory Control</text>
+
+<text x="12" y="46" class="txt-body">• <tspan fill="#e6edf3" font-weight="600">Ubiquitous Language:</tspan> SynopticCanvas, DynamicGlyph, BindAddress</text>
+<text x="12" y="58" class="txt-body">• <tspan fill="#e6edf3" font-weight="600">Integration:</tspan> Customer-Supplier via OHS (Binary WSS Stream)</text>
+<text x="12" y="70" class="txt-body">• <tspan fill="#e6edf3" font-weight="600">Off-Thread Decoding:</tspan> Web Workers + SharedArrayBuffer</text>
+
+<!-- Invariant 3 Badge -->
+<rect x="10" y="80" width="295" height="34" rx="3" fill="#161b22" stroke="#e3b341" />
+<text x="16" y="93" fill="#e3b341" font-size="8" font-weight="700">Dynamic Velocity Invariant (Tong et al., 2026):</text>
+<text x="16" y="105" class="txt-body">Glyph animation speed constrained to 4°/s–12°/s (&lt;16°/s limit)</text>
+</g>
+
+<!-- 2. Cognitive Mirroring & Alarm State Engine (Core) -->
+<g transform="translate(645, 202)">
+<rect x="0" y="0" width="315" height="120" class="card-box" fill="url(#coreBg)" stroke="#f85149" stroke-width="1.2" />
+<text x="12" y="18" class="hdr" fill="#ff7b72">Downstream Context [D]: Cognitive Mirroring &amp; Alarms</text>
+<text x="12" y="30" class="txt-body">Core Subdomain — Situational Awareness (Endsley L1–L3)</text>
+
+<text x="12" y="46" class="txt-body">• <tspan fill="#e6edf3" font-weight="600">Ubiquitous Language:</tspan> AlarmTrip, SuppressionRule, ChatteringFilter</text>
+<text x="12" y="58" class="txt-body">• <tspan fill="#e6edf3" font-weight="600">Situational Mirror:</tspan> Operator cognitive budget monitoring</text>
+<text x="12" y="70" class="txt-body">• <tspan fill="#e6edf3" font-weight="600">ISA-18.2 Rationalization:</tspan> Standing alarm suppression</text>
+
+<rect x="10" y="80" width="295" height="28" rx="3" fill="#161b22" stroke="#30363d" />
+<text x="16" y="93" fill="#d2a8ff" font-size="8" font-weight="700">Symbiotic Decision Support:</text>
+<text x="16" y="102" class="txt-body">Prioritizes emergency mitigation root-cause prompts</text>
+</g>
+
+<!-- 3. Time-Series Historian Storage (Generic) -->
+<g transform="translate(645, 332)">
+<rect x="0" y="0" width="315" height="146" class="card-box" fill="url(#genericBg)" stroke="#388bfd" stroke-width="1.2" />
+<text x="12" y="18" class="hdr" fill="#58a6ff">Downstream Context [D]: Relational Time-Series Storage</text>
+<text x="12" y="30" class="txt-body">Generic Subdomain — Adopted Off-the-Shelf (TimescaleDB / PostgreSQL)</text>
+
+<text x="12" y="46" class="txt-body">• <tspan fill="#e6edf3" font-weight="600">Ubiquitous Language:</tspan> HypertableChunk, CompressionChunk, WAL</text>
+<text x="12" y="58" class="txt-body">• <tspan fill="#e6edf3" font-weight="600">Ingestion Pattern:</tspan> Bulk batch accumulator (SQL COPY)</text>
+<text x="12" y="70" class="txt-body">• <tspan fill="#e6edf3" font-weight="600">Compression Engine:</tspan> Gorilla XOR &amp; Delta-of-Delta (~12:1)</text>
+
+<rect x="10" y="80" width="295" height="54" rx="3" fill="#161b22" stroke="#388bfd" />
+<text x="16" y="94" fill="#79c0ff" font-size="8" font-weight="700">Generic Commodity Invariant:</text>
+<text x="16" y="106" class="txt-body">Standard relational engine solves multi-tier chunking;</text>
+<text x="16" y="118" class="txt-body">does not require proprietary in-house database engine</text>
+<text x="16" y="128" fill="#8b949e" font-size="7.5" font-style="italic">Villamar et al. (2025); Senk et al. (2026)</text>
+</g>
+</svg>

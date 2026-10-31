@@ -1,0 +1,200 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="920" viewBox="0 0 1280 920" role="img" aria-labelledby="title desc">
+  <title id="title">ALARMS Cognitive Multi-Agent Architecture</title>
+  <desc id="desc">Verdejo et al. (2026) 5W+H shared blackboard architecture.</desc>
+  <defs>
+    <marker id="arr-blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#388bfd" />
+    </marker>
+    <marker id="arr-cyan" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#79c0ff" />
+    </marker>
+    <marker id="arr-green" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#3fb950" />
+    </marker>
+  </defs>
+  <rect x="0.0" y="0.0" width="1280.0" height="920.0" fill="#16191F" stroke="none" stroke-width="1" rx="12"/>
+  <text x="640.0" y="36.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#FDFEFE" text-anchor="middle">The ALARMS Cognitive Multi-Agent Architecture</text>
+  <text x="640.0" y="58.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#8B949E" text-anchor="middle">Verdejo et al. (2026) · 5W+H Shared Blackboard Space &amp; Orthogonal Query Topology</text>
+  <rect x="35.0" y="85.0" width="270.0" height="335.0" fill="#1E222B" stroke="#30363D" stroke-width="1.2" rx="6"/>
+  <rect x="49.0" y="97.0" width="115.0" height="20.0" fill="#162238" stroke="#388bfd" stroke-width="1" rx="3"/>
+  <text x="106.0" y="111.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="9" font-weight="700" fill="#79c0ff" text-anchor="middle">ANALYSIS AGENT</text>
+  <text x="49.0" y="131.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#8B949E" text-anchor="start">SA Level 1 &amp; Lower-Level 2</text>
+  <line x1="49.0" y1="141.0" x2="291.0" y2="141.0" stroke="#30363D" stroke-width="1.5" />
+  <rect x="47.0" y="153.0" width="246.0" height="98.0" fill="#16191F" stroke="#30363D" stroke-width="1" rx="5"/>
+  <text x="59.0" y="172.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#FDFEFE" text-anchor="start">Input Telemetry Streams</text>
+  <text x="59.0" y="189.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#8B949E" text-anchor="start">• Heterogeneous 100 Hz sensor feeds</text>
+  <text x="59.0" y="205.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#8B949E" text-anchor="start">• Sparkplug B metric payloads</text>
+  <text x="59.0" y="221.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#8B949E" text-anchor="start">• Chronological SOE event logs</text>
+  <rect x="47.0" y="263.0" width="246.0" height="142.0" fill="#16191F" stroke="#388bfd" stroke-width="1" rx="5"/>
+  <text x="59.0" y="282.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#79c0ff" text-anchor="start">5W+H Semantic Extractor</text>
+  <text x="59.0" y="299.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#8B949E" text-anchor="start">• Who: Affected asset tag</text>
+  <text x="59.0" y="315.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#8B949E" text-anchor="start">• What: State deviation pattern</text>
+  <text x="59.0" y="331.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#8B949E" text-anchor="start">• When: Event onset timestamp</text>
+  <text x="59.0" y="347.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#8B949E" text-anchor="start">• Where: ISA-95 model location</text>
+  <text x="59.0" y="363.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#8B949E" text-anchor="start">• Why: Root cause correlation</text>
+  <text x="59.0" y="379.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#8B949E" text-anchor="start">• How: Propagation mechanism</text>
+  <rect x="35.0" y="450.0" width="270.0" height="360.0" fill="#1E222B" stroke="#30363D" stroke-width="1.2" rx="6"/>
+  <rect x="49.0" y="462.0" width="135.0" height="20.0" fill="#162238" stroke="#388bfd" stroke-width="1" rx="3"/>
+  <text x="116.0" y="476.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="9" font-weight="700" fill="#79c0ff" text-anchor="middle">ANTICIPATION AGENT</text>
+  <text x="49.0" y="496.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#8B949E" text-anchor="start">SA Level 3 &amp; Weak-Signal Analysis</text>
+  <line x1="49.0" y1="506.0" x2="291.0" y2="506.0" stroke="#30363D" stroke-width="1.5" />
+  <rect x="47.0" y="518.0" width="246.0" height="118.0" fill="#16191F" stroke="#30363D" stroke-width="1" rx="5"/>
+  <text x="59.0" y="537.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#FDFEFE" text-anchor="start">Weak-Signal Detection</text>
+  <text x="59.0" y="554.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#8B949E" text-anchor="start">• Learns baseline of normal dynamics</text>
+  <text x="59.0" y="570.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#8B949E" text-anchor="start">• Detects nascent drift before alarms</text>
+  <text x="59.0" y="586.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#8B949E" text-anchor="start">• Detects absence of expected events</text>
+  <text x="59.0" y="602.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#8B949E" text-anchor="start">  (e.g., valve open without flow rise)</text>
+  <rect x="47.0" y="648.0" width="246.0" height="148.0" fill="#16191F" stroke="#388bfd" stroke-width="1" rx="5"/>
+  <text x="59.0" y="667.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#79c0ff" text-anchor="start">Uncertainty Propagation</text>
+  <text x="59.0" y="684.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#8B949E" text-anchor="start">• Mandatory uncertainty modeling</text>
+  <text x="59.0" y="700.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#8B949E" text-anchor="start">• Generates confidence bounds (± σ)</text>
+  <text x="59.0" y="716.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#8B949E" text-anchor="start">• Evaluates alternative hypotheses</text>
+  <text x="59.0" y="732.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#8B949E" text-anchor="start">• Forwards probability distributions</text>
+  <text x="59.0" y="748.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#8B949E" text-anchor="start">  directly to Risk Manager &amp; Locutor</text>
+  <rect x="330.0" y="85.0" width="360.0" height="725.0" fill="#1E222B" stroke="#388bfd" stroke-width="1.8" rx="6"/>
+  <rect x="346.0" y="99.0" width="160.0" height="22.0" fill="#0d1b2a" stroke="#388bfd" stroke-width="1" rx="3"/>
+  <text x="426.0" y="114.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="9.5" font-weight="800" fill="#79c0ff" text-anchor="middle">SHARED BLACKBOARD SPACE</text>
+  <text x="346.0" y="135.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#8B949E" text-anchor="start">Pub/Sub Decoupled 5W+H Situation Model (Verdejo et al., 2026)</text>
+  <line x1="344.0" y1="147.0" x2="676.0" y2="147.0" stroke="#30363D" stroke-width="1.5" />
+  <rect x="344.0" y="159.0" width="332.0" height="84.0" fill="#16191F" stroke="#30363D" stroke-width="1" rx="4"/>
+  <rect x="352.0" y="169.0" width="54.0" height="16.0" fill="#0d1b2a" stroke="#388bfd" stroke-width="1" rx="2"/>
+  <text x="379.0" y="181.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="9" font-weight="800" fill="#79c0ff" text-anchor="middle">WHO</text>
+  <text x="414.0" y="181.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="9.5" font-weight="400" fill="#8B949E" text-anchor="start">Primary Asset &amp; Coupled Actuator</text>
+  <text x="352.0" y="205.0" font-family="SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace" font-size="11" font-weight="700" fill="#FDFEFE" text-anchor="start">Reboiler E-102 · Pump P-101A</text>
+  <line x1="352.0" y1="217.0" x2="654.0" y2="217.0" stroke="#30363D" stroke-width="1.5" stroke-dasharray="2 2" />
+  <text x="352.0" y="231.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="8.5" font-weight="400" fill="#8B949E" text-anchor="start">Shared state accessible by Anticipation, Risk &amp; Simulation</text>
+  <rect x="344.0" y="255.0" width="332.0" height="84.0" fill="#16191F" stroke="#30363D" stroke-width="1" rx="4"/>
+  <rect x="352.0" y="265.0" width="54.0" height="16.0" fill="#0d1b2a" stroke="#388bfd" stroke-width="1" rx="2"/>
+  <text x="379.0" y="277.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="9" font-weight="800" fill="#79c0ff" text-anchor="middle">WHAT</text>
+  <text x="414.0" y="277.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="9.5" font-weight="400" fill="#8B949E" text-anchor="start">Abnormal Process Behavior</text>
+  <text x="352.0" y="301.0" font-family="SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace" font-size="11" font-weight="700" fill="#FDFEFE" text-anchor="start">Thermal runaway · +4.2 bar/min</text>
+  <line x1="352.0" y1="313.0" x2="654.0" y2="313.0" stroke="#30363D" stroke-width="1.5" stroke-dasharray="2 2" />
+  <text x="352.0" y="327.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="8.5" font-weight="400" fill="#8B949E" text-anchor="start">Shared state accessible by Anticipation, Risk &amp; Simulation</text>
+  <rect x="344.0" y="351.0" width="332.0" height="84.0" fill="#16191F" stroke="#30363D" stroke-width="1" rx="4"/>
+  <rect x="352.0" y="361.0" width="54.0" height="16.0" fill="#0d1b2a" stroke="#388bfd" stroke-width="1" rx="2"/>
+  <text x="379.0" y="373.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="9" font-weight="800" fill="#79c0ff" text-anchor="middle">WHEN</text>
+  <text x="414.0" y="373.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="9.5" font-weight="400" fill="#8B949E" text-anchor="start">Chronological Event Horizon</text>
+  <text x="352.0" y="397.0" font-family="SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace" font-size="11" font-weight="700" fill="#FDFEFE" text-anchor="start">Onset: 14:22:08 UTC (+42 s)</text>
+  <line x1="352.0" y1="409.0" x2="654.0" y2="409.0" stroke="#30363D" stroke-width="1.5" stroke-dasharray="2 2" />
+  <text x="352.0" y="423.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="8.5" font-weight="400" fill="#8B949E" text-anchor="start">Shared state accessible by Anticipation, Risk &amp; Simulation</text>
+  <rect x="344.0" y="447.0" width="332.0" height="84.0" fill="#16191F" stroke="#30363D" stroke-width="1" rx="4"/>
+  <rect x="352.0" y="457.0" width="54.0" height="16.0" fill="#0d1b2a" stroke="#388bfd" stroke-width="1" rx="2"/>
+  <text x="379.0" y="469.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="9" font-weight="800" fill="#79c0ff" text-anchor="middle">WHERE</text>
+  <text x="414.0" y="469.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="9.5" font-weight="400" fill="#8B949E" text-anchor="start">ISA-95 Plant Taxonomy</text>
+  <text x="352.0" y="493.0" font-family="SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace" font-size="11" font-weight="700" fill="#FDFEFE" text-anchor="start">SiteA/Unit102/Distillation</text>
+  <line x1="352.0" y1="505.0" x2="654.0" y2="505.0" stroke="#30363D" stroke-width="1.5" stroke-dasharray="2 2" />
+  <text x="352.0" y="519.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="8.5" font-weight="400" fill="#8B949E" text-anchor="start">Shared state accessible by Anticipation, Risk &amp; Simulation</text>
+  <rect x="344.0" y="543.0" width="332.0" height="84.0" fill="#16191F" stroke="#30363D" stroke-width="1" rx="4"/>
+  <rect x="352.0" y="553.0" width="54.0" height="16.0" fill="#0d1b2a" stroke="#388bfd" stroke-width="1" rx="2"/>
+  <text x="379.0" y="565.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="9" font-weight="800" fill="#79c0ff" text-anchor="middle">WHY</text>
+  <text x="414.0" y="565.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="9.5" font-weight="400" fill="#8B949E" text-anchor="start">Correlated Upstream Root Cause</text>
+  <text x="352.0" y="589.0" font-family="SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace" font-size="11" font-weight="700" fill="#FDFEFE" text-anchor="start">V-12 closed while H-01 active</text>
+  <line x1="352.0" y1="601.0" x2="654.0" y2="601.0" stroke="#30363D" stroke-width="1.5" stroke-dasharray="2 2" />
+  <text x="352.0" y="615.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="8.5" font-weight="400" fill="#8B949E" text-anchor="start">Shared state accessible by Anticipation, Risk &amp; Simulation</text>
+  <rect x="344.0" y="639.0" width="332.0" height="84.0" fill="#16191F" stroke="#30363D" stroke-width="1" rx="4"/>
+  <rect x="352.0" y="649.0" width="54.0" height="16.0" fill="#0d1b2a" stroke="#388bfd" stroke-width="1" rx="2"/>
+  <text x="379.0" y="661.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="9" font-weight="800" fill="#79c0ff" text-anchor="middle">HOW</text>
+  <text x="414.0" y="661.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="9.5" font-weight="400" fill="#8B949E" text-anchor="start">Physical Propagation Mechanism</text>
+  <text x="352.0" y="685.0" font-family="SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace" font-size="11" font-weight="700" fill="#FDFEFE" text-anchor="start">Vaporization in shell bundle</text>
+  <line x1="352.0" y1="697.0" x2="654.0" y2="697.0" stroke="#30363D" stroke-width="1.5" stroke-dasharray="2 2" />
+  <text x="352.0" y="711.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="8.5" font-weight="400" fill="#8B949E" text-anchor="start">Shared state accessible by Anticipation, Risk &amp; Simulation</text>
+  <text x="510.0" y="790.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="600" fill="#79c0ff" text-anchor="middle">Blackboard decouples analytical agents from UI locutor</text>
+  <rect x="715.0" y="85.0" width="270.0" height="335.0" fill="#1E222B" stroke="#30363D" stroke-width="1.2" rx="6"/>
+  <rect x="729.0" y="97.0" width="135.0" height="20.0" fill="#162238" stroke="#388bfd" stroke-width="1" rx="3"/>
+  <text x="796.0" y="111.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="9" font-weight="700" fill="#79c0ff" text-anchor="middle">RISK MANAGER AGENT</text>
+  <text x="729.0" y="131.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#8B949E" text-anchor="start">Decision Support &amp; Threat Evaluation</text>
+  <line x1="729.0" y1="141.0" x2="971.0" y2="141.0" stroke="#30363D" stroke-width="1.5" />
+  <rect x="727.0" y="153.0" width="246.0" height="98.0" fill="#16191F" stroke="#30363D" stroke-width="1" rx="5"/>
+  <text x="739.0" y="172.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#FDFEFE" text-anchor="start">Probabilistic Threat Matrix</text>
+  <text x="739.0" y="189.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#8B949E" text-anchor="start">• Likelihood × Impact scoring</text>
+  <text x="739.0" y="205.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#8B949E" text-anchor="start">• Maps anomalies to equipment</text>
+  <text x="739.0" y="221.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#8B949E" text-anchor="start">• Computes unmitigated hazard score</text>
+  <rect x="727.0" y="263.0" width="246.0" height="142.0" fill="#16191F" stroke="#ff7b72" stroke-width="1" rx="5"/>
+  <text x="739.0" y="282.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#ff7b72" text-anchor="start">Non-Binding Advisory Rule</text>
+  <text x="739.0" y="299.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#8B949E" text-anchor="start">• Never executes autonomous control</text>
+  <text x="739.0" y="315.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#8B949E" text-anchor="start">• Generates options &amp; trade-offs</text>
+  <text x="739.0" y="331.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#8B949E" text-anchor="start">• Computes residual risk per option</text>
+  <text x="739.0" y="347.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#8B949E" text-anchor="start">• Human operator retains sole veto</text>
+  <text x="739.0" y="363.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#8B949E" text-anchor="start">• Structural gate (IEC 62443)</text>
+  <rect x="715.0" y="450.0" width="270.0" height="360.0" fill="#1E222B" stroke="#30363D" stroke-width="1.2" rx="6"/>
+  <rect x="729.0" y="462.0" width="125.0" height="20.0" fill="#162238" stroke="#388bfd" stroke-width="1" rx="3"/>
+  <text x="791.0" y="476.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="9" font-weight="700" fill="#79c0ff" text-anchor="middle">SIMULATION AGENT</text>
+  <text x="729.0" y="496.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#8B949E" text-anchor="start">Digital Twin &amp; What-If Trajectories</text>
+  <line x1="729.0" y1="506.0" x2="971.0" y2="506.0" stroke="#30363D" stroke-width="1.5" />
+  <rect x="727.0" y="518.0" width="246.0" height="118.0" fill="#16191F" stroke="#30363D" stroke-width="1" rx="5"/>
+  <text x="739.0" y="537.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#FDFEFE" text-anchor="start">Digital Twin Fast-Forward</text>
+  <text x="739.0" y="554.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#8B949E" text-anchor="start">• Physics thermodynamic model</text>
+  <text x="739.0" y="570.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#8B949E" text-anchor="start">• Runs 10× faster than real-time</text>
+  <text x="739.0" y="586.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#8B949E" text-anchor="start">• Simulates runaway trajectory</text>
+  <text x="739.0" y="602.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#8B949E" text-anchor="start">• Computes time-to-rupture = 3.5m</text>
+  <rect x="727.0" y="648.0" width="246.0" height="148.0" fill="#16191F" stroke="#388bfd" stroke-width="1" rx="5"/>
+  <text x="739.0" y="667.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#79c0ff" text-anchor="start">What-If Branch Evaluation</text>
+  <text x="739.0" y="684.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#8B949E" text-anchor="start">• Option A: Trip Heater (1.8m)</text>
+  <text x="739.0" y="700.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#8B949E" text-anchor="start">• Option B: Open Bypass (2.4m)</text>
+  <text x="739.0" y="716.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#8B949E" text-anchor="start">• Simulates transient overshoot</text>
+  <text x="739.0" y="732.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#8B949E" text-anchor="start">• Feeds curves to Locutor Agent</text>
+  <text x="739.0" y="748.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#8B949E" text-anchor="start">• Physics-based trade-off curves</text>
+  <rect x="1010.0" y="85.0" width="235.0" height="435.0" fill="#1E222B" stroke="#388bfd" stroke-width="1.8" rx="6"/>
+  <rect x="1024.0" y="97.0" width="115.0" height="22.0" fill="#0d1b2a" stroke="#388bfd" stroke-width="1" rx="3"/>
+  <text x="1081.0" y="112.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="9.5" font-weight="800" fill="#79c0ff" text-anchor="middle">LOCUTOR AGENT</text>
+  <text x="1024.0" y="133.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#8B949E" text-anchor="start">The Cognitive Mirror Paradigm</text>
+  <line x1="1024.0" y1="143.0" x2="1231.0" y2="143.0" stroke="#30363D" stroke-width="1.5" />
+  <rect x="1022.0" y="155.0" width="211.0" height="105.0" fill="#16191F" stroke="#388bfd" stroke-width="1" rx="5"/>
+  <text x="1034.0" y="174.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#79c0ff" text-anchor="start">Orthogonal Query APIs</text>
+  <text x="1034.0" y="191.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#8B949E" text-anchor="start">• Sits orthogonally to bus</text>
+  <text x="1034.0" y="207.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#8B949E" text-anchor="start">• Dedicated read-only query APIs</text>
+  <text x="1034.0" y="223.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#8B949E" text-anchor="start">• Aggregates 5W+H &amp; simulation</text>
+  <text x="1034.0" y="239.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#8B949E" text-anchor="start">• Translates math to dialogue</text>
+  <rect x="1022.0" y="270.0" width="211.0" height="125.0" fill="#16191F" stroke="#30363D" stroke-width="1" rx="5"/>
+  <text x="1034.0" y="289.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#FDFEFE" text-anchor="start">Cognitive Mirroring</text>
+  <text x="1034.0" y="306.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#8B949E" text-anchor="start">• Reframes problem dimensions</text>
+  <text x="1034.0" y="322.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#8B949E" text-anchor="start">• Challenges tunnel vision</text>
+  <text x="1034.0" y="338.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#8B949E" text-anchor="start">• Exposes hidden assumptions</text>
+  <text x="1034.0" y="354.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#8B949E" text-anchor="start">• Prevents mental deskilling</text>
+  <text x="1034.0" y="370.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#8B949E" text-anchor="start">• Surfaces uncertainty (± σ)</text>
+  <rect x="1022.0" y="405.0" width="211.0" height="100.0" fill="#16191F" stroke="#388bfd" stroke-width="1" rx="5"/>
+  <text x="1034.0" y="424.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#79c0ff" text-anchor="start">Dialogue Engine</text>
+  <text x="1034.0" y="441.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#8B949E" text-anchor="start">• Bidirectional WebSocket</text>
+  <text x="1034.0" y="457.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#8B949E" text-anchor="start">• Explainable AI (XAI) logic</text>
+  <text x="1034.0" y="473.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#8B949E" text-anchor="start">• Non-intrusive dialectic</text>
+  <rect x="1010.0" y="545.0" width="235.0" height="265.0" fill="#1E222B" stroke="#3fb950" stroke-width="1.8" rx="6"/>
+  <circle cx="1042.0" cy="579.0" r="16.0" fill="#0d1b2a" stroke="#3fb950" stroke-width="2"/>
+  <text x="1042.0" y="584.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="800" fill="#3fb950" text-anchor="middle">OP</text>
+  <text x="1066.0" y="575.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="800" fill="#3fb950" text-anchor="start">CONSOLE OPERATOR</text>
+  <text x="1066.0" y="589.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="8.5" font-weight="400" fill="#8B949E" text-anchor="start">Exclusive Authority (ISA-101)</text>
+  <line x1="1024.0" y1="603.0" x2="1231.0" y2="603.0" stroke="#30363D" stroke-width="1.5" />
+  <rect x="1022.0" y="615.0" width="211.0" height="175.0" fill="#16191F" stroke="#3fb950" stroke-width="1" rx="5"/>
+  <text x="1034.0" y="634.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#3fb950" text-anchor="start">Structural Enforceability</text>
+  <text x="1034.0" y="651.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#8B949E" text-anchor="start">• Evaluates Socratic advice</text>
+  <text x="1034.0" y="667.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#8B949E" text-anchor="start">• Sole decision authority</text>
+  <text x="1034.0" y="683.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#8B949E" text-anchor="start">• Invariant: No auto-actions</text>
+  <text x="1034.0" y="699.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#8B949E" text-anchor="start">• Vetoes logged (IEC-62443)</text>
+  <text x="1034.0" y="715.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#8B949E" text-anchor="start">• Cryptographic SOE audit log</text>
+  <text x="1034.0" y="731.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#8B949E" text-anchor="start">• Final command barrier</text>
+  <line x1="305.0" y1="300.0" x2="330.0" y2="300.0" stroke="#388bfd" stroke-width="2" marker-end="url(#arr-blue)"/>
+  <line x1="305.0" y1="580.0" x2="330.0" y2="580.0" stroke="#388bfd" stroke-width="2" marker-end="url(#arr-blue)"/>
+  <line x1="690.0" y1="205.0" x2="715.0" y2="205.0" stroke="#388bfd" stroke-width="2" marker-end="url(#arr-blue)"/>
+  <line x1="690.0" y1="580.0" x2="715.0" y2="580.0" stroke="#388bfd" stroke-width="2" marker-end="url(#arr-blue)"/>
+  <line x1="690.0" y1="435.0" x2="1010.0" y2="435.0" stroke="#79c0ff" stroke-width="1.8" stroke-dasharray="3 3" />
+  <line x1="850.0" y1="420.0" x2="850.0" y2="435.0" stroke="#79c0ff" stroke-width="1.8" stroke-dasharray="3 3" marker-start="url(#arr-cyan)"/>
+  <line x1="850.0" y1="435.0" x2="850.0" y2="450.0" stroke="#79c0ff" stroke-width="1.8" stroke-dasharray="3 3" marker-end="url(#arr-cyan)"/>
+  <circle cx="850.0" cy="435.0" r="4.0" fill="#79c0ff" stroke="#388bfd" stroke-width="1.5"/>
+  <rect x="720.0" y="424.0" width="260.0" height="22.0" fill="#16191F" stroke="#388bfd" stroke-width="1" rx="3"/>
+  <text x="850.0" y="439.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="8.5" font-weight="700" fill="#79c0ff" text-anchor="middle">Orthogonal Query Bus (Dedicated APIs)</text>
+  <line x1="1127.5" y1="520.0" x2="1127.5" y2="545.0" stroke="#3fb950" stroke-width="2" marker-end="url(#arr-green)" marker-start="url(#arr-cyan)"/>
+  <rect x="1069.5" y="522.5" width="116.0" height="20.0" fill="#12241b" stroke="#3fb950" stroke-width="1" rx="3"/>
+  <text x="1127.5" y="536.5" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="9" font-weight="800" fill="#3fb950" text-anchor="middle">Socratic Dialogue</text>
+  <rect x="35.0" y="825.0" width="1210.0" height="54.0" fill="#16191F" stroke="#30363D" stroke-width="1" rx="6"/>
+  <text x="51.0" y="845.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#3fb950" text-anchor="start">✓</text>
+  <text x="67.0" y="845.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#FDFEFE" text-anchor="start">ALARMS Architecture:</text>
+  <text x="210.0" y="845.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#8B949E" text-anchor="start">5 specialized agents (Analysis, Anticipation, Risk Manager, Simulation, Locutor) — Verdejo et al. (2026)</text>
+  <text x="815.0" y="845.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#3fb950" text-anchor="start">✓</text>
+  <text x="831.0" y="845.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#FDFEFE" text-anchor="start">5W+H Blackboard:</text>
+  <text x="955.0" y="845.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#8B949E" text-anchor="start">Pub/sub decoupled shared situation model</text>
+  <text x="51.0" y="866.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#3fb950" text-anchor="start">✓</text>
+  <text x="67.0" y="866.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#FDFEFE" text-anchor="start">Orthogonal Query:</text>
+  <text x="195.0" y="866.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#8B949E" text-anchor="start">Locutor queries agents directly via dedicated APIs without polluting shared state</text>
+  <text x="815.0" y="866.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#3fb950" text-anchor="start">✓</text>
+  <text x="831.0" y="866.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#FDFEFE" text-anchor="start">Human Authority:</text>
+  <text x="950.0" y="866.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#8B949E" text-anchor="start">Structural enforceability of human operator veto (IEC-62443)</text>
+</svg>

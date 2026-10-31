@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="780" viewBox="0 0 1120 780" role="img" aria-labelledby="title desc">
+  <title id="title">Endsley 3-Level Situational Awareness and the Cognitive Mirror</title>
+  <desc id="desc">Mica Endsley's 3-level SA model (Perception -&gt; Comprehension -&gt; Projection) illustrated across an exothermic boiler upset, culminating in the ALARMS Cognitive Mirror Socratic dialogue.</desc>
+  <defs>
+  <marker id="arr-blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+    <path d="M 0 1 L 10 5 L 0 9 z" fill="#388bfd" />
+  </marker>
+  <marker id="arr-red" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+    <path d="M 0 1 L 10 5 L 0 9 z" fill="#f85149" />
+  </marker>
+</defs>
+  <rect x="0.0" y="0.0" width="1120.0" height="780.0" rx="12" fill="#16191F" stroke="none" stroke-width="1" />
+  <text x="560.0" y="38.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#FDFEFE" text-anchor="middle" >Endsley's 3-Level Situational Awareness &amp; The Cognitive Mirror</text>
+  <text x="560.0" y="59.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#7E8B9B" text-anchor="middle" >Mica Endsley (1995) · Perception (L1) → Comprehension (L2) → Projection (L3) · Verdejo et al. (2026)</text>
+  <rect x="35.0" y="80.0" width="330.0" height="460.0" rx="8" fill="#1E222B" stroke="#2A9D8F" stroke-width="1.5" />
+  <rect x="51.0" y="94.0" width="80.0" height="22.0" rx="3" fill="#1b3a2a" stroke="#2A9D8F" stroke-width="1" />
+  <text x="91.0" y="109.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#2A9D8F" text-anchor="middle" >SA LEVEL 1</text>
+  <text x="139.0" y="110.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#2A9D8F" text-anchor="start" >Perception of Elements</text>
+  <text x="51.0" y="132.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#7E8B9B" text-anchor="start" font-style="italic" >"What are the raw elements right now?"</text>
+  <line x1="51.0" y1="144.0" x2="349.0" y2="144.0" stroke="#3A4154" stroke-width="1" />
+  <rect x="51.0" y="158.0" width="298.0" height="56.0" rx="4" fill="#16191F" stroke="#3A4154" stroke-width="1" />
+  <text x="63.0" y="178.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#7E8B9B" text-anchor="start" >Tank T-01 Liquid Level</text>
+  <text x="63.0" y="200.0" font-family="Cascadia Code, SF Mono, Consolas, DejaVu Sans Mono, monospace" font-size="16" font-weight="700" fill="#FDFEFE" text-anchor="start" >88.5 %</text>
+  <text x="337.0" y="200.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="9.5" font-weight="400" fill="#2A9D8F" text-anchor="end" >Nominal Band (30–90%)</text>
+  <rect x="51.0" y="226.0" width="298.0" height="56.0" rx="4" fill="#16191F" stroke="#3A4154" stroke-width="1" />
+  <text x="63.0" y="246.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#7E8B9B" text-anchor="start" >Relief Valve V-102</text>
+  <text x="63.0" y="268.0" font-family="Cascadia Code, SF Mono, Consolas, DejaVu Sans Mono, monospace" font-size="16" font-weight="700" fill="#FDFEFE" text-anchor="start" >CLOSED</text>
+  <text x="337.0" y="268.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="9.5" font-weight="400" fill="#F4A261" text-anchor="end" >0% Flow / Latched</text>
+  <rect x="51.0" y="294.0" width="298.0" height="56.0" rx="4" fill="#16191F" stroke="#3A4154" stroke-width="1" />
+  <text x="63.0" y="314.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#7E8B9B" text-anchor="start" >Heater Element H-01</text>
+  <text x="63.0" y="336.0" font-family="Cascadia Code, SF Mono, Consolas, DejaVu Sans Mono, monospace" font-size="16" font-weight="700" fill="#FDFEFE" text-anchor="start" >100.0 %</text>
+  <text x="337.0" y="336.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="9.5" font-weight="400" fill="#E63946" text-anchor="end" >Active Duty (Thermal Input)</text>
+  <rect x="51.0" y="380.0" width="298.0" height="140.0" rx="6" fill="#16191F" stroke="#3A4154" stroke-width="1.5" />
+  <text x="65.0" y="401.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#7E8B9B" text-anchor="start" >Operator Mental State (L1 Only)</text>
+  <text x="65.0" y="419.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#7E8B9B" text-anchor="start" >• Views 3 separate, disconnected metrics.</text>
+  <text x="65.0" y="435.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#7E8B9B" text-anchor="start" >• T-01 is in band, so no scalar alarm trips yet.</text>
+  <text x="65.0" y="451.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#7E8B9B" text-anchor="start" >• Relies on serial visual search across tags.</text>
+  <text x="65.0" y="467.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#7E8B9B" text-anchor="start" >• High risk of inattentional blindness and</text>
+  <text x="65.0" y="483.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#7E8B9B" text-anchor="start" >  out-of-the-loop unawareness (OOTLU).</text>
+  <line x1="365.0" y1="290.0" x2="395.0" y2="290.0" stroke="#388bfd" stroke-width="2" marker-end="url(#arr-blue)"/>
+  <rect x="395.0" y="80.0" width="330.0" height="460.0" rx="8" fill="#1E222B" stroke="#58a6ff" stroke-width="1.5" />
+  <rect x="411.0" y="94.0" width="80.0" height="22.0" rx="3" fill="#1f3a5f" stroke="#58a6ff" stroke-width="1" />
+  <text x="451.0" y="109.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#79c0ff" text-anchor="middle" >SA LEVEL 2</text>
+  <text x="499.0" y="110.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#79c0ff" text-anchor="start" >Comprehension of Meaning</text>
+  <text x="411.0" y="132.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#7E8B9B" text-anchor="start" font-style="italic" >"What does this state pattern mean?"</text>
+  <line x1="411.0" y1="144.0" x2="709.0" y2="144.0" stroke="#3A4154" stroke-width="1" />
+  <rect x="411.0" y="158.0" width="298.0" height="192.0" rx="4" fill="#16191F" stroke="#58a6ff" stroke-width="1.2" />
+  <text x="423.0" y="182.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#79c0ff" text-anchor="start" >Cross-Variable Correlation (5W+H):</text>
+  <text x="423.0" y="206.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#FDFEFE" text-anchor="start" >Physical Synthesis:</text>
+  <text x="423.0" y="222.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#7E8B9B" text-anchor="start" >Heater is active + Relief valve is shut</text>
+  <text x="423.0" y="242.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#FDFEFE" text-anchor="start" >Thermal Reaction:</text>
+  <text x="423.0" y="258.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#7E8B9B" text-anchor="start" >Liquid boiling creates rapid vapor surge</text>
+  <text x="423.0" y="278.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#FDFEFE" text-anchor="start" >Volumetric Effect:</text>
+  <text x="423.0" y="294.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#7E8B9B" text-anchor="start" >Expanding liquid displaces headspace</text>
+  <text x="423.0" y="314.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#E63946" text-anchor="start" >Systemic Hazard:</text>
+  <text x="423.0" y="330.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#7E8B9B" text-anchor="start" >Exothermic Runaway Pressure Surge</text>
+  <rect x="411.0" y="380.0" width="298.0" height="140.0" rx="6" fill="#16191F" stroke="#58a6ff" stroke-width="1.5" />
+  <text x="425.0" y="401.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#79c0ff" text-anchor="start" >Operator Mental State (L2 Reached)</text>
+  <text x="425.0" y="419.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#7E8B9B" text-anchor="start" >• Connects individual measurements into a</text>
+  <text x="425.0" y="435.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#7E8B9B" text-anchor="start" >  unified thermodynamic system model.</text>
+  <text x="425.0" y="451.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#7E8B9B" text-anchor="start" >• Recognizes un-annunciated physical danger.</text>
+  <text x="425.0" y="467.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#7E8B9B" text-anchor="start" >• Overcomes single-variable tunnel vision.</text>
+  <text x="425.0" y="483.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#7E8B9B" text-anchor="start" >• Understands *why* the process is deviating.</text>
+  <line x1="725.0" y1="290.0" x2="755.0" y2="290.0" stroke="#388bfd" stroke-width="2" marker-end="url(#arr-blue)"/>
+  <rect x="755.0" y="80.0" width="330.0" height="460.0" rx="8" fill="#1E222B" stroke="#E63946" stroke-width="1.5" />
+  <rect x="771.0" y="94.0" width="80.0" height="22.0" rx="3" fill="#2c1517" stroke="#E63946" stroke-width="1" />
+  <text x="811.0" y="109.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#E63946" text-anchor="middle" >SA LEVEL 3</text>
+  <text x="859.0" y="110.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#E63946" text-anchor="start" >Projection of Future Status</text>
+  <text x="771.0" y="132.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#7E8B9B" text-anchor="start" font-style="italic" >"What will happen next and when?"</text>
+  <line x1="771.0" y1="144.0" x2="1069.0" y2="144.0" stroke="#3A4154" stroke-width="1" />
+  <rect x="771.0" y="158.0" width="298.0" height="192.0" rx="4" fill="#16191F" stroke="#E63946" stroke-width="1.2" />
+  <text x="783.0" y="180.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#E63946" text-anchor="start" >Extrapolated Pressure Trajectory:</text>
+  <line x1="791.0" y1="313.0" x2="1049.0" y2="313.0" stroke="#5C667A" stroke-width="1" />
+  <line x1="791.0" y1="198.0" x2="791.0" y2="313.0" stroke="#5C667A" stroke-width="1" />
+  <line x1="791.0" y1="214.0" x2="1049.0" y2="214.0" stroke="#E63946" stroke-width="1" stroke-dasharray="3 3" />
+  <text x="1049.0" y="210.0" font-family="Cascadia Code, SF Mono, Consolas, DejaVu Sans Mono, monospace" font-size="9" font-weight="700" fill="#E63946" text-anchor="end" >RUPTURE: 150 bar</text>
+  <line x1="907.1" y1="198.0" x2="907.1" y2="313.0" stroke="#5C667A" stroke-width="1" stroke-dasharray="2 2" />
+  <text x="907.1" y="327.0" font-family="Cascadia Code, SF Mono, Consolas, DejaVu Sans Mono, monospace" font-size="9" font-weight="400" fill="#7E8B9B" text-anchor="middle" >Now (t0)</text>
+  <text x="1049.0" y="327.0" font-family="Cascadia Code, SF Mono, Consolas, DejaVu Sans Mono, monospace" font-size="9" font-weight="400" fill="#7E8B9B" text-anchor="end" >+5 min</text>
+  <path d="M791,293 Q831,288 907.1,263" fill="none" stroke="#58a6ff" stroke-width="2" />
+  <circle cx="907.1" cy="263.0" r="4" fill="#58a6ff" stroke="none" stroke-width="1" />
+  <text x="899.1" y="258.0" font-family="Cascadia Code, SF Mono, Consolas, DejaVu Sans Mono, monospace" font-size="9" font-weight="400" fill="#79c0ff" text-anchor="end" >88 bar</text>
+  <path d="M907.1,263 Q947.1,228 1029,214" fill="none" stroke="#E63946" stroke-width="2.2" stroke-dasharray="3 3" />
+  <circle cx="1029.0" cy="214.0" r="5" fill="#E63946" stroke="none" stroke-width="1" />
+  <rect x="783.0" y="320.0" width="274.0" height="22.0" rx="3" fill="#2c1517" stroke="#E63946" stroke-width="1" />
+  <text x="920.0" y="335.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#E63946" text-anchor="middle" >Time-to-Trip: 3.5 Minutes to Rupture</text>
+  <rect x="771.0" y="380.0" width="298.0" height="140.0" rx="6" fill="#16191F" stroke="#E63946" stroke-width="1.5" />
+  <text x="785.0" y="401.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#E63946" text-anchor="start" >Operator Mental State (L3 Reached)</text>
+  <text x="785.0" y="419.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#7E8B9B" text-anchor="start" >• Proactive decision window opened.</text>
+  <text x="785.0" y="435.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#7E8B9B" text-anchor="start" >• Anticipates mechanical catastrophe 3.5</text>
+  <text x="785.0" y="451.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#7E8B9B" text-anchor="start" >  minutes before high-pressure trip.</text>
+  <text x="785.0" y="467.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#7E8B9B" text-anchor="start" >• Can intervene proactively: trip heater now</text>
+  <text x="785.0" y="483.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#7E8B9B" text-anchor="start" >  and vent bypass safely before trip.</text>
+  <rect x="35.0" y="560.0" width="1050.0" height="138.0" rx="8" fill="#1E222B" stroke="#58a6ff" stroke-width="1.5" />
+  <text x="55.0" y="584.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#79c0ff" text-anchor="start" >The ALARMS Cognitive Mirror Interlock (Verdejo et al., 2026)</text>
+  <text x="55.0" y="602.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#7E8B9B" text-anchor="start" >Instead of an opaque black-box auto-tripping the plant, the Locutor Agent acts as a Socratic mirror challenging operator tunnel vision:</text>
+  <rect x="55.0" y="612.0" width="1010.0" height="70.0" rx="5" fill="#16191F" stroke="#58a6ff" stroke-width="1" />
+  <circle cx="85.0" cy="647.0" r="18" fill="#0d1b2a" stroke="#388bfd" stroke-width="1.5" />
+  <text x="85.0" y="653.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="800" fill="#79c0ff" text-anchor="middle" >AI</text>
+  <text x="115.0" y="636.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#79c0ff" text-anchor="start" >Locutor Agent (Cognitive Mirror Advisory):</text>
+  <text x="115.0" y="656.0" font-family="Cascadia Code, SF Mono, Consolas, DejaVu Sans Mono, monospace" font-size="11" font-weight="400" fill="#FDFEFE" text-anchor="start" >"Operator, you acknowledged Level Alarm T-01, but Heater H-01 remains at 100% with Relief V-102 closed.</text>
+  <text x="115.0" y="671.0" font-family="Cascadia Code, SF Mono, Consolas, DejaVu Sans Mono, monospace" font-size="11" font-weight="400" fill="#E63946" text-anchor="start" > Pressure will breach rupture disc in 3.5 min (Confidence: 94% ± 2.8%). Confirm emergency heater trip?"</text>
+  <rect x="895.0" y="630.0" width="140.0" height="34.0" rx="4" fill="#E63946" stroke="none" stroke-width="1" />
+  <text x="965.0" y="651.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="800" fill="#FFFFFF" text-anchor="middle" >TRIP HEATER NOW</text>
+  <rect x="35.0" y="712.0" width="1050.0" height="32.0" rx="4" fill="#16191F" stroke="none" stroke-width="1" />
+  <text x="51.0" y="732.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#7E8B9B">✓ <tspan font-weight="700" fill="#FDFEFE">Endsley SA:</tspan> L1 Perception → L2 Comprehension → L3 Projection</text>
+  <text x="411.0" y="732.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#7E8B9B">✓ <tspan font-weight="700" fill="#FDFEFE">Cognitive Mirror:</tspan> challenges tunnel vision to prevent complacency</text>
+  <text x="771.0" y="732.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#7E8B9B">✓ <tspan font-weight="700" fill="#FDFEFE">Human Authority:</tspan> operator retains exclusive final command authority</text>
+</svg>

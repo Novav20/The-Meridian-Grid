@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 760" width="100%" height="100%" style="background:#16191F; font-family: Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif;">
+  <defs>
+    <marker id="arr-blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#388bfd" />
+    </marker>
+    <marker id="arr-green" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#3fb950" />
+    </marker>
+    <marker id="arr-red" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#ff7b72" />
+    </marker>
+  </defs>
+  <rect width="1240" height="760" rx="12" fill="#16191F" stroke="#30363D" stroke-width="1.5" class="bg" />
+  <text x="620" y="36" fill="#F0F6FC" font-size="19" font-weight="700" text-anchor="middle">Visual Angle Presentation Geometry &amp; Retinal Field Cones</text>
+  <text x="620" y="58" fill="#8B949E" font-size="12" text-anchor="middle">Paivio-Mayer Dual-Coding · Tracing Angular Velocity ω = dθ/dt and Viewing Cones (Tong et al., 2026)</text>
+  <rect x="30" y="82" width="570" height="615" rx="8" fill="#1E222B" stroke="#30363D" stroke-width="1.2" />
+  <rect x="46" y="96" width="250" height="26" rx="4" fill="#16191F" stroke="#388bfd" stroke-width="1.2" />
+  <text x="54" y="113" fill="#79c0ff" font-size="11" font-weight="700">1. RETINAL RAY TRACING GEOMETRY</text>
+  <text x="310" y="113" fill="#8B949E" font-size="10.5">Biomechanical Optical Plane</text>
+  <polygon points="125,282 410,162 410,402" fill="#388bfd" fill-opacity="0.06" />
+  <polygon points="125,282 410,207 410,357" fill="#388bfd" fill-opacity="0.10" />
+  <polygon points="125,282 410,252 410,312" fill="#388bfd" fill-opacity="0.16" />
+  <polygon points="125,282 410,274 410,290" fill="#3fb950" fill-opacity="0.30" />
+  <line x1="125" y1="282" x2="410" y2="162" stroke="#388bfd" stroke-width="1" stroke-dasharray="3,3" />
+  <line x1="125" y1="282" x2="410" y2="402" stroke="#388bfd" stroke-width="1" stroke-dasharray="3,3" />
+  <line x1="125" y1="282" x2="410" y2="252" stroke="#79c0ff" stroke-width="1" stroke-dasharray="2,2" />
+  <line x1="125" y1="282" x2="410" y2="312" stroke="#79c0ff" stroke-width="1" stroke-dasharray="2,2" />
+  <line x1="125" y1="282" x2="410" y2="282" stroke="#79c0ff" stroke-width="1.5" />
+  <circle cx="110" cy="282" r="22" fill="#16191F" stroke="#79c0ff" stroke-width="1.8" />
+  <path d="M 118 268 A 16 16 0 0 1 118 296 Z" fill="#388bfd" fill-opacity="0.4" />
+  <circle cx="117" cy="282" r="8" fill="#58a6ff" />
+  <circle cx="120" cy="282" r="3.5" fill="#FFFFFF" />
+  <text x="110" y="320" fill="#C9D1D9" font-size="10" font-weight="700" text-anchor="middle">Human Eye</text>
+  <text x="110" y="332" fill="#8B949E" font-size="8.5" text-anchor="middle">Retina &amp; Fovea</text>
+  <line x1="410" y1="154" x2="410" y2="410" stroke="#E6EDF3" stroke-width="3.5" stroke-linecap="round" />
+  <text x="420" y="166" fill="#E6EDF3" font-size="10.5" font-weight="700">Display Surface</text>
+  <line x1="414" y1="237" x2="414" y2="327" stroke="#ff7b72" stroke-width="2.5" marker-end="url(#arr-red)" />
+  <text x="422" y="280" fill="#ff7b72" font-size="10" font-weight="700">Motion Vector S</text>
+  <text x="422" y="294" fill="#8B949E" font-size="8.5">Displacement (mm)</text>
+  <line x1="125" y1="422" x2="410" y2="422" stroke="#8B949E" stroke-width="1.2" stroke-dasharray="4,4" />
+  <line x1="125" y1="416" x2="125" y2="428" stroke="#8B949E" stroke-width="1.2" />
+  <line x1="410" y1="416" x2="410" y2="428" stroke="#8B949E" stroke-width="1.2" />
+  <text x="267" y="437" fill="#79c0ff" font-size="10.5" font-weight="700" text-anchor="middle">Viewing Distance D (mm)</text>
+  <path d="M 190 268 A 80 80 0 0 1 190 296" fill="none" stroke="#3fb950" stroke-width="2" />
+  <text x="202" y="286" fill="#3fb950" font-size="11" font-weight="700">θ</text>
+  <rect x="50" y="462" width="530" height="225" rx="6" fill="#16191F" stroke="#30363D" stroke-width="1" />
+  <text x="64" y="482" fill="#79c0ff" font-size="11" font-weight="700">Retinal Field Cones &amp; Ocular Acuity Limits:</text>
+  <circle cx="72" cy="500" r="4" fill="#3fb950" />
+  <text x="84" y="504" fill="#3fb950" font-size="10" font-weight="700">Foveal Field (1° – 2°):</text>
+  <text x="245" y="504" fill="#C9D1D9" font-size="9.5">Maximum acuity (fovea centralis). Alphanumerics, critical digits, and alarm IDs.</text>
+  <circle cx="72" cy="522" r="4" fill="#79c0ff" />
+  <text x="84" y="526" fill="#79c0ff" font-size="10" font-weight="700">Parafoveal Field (2° – 5°):</text>
+  <text x="245" y="526" fill="#C9D1D9" font-size="9.5">Recognizes analog bars, trend direction, and spatial symbol relationships.</text>
+  <circle cx="72" cy="544" r="4" fill="#8b949e" />
+  <text x="84" y="548" fill="#8b949e" font-size="10" font-weight="700">Near-Peripheral (5° – 30°):</text>
+  <text x="245" y="548" fill="#C9D1D9" font-size="9.5">Motion detection &amp; chromatic change; triggers involuntary attention shift.</text>
+  <circle cx="72" cy="566" r="4" fill="#4a5163" />
+  <text x="84" y="570" fill="#4a5163" font-size="10" font-weight="700">Far-Peripheral (&gt; 30°):</text>
+  <text x="245" y="570" fill="#C9D1D9" font-size="9.5">Low acuity gross motion surveillance. Salient flashing alarm triggers.</text>
+  <rect x="50" y="602" width="530" height="80" rx="6" fill="#0D1117" stroke="#388bfd" stroke-width="1" />
+  <text x="64" y="624" fill="#79c0ff" font-size="10.5" font-weight="700">Empirical Trigonometric Formulations (Tong et al., 2026):</text>
+  <text x="64" y="646" fill="#E6EDF3" font-size="11" font-family="monospace">Visual Angle: θ = 2 · arctan(S / 2D) · (180 / π)</text>
+  <text x="64" y="666" fill="#79c0ff" font-size="11" font-family="monospace">Angular Velocity: ω = dθ/dt = (180 / π) · [2D / (4D² + S²)] · (dS/dt)</text>
+  <rect x="630" y="82" width="580" height="615" rx="8" fill="#1E222B" stroke="#30363D" stroke-width="1.2" />
+  <rect x="646" y="96" width="310" height="26" rx="4" fill="#16191F" stroke="#388bfd" stroke-width="1.2" />
+  <text x="654" y="113" fill="#79c0ff" font-size="11" font-weight="700">2. THE RESOLUTION / DISTANCE TRAP</text>
+  <text x="970" y="113" fill="#8B949E" font-size="10.5">Why "Pixels/sec" is False</text>
+  <text x="650" y="144" fill="#C9D1D9" font-size="10.5">Naïve web SCADA engines configure animations in raw screen pixels: <tspan fill="#ff7b72" font-family="monospace">200 px/s</tspan>.</text>
+  <text x="650" y="160" fill="#8B949E" font-size="10">Retinal velocity ω depends on physical pixel pitch p (mm/px) and viewing distance D:</text>
+  <rect x="646" y="177" width="548" height="105" rx="6" fill="#16191F" stroke="#3fb950" stroke-width="1" />
+  <rect x="658" y="189" width="200" height="20" rx="3" fill="#14261C" />
+  <text x="666" y="203" fill="#3fb950" font-size="10" font-weight="700">CASE A: Desktop Operator Console</text>
+  <rect x="1050" y="189" width="116" height="20" rx="3" fill="#14261C" stroke="#3fb950" stroke-width="0.8" />
+  <text x="1108" y="203" fill="#3fb950" font-size="9" font-weight="700" text-anchor="middle">✓ OPTIMAL ZONE</text>
+  <text x="658" y="225" fill="#8B949E" font-size="9.5">• Hardware: 24" 1080p Monitor · Pixel Pitch: <tspan fill="#E6EDF3" font-family="monospace">p = 0.276 mm/px</tspan></text>
+  <text x="658" y="241" fill="#8B949E" font-size="9.5">• Viewing Distance: <tspan fill="#E6EDF3" font-family="monospace">D = 650 mm</tspan> · Velocity: <tspan fill="#79c0ff" font-family="monospace">200 px/s = 55.2 mm/s</tspan></text>
+  <text x="658" y="263" fill="#3fb950" font-size="11" font-weight="700">Retinal Velocity: ω = 4.86°/s  (Optimal 4°/s – 12°/s Safe Window)</text>
+  <rect x="646" y="295" width="548" height="105" rx="6" fill="#16191F" stroke="#388bfd" stroke-width="1" />
+  <rect x="658" y="307" width="200" height="20" rx="3" fill="#0D1B2A" />
+  <text x="666" y="321" fill="#58a6ff" font-size="10" font-weight="700">CASE B: Central Video Wall (LOD)</text>
+  <rect x="1050" y="307" width="116" height="20" rx="3" fill="#0D1B2A" stroke="#388bfd" stroke-width="0.8" />
+  <text x="1108" y="321" fill="#79c0ff" font-size="9" font-weight="700" text-anchor="middle">SUB-OPTIMAL SLOW</text>
+  <text x="658" y="343" fill="#8B949E" font-size="9.5">• Hardware: 85" 4K Video Wall · Pixel Pitch: <tspan fill="#E6EDF3" font-family="monospace">p = 0.489 mm/px</tspan></text>
+  <text x="658" y="359" fill="#8B949E" font-size="9.5">• Viewing Distance: <tspan fill="#E6EDF3" font-family="monospace">D = 2200 mm</tspan> · Velocity: <tspan fill="#79c0ff" font-family="monospace">200 px/s = 97.8 mm/s</tspan></text>
+  <text x="658" y="381" fill="#58a6ff" font-size="11" font-weight="700">Retinal Velocity: ω = 2.55°/s  (Below 4°/s; Saccadic Inefficiency)</text>
+  <rect x="646" y="413" width="548" height="105" rx="6" fill="#16191F" stroke="#ff7b72" stroke-width="1" />
+  <rect x="658" y="425" width="200" height="20" rx="3" fill="#2C1517" />
+  <text x="666" y="439" fill="#ff7b72" font-size="10" font-weight="700">CASE C: Mobile Rugged Field Tablet</text>
+  <rect x="1050" y="425" width="116" height="20" rx="3" fill="#2C1517" stroke="#ff7b72" stroke-width="0.8" />
+  <text x="1108" y="439" fill="#ff7b72" font-size="9" font-weight="700" text-anchor="middle">CRITICAL FAILURE</text>
+  <text x="658" y="461" fill="#8B949E" font-size="9.5">• Hardware: 10.1" Tablet (1920x1200) · Pixel Pitch: <tspan fill="#E6EDF3" font-family="monospace">p = 0.113 mm/px</tspan></text>
+  <text x="658" y="477" fill="#8B949E" font-size="9.5">• Viewing Distance: <tspan fill="#E6EDF3" font-family="monospace">D = 320 mm</tspan> · Fast Sweep: <tspan fill="#ff7b72" font-family="monospace">800 px/s = 90.4 mm/s</tspan></text>
+  <text x="658" y="499" fill="#ff7b72" font-size="11" font-weight="700">Retinal Velocity: ω = 16.18°/s  (Exceeds 16°/s; SA Collapses!)</text>
+  <rect x="646" y="533" width="548" height="55" rx="6" fill="#0D1117" stroke="#30363D" stroke-width="1" />
+  <text x="658" y="555" fill="#3fb950" font-size="10.5" font-weight="700">Architectural Invariant:</text>
+  <text x="658" y="573" fill="#C9D1D9" font-size="9.5">HMI rendering engines must normalize movement vectors using client DPI and viewing distance D,</text>
+  <text x="658" y="585" fill="#C9D1D9" font-size="9.5">dynamically clamping physical animation speed to <tspan fill="#3fb950" font-weight="700">4°/s – 12°/s</tspan> across all form factors.</text>
+  <rect x="30" y="714" width="1180" height="32" rx="6" fill="#1E222B" stroke="#30363D" stroke-width="1" />
+  <text x="45" y="734" fill="#3fb950" font-size="10" font-weight="700">✓ Invariant: 4°/s – 12°/s</text>
+  <text x="210" y="734" fill="#8B949E" font-size="9.5">Optimal cognitive window; preserves attentional supply &amp; target search accuracy</text>
+  <text x="830" y="734" fill="#ff7b72" font-size="10" font-weight="700">✗ Invariant: Hard Stop &gt; 16°/s</text>
+  <text x="1010" y="734" fill="#8B949E" font-size="9.5">Situational awareness collapses; severe blink inhibition</text>
+</svg>

@@ -1,0 +1,169 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="800" viewBox="0 0 1120 800" role="img" aria-labelledby="title desc">
+  <title id="title">ANSI/ISA-101 4-Tier Supervisory Display Hierarchy</title>
+  <desc id="desc">Four-tier display hierarchy showing Level 1 Overview (KPIs), Level 2 Unit Control (P&amp;ID with MAIs), Level 3 Detail &amp; Faceplate, and Level 4 Diagnostics. Demonstrates progressive disclosure navigation (&lt;= 2 clicks to operational context) and upward alarm annunciation rollups.</desc>
+  <defs>
+  <marker id="arr-blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+    <path d="M 0 1 L 10 5 L 0 9 z" fill="#388bfd" />
+  </marker>
+  <marker id="arr-red" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+    <path d="M 0 1 L 10 5 L 0 9 z" fill="#f85149" />
+  </marker>
+</defs>
+  <rect x="0.0" y="0.0" width="1120.0" height="800.0" rx="12" fill="#16191F" stroke="none" stroke-width="1" />
+  <text x="560.0" y="38.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#FDFEFE" text-anchor="middle" >ANSI/ISA-101.01 4-Tier Supervisory Display Hierarchy</text>
+  <text x="560.0" y="59.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#7E8B9B" text-anchor="middle" >Progressive Disclosure Navigation (≤ 2 Clicks to Context) &amp; Upward Alarm Annunciation Rollup Paths</text>
+  <rect x="35.0" y="78.0" width="490.0" height="310.0" rx="8" fill="#1E222B" stroke="#3A4154" stroke-width="1" />
+  <rect x="49.0" y="90.0" width="65.0" height="20.0" rx="3" fill="#1f6feb" stroke="none" stroke-width="1" />
+  <text x="81.5" y="104.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle" >LEVEL 1</text>
+  <text x="123.0" y="105.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#58a6ff" text-anchor="start" >Overview Display (Facility / Macro KPIs)</text>
+  <text x="49.0" y="124.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#7E8B9B" text-anchor="start" >Scope: Enterprise &amp; Plant-Wide • Target Audience: Superintendents &amp; Dispatchers</text>
+  <rect x="49.0" y="134.0" width="240.0" height="200.0" rx="4" fill="#16191F" stroke="#3A4154" stroke-width="1" />
+  <text x="59.0" y="152.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#79c0ff" text-anchor="start" >Site A — Macro Overview</text>
+  <rect x="57.0" y="162.0" width="70.0" height="48.0" rx="3" fill="#1E222B" stroke="#3A4154" stroke-width="1" />
+  <text x="63.0" y="176.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="8" font-weight="700" fill="#7E8B9B" text-anchor="start" >THROUGHPUT</text>
+  <text x="63.0" y="192.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#3fb950" text-anchor="start" >94.2 %</text>
+  <text x="63.0" y="204.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="8" font-weight="400" fill="#7E8B9B" text-anchor="start" >14,200 bpd</text>
+  <rect x="133.0" y="162.0" width="70.0" height="48.0" rx="3" fill="#1E222B" stroke="#3A4154" stroke-width="1" />
+  <text x="139.0" y="176.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="8" font-weight="700" fill="#7E8B9B" text-anchor="start" >ENERGY</text>
+  <text x="139.0" y="192.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#79c0ff" text-anchor="start" >3.8 MW</text>
+  <text x="139.0" y="204.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="8" font-weight="400" fill="#7E8B9B" text-anchor="start" >-1.2% nom.</text>
+  <rect x="209.0" y="162.0" width="70.0" height="48.0" rx="3" fill="#1E222B" stroke="#f85149" stroke-width="1" />
+  <text x="215.0" y="176.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="8" font-weight="700" fill="#f85149" text-anchor="start" >ALARMS</text>
+  <text x="215.0" y="192.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#f85149" text-anchor="start" >1 CRIT</text>
+  <text x="215.0" y="204.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="8" font-weight="400" fill="#7E8B9B" text-anchor="start" >Unit 102</text>
+  <rect x="57.0" y="220.0" width="70.0" height="68.0" rx="3" fill="#1E222B" stroke="#2A9D8F" stroke-width="1" />
+  <text x="92.0" y="238.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#FDFEFE" text-anchor="middle" >Unit 101</text>
+  <text x="92.0" y="252.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="8" font-weight="400" fill="#7E8B9B" text-anchor="middle" >Crude Distill.</text>
+  <text x="92.0" y="274.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="9" font-weight="700" fill="#2A9D8F" text-anchor="middle" >✓ NORMAL</text>
+  <rect x="133.0" y="220.0" width="70.0" height="68.0" rx="3" fill="#2c1517" stroke="#E63946" stroke-width="1.5" />
+  <text x="168.0" y="238.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#E63946" text-anchor="middle" >Unit 102</text>
+  <text x="168.0" y="252.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="8" font-weight="400" fill="#7E8B9B" text-anchor="middle" >Steam / Boiler</text>
+  <g><rect x="158.0" y="260.0" width="20" height="20" rx="4" fill="#E63946" stroke="#16191F" stroke-width="1"/><text x="168.0" y="274.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10.8" font-weight="900" fill="#FFFFFF" text-anchor="middle">1</text></g>
+  <rect x="209.0" y="220.0" width="70.0" height="68.0" rx="3" fill="#1E222B" stroke="#2A9D8F" stroke-width="1" />
+  <text x="244.0" y="238.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#FDFEFE" text-anchor="middle" >Unit 103</text>
+  <text x="244.0" y="252.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="8" font-weight="400" fill="#7E8B9B" text-anchor="middle" >Hydrotreater</text>
+  <text x="244.0" y="274.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="9" font-weight="700" fill="#2A9D8F" text-anchor="middle" >✓ NORMAL</text>
+  <rect x="57.0" y="296.0" width="224.0" height="26.0" rx="3" fill="#1E222B" stroke="#388bfd" stroke-width="1" />
+  <text x="169.0" y="312.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="9" font-weight="700" fill="#388bfd" text-anchor="middle" >1 Click on Unit 102 → Opens Level 2</text>
+  <text x="301.0" y="150.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#FDFEFE" text-anchor="start" >Operational Invariants:</text>
+  <text x="301.0" y="170.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#7E8B9B" text-anchor="start" >• High-level situational awareness</text>
+  <text x="301.0" y="186.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#7E8B9B" text-anchor="start" >• Macro mass &amp; energy balance</text>
+  <text x="301.0" y="202.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#7E8B9B" text-anchor="start" >• Top-level alarm rollup banner</text>
+  <rect x="301.0" y="218.0" width="210.0" height="64.0" rx="4" fill="#16191F" stroke="#E63946" stroke-width="1.2" />
+  <text x="309.0" y="236.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="9.5" font-weight="700" fill="#E63946" text-anchor="start" >⚠️ ZERO DIRECT CONTROL RULE</text>
+  <text x="309.0" y="252.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="9" font-weight="400" fill="#7E8B9B" text-anchor="start" >No setpoints or valves directly touched.</text>
+  <text x="309.0" y="268.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="9" font-weight="400" fill="#7E8B9B" text-anchor="start" >Prevents blind action without local context.</text>
+  <line x1="49.0" y1="348.0" x2="511.0" y2="348.0" stroke="#3A4154" stroke-width="1" />
+  <text x="49.0" y="370.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#7E8B9B" text-anchor="start" >Display Form Factor: 4K/8K Video Walls &amp; Superintendent Desktops</text>
+  <rect x="545.0" y="78.0" width="490.0" height="310.0" rx="8" fill="#1E222B" stroke="#3A4154" stroke-width="1" />
+  <rect x="559.0" y="90.0" width="65.0" height="20.0" rx="3" fill="#388bfd" stroke="none" stroke-width="1" />
+  <text x="591.5" y="104.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle" >LEVEL 2</text>
+  <text x="633.0" y="105.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#58a6ff" text-anchor="start" >Unit Control Display (Primary Operating Screen)</text>
+  <text x="559.0" y="124.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#7E8B9B" text-anchor="start" >Scope: Dedicated Process Unit • Target Audience: Console Board Operator (Daily Driver)</text>
+  <rect x="559.0" y="134.0" width="240.0" height="200.0" rx="4" fill="#16191F" stroke="#3A4154" stroke-width="1" />
+  <text x="569.0" y="152.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#58a6ff" text-anchor="start" >Unit 102 — Boiler Feed Synoptic</text>
+  <rect x="571.0" y="166.0" width="54.0" height="75.0" rx="3" fill="#1E222B" stroke="#5C667A" stroke-width="1" />
+  <text x="598.0" y="182.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="8.5" font-weight="600" fill="#7E8B9B" text-anchor="middle" >TK-201</text>
+  <rect x="581.0" y="190.0" width="10.0" height="42.0" rx="2" fill="#2A2F3D" stroke="#353B4D" stroke-width="1" />
+  <rect x="581.0" y="202.0" width="10.0" height="22.0" rx="1" fill="#0369A1" stroke="none" stroke-width="1" />
+  <circle cx="586.0" cy="199.0" r="4.5" fill="#FDFEFE" stroke="#16191F" stroke-width="2" />
+  <text x="596.0" y="212.0" font-family="Cascadia Code, SF Mono, Consolas, DejaVu Sans Mono, monospace" font-size="9" font-weight="600" fill="#FDFEFE" text-anchor="start" >68%</text>
+  <path d="M625,204 H674 V184 H704" fill="none" stroke="#3A4154" stroke-width="2" />
+  <path d="M674,204 V229 H704" fill="none" stroke="#3A4154" stroke-width="2" />
+  <circle cx="717.0" cy="184.0" r="13" fill="#1E222B" stroke="#5C667A" stroke-width="1.2" />
+  <polygon points="714.0,178.0 723.0,184.0 714.0,190.0" fill="#FDFEFE" stroke="none" stroke-width="1" stroke-linejoin="round" />
+  <text x="717.0" y="164.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="8" font-weight="400" fill="#7E8B9B" text-anchor="middle" >P-102A</text>
+  <circle cx="717.0" cy="229.0" r="13" fill="#2c1517" stroke="#E63946" stroke-width="1.5" />
+  <text x="717.0" y="233.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="7" font-weight="700" fill="#E63946" text-anchor="middle" >TRIP</text>
+  <g><rect x="734.0" y="214.0" width="30" height="30" rx="7" fill="none" stroke="#E63946" stroke-width="1.5" stroke-dasharray="3 3"/><rect x="740.0" y="220.0" width="18" height="18" rx="4" fill="#E63946" stroke="#16191F" stroke-width="1"/><text x="749.0" y="232.6" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="9.7" font-weight="900" fill="#FFFFFF" text-anchor="middle">1</text></g>
+  <text x="717.0" y="254.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="8" font-weight="700" fill="#E63946" text-anchor="middle" >P-102B (Click)</text>
+  <rect x="569.0" y="279.0" width="220.0" height="44.0" rx="3" fill="#1E222B" stroke="#3A4154" stroke-width="1" />
+  <text x="577.0" y="293.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="8.5" font-weight="700" fill="#FDFEFE" text-anchor="start" >FIC-102 Feed Flow</text>
+  <text x="781.0" y="293.0" font-family="Cascadia Code, SF Mono, Consolas, DejaVu Sans Mono, monospace" font-size="9" font-weight="700" fill="#FDFEFE" text-anchor="end" >142 kg/h</text>
+  <rect x="575.0" y="301.0" width="144.0" height="7.0" rx="3" fill="#2A2F3D" stroke="none" stroke-width="1" />
+  <rect x="647.0" y="301.0" width="43.2" height="7.0" rx="1" fill="#0369A1" stroke="none" stroke-width="1" />
+  <polygon points="675.8,299.0 671.8,292.5 679.8,292.5" fill="#16191F" stroke="#FDFEFE" stroke-width="1.6" stroke-linejoin="round" />
+  <circle cx="677.2" cy="304.0" r="5" fill="#FDFEFE" stroke="#16191F" stroke-width="2" />
+  <text x="811.0" y="150.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#FDFEFE" text-anchor="start" >Operational Invariants:</text>
+  <text x="811.0" y="170.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#7E8B9B" text-anchor="start" >• 90% of operator shift time spent here</text>
+  <text x="811.0" y="186.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#7E8B9B" text-anchor="start" >• Full unit synoptic in grayscale discipline</text>
+  <text x="811.0" y="202.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#7E8B9B" text-anchor="start" >• Analog moving bars &amp; polar radar profiles</text>
+  <rect x="811.0" y="218.0" width="210.0" height="64.0" rx="4" fill="#16191F" stroke="#2A9D8F" stroke-width="1.2" />
+  <text x="819.0" y="236.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="9.5" font-weight="700" fill="#2A9D8F" text-anchor="start" >✓ PRIMARY CONTROL EXECUTION</text>
+  <text x="819.0" y="252.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="9" font-weight="400" fill="#7E8B9B" text-anchor="start" >Direct setpoint trimming in full context.</text>
+  <text x="819.0" y="268.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="9" font-weight="400" fill="#7E8B9B" text-anchor="start" >Click equipment → opens Level 3 faceplate.</text>
+  <line x1="559.0" y1="348.0" x2="1021.0" y2="348.0" stroke="#3A4154" stroke-width="1" />
+  <text x="559.0" y="370.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#7E8B9B" text-anchor="start" >Display Form Factor: Dual/Quad-Monitor Ergonomic Consoles (60 FPS)</text>
+  <rect x="35.0" y="412.0" width="490.0" height="310.0" rx="8" fill="#1E222B" stroke="#3A4154" stroke-width="1" />
+  <rect x="49.0" y="424.0" width="65.0" height="20.0" rx="3" fill="#1f6feb" stroke="none" stroke-width="1" />
+  <text x="81.5" y="438.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle" >LEVEL 3</text>
+  <text x="123.0" y="439.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#58a6ff" text-anchor="start" >Detail / Trend Display (Faceplates &amp; Sub-systems)</text>
+  <text x="49.0" y="458.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#7E8B9B" text-anchor="start" >Scope: Equipment Cluster • Target Audience: Console Operator &amp; Process Engineer</text>
+  <rect x="49.0" y="468.0" width="240.0" height="200.0" rx="4" fill="#16191F" stroke="#3A4154" stroke-width="1" />
+  <text x="59.0" y="486.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#FDFEFE" text-anchor="start" >Faceplate: P-102B (Boiler Feed)</text>
+  <rect x="57.0" y="496.0" width="224.0" height="80.0" rx="3" fill="#1E222B" stroke="none" stroke-width="1" />
+  <text x="63.0" y="512.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="9" font-weight="700" fill="#7E8B9B" text-anchor="start" >Safety Interlock Chain:</text>
+  <text x="63.0" y="528.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="8.5" font-weight="400" fill="#FDFEFE" text-anchor="start" >✓ Suction Valve ZSO-102 Open</text>
+  <text x="63.0" y="543.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="8.5" font-weight="400" fill="#FDFEFE" text-anchor="start" >✓ Seal Water FIT-102 &gt; 1.5 L/min</text>
+  <text x="63.0" y="558.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="8.5" font-weight="600" fill="#E63946" text-anchor="start" >✗ Lube Oil Press PSL-102 LOW</text>
+  <rect x="57.0" y="582.0" width="224.0" height="44.0" rx="3" fill="#1E222B" stroke="none" stroke-width="1" />
+  <text x="63.0" y="596.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="8" font-weight="400" fill="#7E8B9B" text-anchor="start" >10-min Micro-Trend (Trip point)</text>
+  <line x1="63.0" y1="614.0" x2="169.0" y2="614.0" stroke="#FDFEFE" stroke-width="1.5" />
+  <line x1="169.0" y1="614.0" x2="189.0" y2="602.0" stroke="#E63946" stroke-width="1.5" />
+  <line x1="189.0" y1="602.0" x2="269.0" y2="602.0" stroke="#E63946" stroke-width="1.5" stroke-dasharray="2 2" />
+  <circle cx="189.0" cy="602.0" r="3" fill="#E63946" stroke="none" stroke-width="1" />
+  <rect x="57.0" y="632.0" width="224.0" height="26.0" rx="3" fill="#1E222B" stroke="#388bfd" stroke-width="1" />
+  <text x="169.0" y="648.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="8.5" font-weight="700" fill="#388bfd" text-anchor="middle" >Click PSL-102 → Opens Level 4 Diagnostics</text>
+  <text x="301.0" y="484.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#FDFEFE" text-anchor="start" >Operational Invariants:</text>
+  <text x="301.0" y="504.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#7E8B9B" text-anchor="start" >• Deep diagnostic faceplates &amp; interlocks</text>
+  <text x="301.0" y="520.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#7E8B9B" text-anchor="start" >• 10-minute real-time micro-trends</text>
+  <text x="301.0" y="536.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#7E8B9B" text-anchor="start" >• Surgical root-cause troubleshooting</text>
+  <rect x="301.0" y="552.0" width="210.0" height="64.0" rx="4" fill="#16191F" stroke="#58a6ff" stroke-width="1.2" />
+  <text x="309.0" y="570.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="9.5" font-weight="700" fill="#58a6ff" text-anchor="start" >ARM-AND-EXECUTE BARRIER</text>
+  <text x="309.0" y="586.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="9" font-weight="400" fill="#7E8B9B" text-anchor="start" >Stage 1 (Arm) + Stage 2 (Execute).</text>
+  <text x="309.0" y="602.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="9" font-weight="400" fill="#7E8B9B" text-anchor="start" >Prevents accidental touchscreen touches.</text>
+  <line x1="49.0" y1="682.0" x2="511.0" y2="682.0" stroke="#3A4154" stroke-width="1" />
+  <text x="49.0" y="704.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#7E8B9B" text-anchor="start" >Display Form Factor: Contextual Modals, Slide-in Trays, Multi-Touch Pointers</text>
+  <rect x="545.0" y="412.0" width="490.0" height="310.0" rx="8" fill="#1E222B" stroke="#3A4154" stroke-width="1" />
+  <rect x="559.0" y="424.0" width="65.0" height="20.0" rx="3" fill="#484f58" stroke="none" stroke-width="1" />
+  <text x="591.5" y="438.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle" >LEVEL 4</text>
+  <text x="633.0" y="439.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#8b949e" text-anchor="start" >Diagnostic &amp; Support Display (Transmitters &amp; Logic)</text>
+  <text x="559.0" y="458.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#7E8B9B" text-anchor="start" >Scope: Field Instrument &amp; Register • Target Audience: Maintenance Technicians &amp; I&amp;C</text>
+  <rect x="559.0" y="468.0" width="240.0" height="200.0" rx="4" fill="#16191F" stroke="#3A4154" stroke-width="1" />
+  <text x="569.0" y="486.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#8b949e" text-anchor="start" >HART Diagnostic: PSL-102</text>
+  <rect x="567.0" y="496.0" width="224.0" height="92.0" rx="3" fill="#1E222B" stroke="none" stroke-width="1" />
+  <text x="573.0" y="510.0" font-family="Cascadia Code, SF Mono, Consolas, DejaVu Sans Mono, monospace" font-size="8.5" font-weight="400" fill="#7E8B9B" text-anchor="start" >Loop Current:</text>
+  <text x="785.0" y="510.0" font-family="Cascadia Code, SF Mono, Consolas, DejaVu Sans Mono, monospace" font-size="8.5" font-weight="700" fill="#E63946" text-anchor="end" >3.82 mA (Underflow)</text>
+  <text x="573.0" y="526.0" font-family="Cascadia Code, SF Mono, Consolas, DejaVu Sans Mono, monospace" font-size="8.5" font-weight="400" fill="#7E8B9B" text-anchor="start" >HART Status:</text>
+  <text x="785.0" y="526.0" font-family="Cascadia Code, SF Mono, Consolas, DejaVu Sans Mono, monospace" font-size="8.5" font-weight="700" fill="#E63946" text-anchor="end" >CURRENT_SATURATED</text>
+  <text x="573.0" y="542.0" font-family="Cascadia Code, SF Mono, Consolas, DejaVu Sans Mono, monospace" font-size="8.5" font-weight="400" fill="#7E8B9B" text-anchor="start" >Raw ADC:</text>
+  <text x="785.0" y="542.0" font-family="Cascadia Code, SF Mono, Consolas, DejaVu Sans Mono, monospace" font-size="8.5" font-weight="400" fill="#FDFEFE" text-anchor="end" >0x07D2 (2002 counts)</text>
+  <text x="573.0" y="558.0" font-family="Cascadia Code, SF Mono, Consolas, DejaVu Sans Mono, monospace" font-size="8.5" font-weight="400" fill="#7E8B9B" text-anchor="start" >Sensor Temp:</text>
+  <text x="785.0" y="558.0" font-family="Cascadia Code, SF Mono, Consolas, DejaVu Sans Mono, monospace" font-size="8.5" font-weight="400" fill="#FDFEFE" text-anchor="end" >41.8 °C</text>
+  <text x="573.0" y="574.0" font-family="Cascadia Code, SF Mono, Consolas, DejaVu Sans Mono, monospace" font-size="8.5" font-weight="400" fill="#7E8B9B" text-anchor="start" >Calibration:</text>
+  <text x="785.0" y="574.0" font-family="Cascadia Code, SF Mono, Consolas, DejaVu Sans Mono, monospace" font-size="8.5" font-weight="700" fill="#2A9D8F" text-anchor="end" >2026-04-12 (SEL-OK)</text>
+  <rect x="567.0" y="594.0" width="224.0" height="38.0" rx="3" fill="#1E222B" stroke="none" stroke-width="1" />
+  <text x="573.0" y="608.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="8.5" font-weight="700" fill="#79c0ff" text-anchor="start" >Rack 02 / Slot 04 / Channel 03</text>
+  <text x="573.0" y="622.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="8" font-weight="400" fill="#7E8B9B" text-anchor="start" >Wiring: TB-102 Terminals 14(+) &amp; 15(-)</text>
+  <rect x="567.0" y="638.0" width="224.0" height="20.0" rx="3" fill="#1E222B" stroke="none" stroke-width="1" />
+  <text x="679.0" y="652.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="8" font-weight="400" fill="#7E8B9B" text-anchor="middle" >Deepest Leaf Node in Operational Synoptic</text>
+  <text x="811.0" y="484.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#FDFEFE" text-anchor="start" >Operational Invariants:</text>
+  <text x="811.0" y="504.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#7E8B9B" text-anchor="start" >• Sub-element I/O loop &amp; register debug</text>
+  <text x="811.0" y="520.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#7E8B9B" text-anchor="start" >• Fieldbus &amp; HART instrument health</text>
+  <text x="811.0" y="536.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#7E8B9B" text-anchor="start" >• Accessed strictly on-demand for repair</text>
+  <rect x="811.0" y="552.0" width="210.0" height="64.0" rx="4" fill="#16191F" stroke="#5C667A" stroke-width="1.2" />
+  <text x="819.0" y="570.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="9.5" font-weight="700" fill="#FDFEFE" text-anchor="start" >ISOLATION &amp; OVERRIDES</text>
+  <text x="819.0" y="586.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="9" font-weight="400" fill="#7E8B9B" text-anchor="start" >Manual force &amp; cryptographic bypass.</text>
+  <text x="819.0" y="602.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="9" font-weight="400" fill="#7E8B9B" text-anchor="start" >Audited under ISA/IEC 62443 security.</text>
+  <line x1="559.0" y1="682.0" x2="1021.0" y2="682.0" stroke="#3A4154" stroke-width="1" />
+  <text x="559.0" y="704.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#7E8B9B" text-anchor="start" >Display Form Factor: Maintenance Rugged Laptops &amp; Field Calibrators</text>
+  <line x1="525.0" y1="233.0" x2="545.0" y2="233.0" stroke="#388bfd" stroke-width="2" marker-end="url(#arr-blue)"/>
+  <path d="M790.0,388 V392 H280.0 V412" fill="none" stroke="#388bfd" stroke-width="2" marker-end="url(#arr-blue)"/>
+  <line x1="525.0" y1="567.0" x2="545.0" y2="567.0" stroke="#388bfd" stroke-width="2" marker-end="url(#arr-blue)"/>
+  <path d="M1035,592 H1075 V158 H1035" fill="none" stroke="#E63946" stroke-width="2" stroke-dasharray="4 4" marker-end="url(#arr-red)"/>
+  <text x="1093.0" y="400.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#E63946" text-anchor="middle" transform="rotate(90,1093,400.0)">Alarm Annunciation Rollup (L4 → L3 → L2 → L1)</text>
+  <rect x="35.0" y="746.0" width="1050.0" height="32.0" rx="4" fill="#16191F" stroke="none" stroke-width="1" />
+  <text x="51.0" y="766.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#7E8B9B">✓ <tspan font-weight="700" fill="#FDFEFE">Progressive Disclosure:</tspan> ≤ 2 clicks to reach localized operating context</text>
+  <text x="421.0" y="766.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#7E8B9B">✓ <tspan font-weight="700" fill="#FDFEFE">Situational Awareness:</tspan> macro KPIs at L1; primary control at L2</text>
+  <text x="771.0" y="766.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#7E8B9B">✓ <tspan font-weight="700" fill="#FDFEFE">Zero Direct Control:</tspan> no blind setpoint adjustments from L1 displays</text>
+</svg>

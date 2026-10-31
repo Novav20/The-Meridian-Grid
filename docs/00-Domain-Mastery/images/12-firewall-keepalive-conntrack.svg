@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 700" width="100%" height="100%" style="background-color: #16191F; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="cardGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#212631" />
+      <stop offset="100%" stop-color="#1A1E26" />
+    </linearGradient>
+    
+    <!-- Markers -->
+    <marker id="arrowBlue" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#388bfd" />
+    </marker>
+    <marker id="arrowRed" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#ff7b72" />
+    </marker>
+    <marker id="arrowGreen" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#3fb950" />
+    </marker>
+    <marker id="arrowMuted" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#8b949e" />
+    </marker>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="1180" height="700" rx="12" fill="#16191F" />
+
+  <!-- Title & Subtitle -->
+  <text x="590" y="38" text-anchor="middle" font-size="20" font-weight="700" fill="#f0f6fc">Stateful Firewall NAT Connection Tracking vs. RFC 6455 Ping/Pong Keep-Alives</text>
+  <text x="590" y="60" text-anchor="middle" font-size="12" fill="#8b949e">Preventing silent TCP socket termination during quiescent Report-by-Exception (RBE) operation across IDMZ middleboxes</text>
+
+  <!-- ==================== TOP COMPARISON: QUIESCENT RBE & SILENT EVICTION (FAILURE MODE) ==================== -->
+  <rect x="35" y="80" width="1110" height="265" rx="8" fill="url(#cardGrad)" stroke="#30363D" stroke-width="1" />
+  
+  <!-- Section Badge -->
+  <rect x="50" y="92" width="280" height="22" rx="4" fill="#2d1d24" stroke="#ff7b72" stroke-width="1" />
+  <circle cx="62" cy="103" r="4" fill="#ff7b72" />
+  <text x="74" y="107" font-size="11" font-weight="700" fill="#ff7b72">FAILURE MODE: Silent Socket Pruning</text>
+
+  <!-- Participant Headers -->
+  <!-- Browser HMI -->
+  <rect x="50" y="125" width="200" height="42" rx="4" fill="#16191F" stroke="#30363D" stroke-width="1" />
+  <text x="150" y="143" font-size="11" font-weight="700" text-anchor="middle" fill="#c9d1d9">HMI Browser Client</text>
+  <text x="150" y="157" font-size="9" font-family="monospace" text-anchor="middle" fill="#79c0ff">10.10.40.15:52341 (L4 Enterprise)</text>
+
+  <!-- IDMZ Stateful Firewall -->
+  <rect x="470" y="125" width="240" height="42" rx="4" fill="#16191F" stroke="#ff7b72" stroke-width="1" />
+  <text x="590" y="143" font-size="11" font-weight="700" text-anchor="middle" fill="#ff7b72">IDMZ Stateful Firewall / NAT</text>
+  <text x="590" y="157" font-size="9" font-family="monospace" text-anchor="middle" fill="#8b949e">Netfilter nf_conntrack (Idle: 60s)</text>
+
+  <!-- SCADA Gateway -->
+  <rect x="930" y="125" width="200" height="42" rx="4" fill="#16191F" stroke="#30363D" stroke-width="1" />
+  <text x="1030" y="143" font-size="11" font-weight="700" text-anchor="middle" fill="#c9d1d9">SCADA WSS Gateway</text>
+  <text x="1030" y="157" font-size="9" font-family="monospace" text-anchor="middle" fill="#79c0ff">10.10.35.10:443 (L3.5 IDMZ)</text>
+
+  <!-- Vertical Lifelines -->
+  <line x1="150" y1="167" x2="150" y2="330" stroke="#30363D" stroke-width="1" stroke-dasharray="3,3" />
+  <line x1="590" y1="167" x2="590" y2="330" stroke="#30363D" stroke-width="1" stroke-dasharray="3,3" />
+  <line x1="1030" y1="167" x2="1030" y2="330" stroke="#30363D" stroke-width="1" stroke-dasharray="3,3" />
+
+  <!-- Timeline Step 1: Quiescent RBE -->
+  <rect x="230" y="178" width="720" height="24" rx="4" fill="#16191F" stroke="#30363D" stroke-width="1" />
+  <text x="590" y="194" font-size="10" text-anchor="middle" fill="#8b949e">T = 0s to 65s: Quiescent Plant Operation &#8212; Zero deadband excursions &#8594; Zero application frames emitted</text>
+
+  <!-- Timeline Step 2: conntrack timer expiration -->
+  <rect x="430" y="210" width="320" height="34" rx="4" fill="#2d1d24" stroke="#ff7b72" stroke-width="1" />
+  <text x="590" y="224" font-size="9.5" font-family="monospace" font-weight="700" text-anchor="middle" fill="#ff7b72">nf_conntrack: [EXPIRED &amp; PURGED]</text>
+  <text x="590" y="238" font-size="8.5" font-family="monospace" text-anchor="middle" fill="#8b949e">Timer hits 0s &#8594; State evicted from kernel table</text>
+
+  <!-- Timeline Step 3: Emergency Trip Attempt (Gateway -> Firewall) -->
+  <path d="M 1030 268 L 685 268" fill="none" stroke="#ff7b72" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrowRed)" />
+  <text x="850" y="262" font-size="9.5" font-family="monospace" font-weight="700" text-anchor="middle" fill="#ff7b72">T=70s: Emergency Push (PUMP_P101A_TRIP)</text>
+
+  <!-- Firewall Drop Box on Lifeline -->
+  <rect x="500" y="256" width="180" height="24" rx="4" fill="#3d1e24" stroke="#ff7b72" stroke-width="1" />
+  <text x="590" y="272" font-size="9" font-family="monospace" font-weight="700" text-anchor="middle" fill="#ff7b72">&#10006; NO CONNTRACK ENTRY</text>
+
+  <!-- Dropped / Blocked Path (Firewall -> Browser) -->
+  <path d="M 495 268 L 160 268" fill="none" stroke="#ff7b72" stroke-width="1.5" stroke-dasharray="3,3" />
+  <text x="325" y="262" font-size="9" font-family="monospace" text-anchor="middle" fill="#ff7b72">&#10006; Ingress Dropped (Never reaches Browser)</text>
+
+  <!-- Bottom Consequence Banner -->
+  <rect x="50" y="295" width="1080" height="36" rx="4" fill="#16191F" stroke="#ff7b72" stroke-width="1" />
+  <text x="65" y="312" font-size="10" font-weight="700" fill="#ff7b72">Catastrophic Failure:</text>
+  <text x="210" y="312" font-size="10" fill="#c9d1d9">TCP FIN was never exchanged &#8594; Browser HMI UI remains "Connected" while completely blind to physical plant trip!</text>
+  <text x="65" y="325" font-size="9" font-family="monospace" fill="#8b949e">Linux Netfilter behavior: Unsolicited server packet on purged state drops silently or triggers TCP RST</text>
+
+  <!-- ==================== BOTTOM COMPARISON: DETERMINISTIC LIVENESS VIA RFC 6455 PING/PONG ==================== -->
+  <rect x="35" y="365" width="1110" height="315" rx="8" fill="url(#cardGrad)" stroke="#30363D" stroke-width="1" />
+  
+  <!-- Section Badge -->
+  <rect x="50" y="377" width="310" height="22" rx="4" fill="#1b2a22" stroke="#3fb950" stroke-width="1" />
+  <circle cx="62" cy="388" r="4" fill="#3fb950" />
+  <text x="74" y="392" font-size="11" font-weight="700" fill="#3fb950">RFC 6455 Heartbeat Loop</text>
+
+  <!-- Participant Headers -->
+  <rect x="50" y="410" width="200" height="42" rx="4" fill="#16191F" stroke="#30363D" stroke-width="1" />
+  <text x="150" y="428" font-size="11" font-weight="700" text-anchor="middle" fill="#c9d1d9">HMI Browser Client</text>
+  <text x="150" y="442" font-size="9" text-anchor="middle" fill="#8b949e">Native Web Networking Stack</text>
+
+  <rect x="470" y="410" width="240" height="42" rx="4" fill="#16191F" stroke="#3fb950" stroke-width="1" />
+  <text x="590" y="428" font-size="11" font-weight="700" text-anchor="middle" fill="#3fb950">IDMZ Stateful Firewall / NAT</text>
+  <text x="590" y="442" font-size="9" font-family="monospace" text-anchor="middle" fill="#79c0ff">Active Conntrack: State Refreshed</text>
+
+  <rect x="930" y="410" width="200" height="42" rx="4" fill="#16191F" stroke="#30363D" stroke-width="1" />
+  <text x="1030" y="428" font-size="11" font-weight="700" text-anchor="middle" fill="#c9d1d9">SCADA WSS Gateway</text>
+  <text x="1030" y="442" font-size="9" text-anchor="middle" fill="#8b949e">Autonomous Keep-Alive Engine</text>
+
+  <!-- Vertical Lifelines -->
+  <line x1="150" y1="452" x2="150" y2="600" stroke="#30363D" stroke-width="1" stroke-dasharray="3,3" />
+  <line x1="590" y1="452" x2="590" y2="600" stroke="#30363D" stroke-width="1" stroke-dasharray="3,3" />
+  <line x1="1030" y1="452" x2="1030" y2="600" stroke="#30363D" stroke-width="1" stroke-dasharray="3,3" />
+
+  <!-- Gateway Ping Dispatch (T=20s) -->
+  <path d="M 1030 472 L 160 472" fill="none" stroke="#388bfd" stroke-width="1.5" marker-end="url(#arrowBlue)" />
+  <text x="590" y="465" font-size="9.5" font-family="monospace" font-weight="700" text-anchor="middle" fill="#79c0ff">Gateway Ping (Opcode 0x9, strictly 2 bytes: 0x89 0x00)</text>
+
+  <!-- Firewall Timer Reset Badge -->
+  <rect x="495" y="482" width="190" height="22" rx="3" fill="#1b2a22" stroke="#3fb950" stroke-width="1" />
+  <text x="590" y="497" font-size="9" font-family="monospace" font-weight="700" text-anchor="middle" fill="#3fb950">&#10003; nf_conntrack: Reset to 60s</text>
+
+  <!-- Browser Auto-Pong Dispatch (T=20.002s) -->
+  <path d="M 150 518 L 1020 518" fill="none" stroke="#3fb950" stroke-width="1.5" marker-end="url(#arrowGreen)" />
+  <text x="590" y="534" font-size="9.5" font-family="monospace" font-weight="700" text-anchor="middle" fill="#3fb950">Auto-Pong (Opcode 0xA, 6 bytes masked: 0x8A 0x80 [Key])</text>
+
+  <!-- Kernel Inspection Card (Bottom Left, x=50, w=510) -->
+  <rect x="50" y="555" width="510" height="105" rx="4" fill="#16191F" stroke="#30363D" stroke-width="1" />
+  <text x="65" y="573" font-size="10" font-weight="700" fill="#c9d1d9">Linux Kernel Conntrack Table Status (/proc/net/nf_conntrack):</text>
+  <rect x="65" y="582" width="480" height="26" rx="2" fill="#0d1117" stroke="#30363D" stroke-width="1" />
+  <text x="75" y="599" font-size="8.5" font-family="monospace" fill="#79c0ff">tcp  6  58 ESTABLISHED src=10.10.40.15 dst=10.10.35.10 [ASSURED]</text>
+  <text x="65" y="625" font-size="8.5" fill="#8b949e">&#8226; Netfilter parameter: net.netfilter.nf_conntrack_tcp_timeout_established = 60s</text>
+  <text x="65" y="640" font-size="8.5" fill="#8b949e">&#8226; 20s Ping cadence ensures session never crosses idle eviction threshold</text>
+
+  <!-- Operational Invariants Card (Bottom Right, x=580, w=550) -->
+  <rect x="580" y="555" width="550" height="105" rx="4" fill="#16191F" stroke="#30363D" stroke-width="1" />
+  <text x="595" y="573" font-size="10" font-weight="700" fill="#3fb950">Engineering Guarantees &amp; Invariants:</text>
+  <text x="595" y="593" font-size="9" fill="#c9d1d9">&#10003; <tspan font-weight="700">Zero UI Thread Interruption:</tspan> Pong reply handled directly in browser C++ kernel</text>
+  <text x="595" y="611" font-size="9" fill="#c9d1d9">&#10003; <tspan font-weight="700">Microscopic Wire Overhead:</tspan> 2B Ping + 6B Pong every 20s = 0.4 bytes/sec bandwidth</text>
+  <text x="595" y="629" font-size="9" fill="#c9d1d9">&#10003; <tspan font-weight="700">Immediate Alarm Readiness:</tspan> Unprompted emergency pushes pass through without delay</text>
+  <text x="595" y="647" font-size="8.5" font-family="monospace" fill="#3fb950">&#10003; Validated across Cisco ASA, Palo Alto PAN-OS, and Linux iptables/nftables IDMZ</text>
+
+</svg>

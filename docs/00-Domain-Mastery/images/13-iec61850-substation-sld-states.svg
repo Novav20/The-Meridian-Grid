@@ -1,0 +1,289 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 730" width="100%" height="100%" style="background-color: #16191F; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="cardGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#212631" />
+      <stop offset="100%" stop-color="#1A1E26" />
+    </linearGradient>
+    
+    <!-- Markers -->
+    <marker id="arrowBlue" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#388bfd" />
+    </marker>
+    <marker id="arrowRed" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#f85149" />
+    </marker>
+    <marker id="arrowGreen" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#3fb950" />
+    </marker>
+  </defs>
+
+  <!-- Canvas Background (Opaque #16191F with rx=12) -->
+  <rect width="1180" height="730" rx="12" fill="#16191F" />
+
+  <!-- Title & Subtitle -->
+  <text x="590" y="38" text-anchor="middle" font-size="20" font-weight="700" fill="#f0f6fc">IEC 61850 Substation One-Line Diagram (SLD) &amp; Dynamic Breaker States</text>
+  <text x="590" y="60" text-anchor="middle" font-size="12" fill="#8b949e">Mnemonic Vector Synoptics, Logical Nodes (XCBR/XSWI), and Double-Point (Dbpos) Status Dynamization</text>
+
+  <!-- ==================== TOP PANEL: 110 kV FEEDER BAY SLD ==================== -->
+  <rect x="35" y="80" width="1110" height="305" rx="8" fill="url(#cardGrad)" stroke="#30363D" stroke-width="1" />
+  
+  <!-- Section Badge -->
+  <rect x="50" y="92" width="370" height="22" rx="4" fill="#16191F" stroke="#388bfd" stroke-width="1" />
+  <circle cx="62" cy="103" r="4" fill="#388bfd" />
+  <text x="74" y="107" font-size="11" font-weight="700" fill="#79c0ff">1. Substation 110 kV Feeder Bay SLD (Topological Vector DOM)</text>
+
+  <!-- Busbars -->
+  <!-- Main Busbar A -->
+  <line x1="80" y1="135" x2="1080" y2="135" stroke="#388bfd" stroke-width="5" stroke-linecap="round" />
+  <text x="90" y="127" font-size="11" font-weight="700" fill="#79c0ff">110 kV Main Busbar A (W1)</text>
+
+  <!-- Transfer Busbar B -->
+  <line x1="80" y1="165" x2="1080" y2="165" stroke="#388bfd" stroke-width="3" stroke-dasharray="6,4" stroke-linecap="round" />
+  <text x="90" y="157" font-size="10" font-family="monospace" fill="#8b949e">110 kV Transfer Busbar B (W2)</text>
+
+  <!-- ==================== BAY 01 (Left, Closed/Energized Feeder) ==================== -->
+  <rect x="150" y="180" width="400" height="190" rx="6" fill="#16191F" stroke="#30363D" stroke-width="1" />
+  <rect x="160" y="188" width="180" height="20" rx="3" fill="#2d1519" />
+  <text x="166" y="202" font-size="10" font-family="monospace" font-weight="700" fill="#f85149">BAY 01: ENERGIZED / LIVE</text>
+  <text x="350" y="202" font-size="9" font-family="monospace" fill="#79c0ff">ID: Alpha_110kV_Bay01</text>
+
+  <!-- Electrical centerline at x=220 -->
+  <!-- Drop line from Bus A through QB1 -->
+  <line x1="220" y1="135" x2="220" y2="215" stroke="#f85149" stroke-width="2" />
+  
+  <!-- Disconnector QB1 (Closed) -->
+  <circle cx="220" cy="218" r="3" fill="#f85149" />
+  <line x1="220" y1="218" x2="220" y2="238" stroke="#f85149" stroke-width="2.5" />
+  <circle cx="220" cy="238" r="3" fill="#f85149" />
+  <text x="235" y="231" font-size="9.5" font-family="monospace" font-weight="700" fill="#f85149">QB1 [CLOSED] (XSWI_1)</text>
+
+  <!-- Line to Breaker QA1 -->
+  <line x1="220" y1="238" x2="220" y2="252" stroke="#f85149" stroke-width="2" />
+
+  <!-- Circuit Breaker QA1 Symbol (Closed: Solid square with bridging line) -->
+  <rect x="206" y="252" width="28" height="28" rx="3" fill="#2d1519" stroke="#f85149" stroke-width="1.5" />
+  <line x1="220" y1="252" x2="220" y2="280" stroke="#f85149" stroke-width="3" />
+  <text x="245" y="264" font-size="10" font-family="monospace" font-weight="700" fill="#f85149">QA1 [CLOSED] (XCBR_1)</text>
+  <text x="245" y="277" font-size="8.5" font-family="monospace" fill="#8b949e">Dbpos: 10 (ON) &#8212; 52a=1, 52b=0</text>
+
+  <!-- Line to CT TA1 -->
+  <line x1="220" y1="280" x2="220" y2="295" stroke="#f85149" stroke-width="2" />
+
+  <!-- Current Transformer TA1 (Two interlocking circles) -->
+  <circle cx="220" cy="301" r="7" fill="none" stroke="#79c0ff" stroke-width="1.5" />
+  <circle cx="220" cy="311" r="7" fill="none" stroke="#79c0ff" stroke-width="1.5" />
+  <text x="240" y="309" font-size="9.5" font-family="monospace" fill="#79c0ff">TA1 (TCTR_1)</text>
+
+  <!-- Line to Line Disconnector QB9 & Outgoing Line -->
+  <line x1="220" y1="318" x2="220" y2="330" stroke="#f85149" stroke-width="2" />
+  
+  <!-- Disconnector QB9 (Closed) -->
+  <circle cx="220" cy="330" r="3" fill="#f85149" />
+  <line x1="220" y1="330" x2="220" y2="346" stroke="#f85149" stroke-width="2.5" />
+  <circle cx="220" cy="346" r="3" fill="#f85149" />
+  <text x="235" y="341" font-size="9.5" font-family="monospace" font-weight="700" fill="#f85149">QB9 (XSWI_9)</text>
+
+  <!-- Earth Switch QC1 offshoot (Open) -->
+  <line x1="220" y1="338" x2="185" y2="338" stroke="#8b949e" stroke-width="1.5" />
+  <line x1="185" y1="338" x2="175" y2="328" stroke="#3fb950" stroke-width="2" />
+  <line x1="171" y1="324" x2="171" y2="336" stroke="#3fb950" stroke-width="2" />
+  <line x1="167" y1="327" x2="167" y2="333" stroke="#3fb950" stroke-width="1.5" />
+  <text x="160" y="355" font-size="8.5" font-family="monospace" fill="#3fb950">QC1 [OPEN]</text>
+
+  <!-- Outgoing Feeder Cable Arrow -->
+  <line x1="220" y1="346" x2="220" y2="360" stroke="#f85149" stroke-width="2" marker-end="url(#arrowRed)" />
+  <text x="235" y="362" font-size="9" font-weight="700" fill="#f85149">&#8594; Line L1 (Live &gt;110 kV)</text>
+
+  <!-- ==================== BAY 02 (Right, Open/Isolated Feeder) ==================== -->
+  <rect x="630" y="180" width="400" height="190" rx="6" fill="#16191F" stroke="#30363D" stroke-width="1" />
+  <rect x="640" y="188" width="180" height="20" rx="3" fill="#122619" />
+  <text x="646" y="202" font-size="10" font-family="monospace" font-weight="700" fill="#3fb950">BAY 02: ISOLATED / SAFE</text>
+  <text x="830" y="202" font-size="9" font-family="monospace" fill="#79c0ff">ID: Alpha_110kV_Bay02</text>
+
+  <!-- Electrical centerline at x=700 -->
+  <!-- Drop line from Bus A through QB2 (Open) -->
+  <line x1="700" y1="135" x2="700" y2="215" stroke="#8b949e" stroke-width="1.5" />
+  
+  <!-- Disconnector QB2 (Open: blade tilted 45 deg) -->
+  <circle cx="700" cy="218" r="3" fill="#8b949e" />
+  <line x1="700" y1="218" x2="714" y2="232" stroke="#8b949e" stroke-width="2" />
+  <circle cx="700" cy="238" r="3" fill="#8b949e" />
+  <text x="725" y="231" font-size="9.5" font-family="monospace" fill="#8b949e">QB2 [OPEN] (XSWI_2)</text>
+
+  <!-- Line to Breaker QA2 -->
+  <line x1="700" y1="238" x2="700" y2="252" stroke="#8b949e" stroke-width="1.5" />
+
+  <!-- Circuit Breaker QA2 Symbol (Open: Square with angled blade) -->
+  <rect x="686" y="252" width="28" height="28" rx="3" fill="#16191F" stroke="#3fb950" stroke-width="1.5" />
+  <line x1="700" y1="254" x2="700" y2="264" stroke="#8b949e" stroke-width="1.5" />
+  <line x1="700" y1="264" x2="710" y2="274" stroke="#3fb950" stroke-width="2.5" />
+  <line x1="700" y1="270" x2="700" y2="278" stroke="#8b949e" stroke-width="1.5" />
+  <text x="725" y="264" font-size="10" font-family="monospace" font-weight="700" fill="#3fb950">QA2 [OPEN] (XCBR_2)</text>
+  <text x="725" y="277" font-size="8.5" font-family="monospace" fill="#8b949e">Dbpos: 01 (OFF) &#8212; 52a=0, 52b=1</text>
+
+  <!-- Line to CT TA2 -->
+  <line x1="700" y1="280" x2="700" y2="295" stroke="#8b949e" stroke-width="1.5" />
+
+  <!-- Current Transformer TA2 -->
+  <circle cx="700" cy="301" r="7" fill="none" stroke="#8b949e" stroke-width="1.5" />
+  <circle cx="700" cy="311" r="7" fill="none" stroke="#8b949e" stroke-width="1.5" />
+  <text x="725" y="309" font-size="9.5" font-family="monospace" fill="#8b949e">TA2 (TCTR_2)</text>
+
+  <!-- Line to Disconnector QB10 & Earth Switch QC2 -->
+  <line x1="700" y1="318" x2="700" y2="330" stroke="#8b949e" stroke-width="1.5" />
+  
+  <!-- Disconnector QB10 (Open) -->
+  <circle cx="700" cy="330" r="3" fill="#8b949e" />
+  <line x1="700" y1="330" x2="714" y2="344" stroke="#8b949e" stroke-width="2" />
+  <circle cx="700" cy="346" r="3" fill="#8b949e" />
+  <text x="725" y="341" font-size="9.5" font-family="monospace" fill="#8b949e">QB10 [OPEN] (XSWI_10)</text>
+
+  <!-- Earth Switch QC2 (Closed to Earth: Green) -->
+  <line x1="700" y1="338" x2="665" y2="338" stroke="#3fb950" stroke-width="2" />
+  <line x1="665" y1="330" x2="665" y2="346" stroke="#3fb950" stroke-width="2.5" />
+  <line x1="660" y1="333" x2="660" y2="343" stroke="#3fb950" stroke-width="2" />
+  <line x1="655" y1="336" x2="655" y2="340" stroke="#3fb950" stroke-width="1.5" />
+  <text x="640" y="355" font-size="8.5" font-family="monospace" font-weight="700" fill="#3fb950">QC2 [GROUNDED]</text>
+
+  <text x="725" y="362" font-size="9" font-weight="700" fill="#3fb950">&#10003; Zero Voltage / Safe for Touch</text>
+
+  <!-- ==================== BOTTOM PANEL: DBPOS ELECTROMECHANICAL CIRCUIT MECHANICS ==================== -->
+  <rect x="35" y="400" width="1110" height="305" rx="8" fill="url(#cardGrad)" stroke="#30363D" stroke-width="1" />
+  
+  <!-- Section Badge -->
+  <rect x="50" y="412" width="470" height="22" rx="4" fill="#16191F" stroke="#3fb950" stroke-width="1" />
+  <circle cx="62" cy="423" r="4" fill="#3fb950" />
+  <text x="74" y="427" font-size="11" font-weight="700" fill="#3fb950">2. IEC 61850-7-2 Double-Point Position (Dbpos) Auxiliary Limit Switch Sensing Circuit</text>
+
+  <!-- 4 State Cards (Width: 258 each, Gap: 18, Start x=50) -->
+
+  <!-- CARD 1: STATE 00 (Intermediate) -->
+  <rect x="50" y="445" width="258" height="245" rx="6" fill="#16191F" stroke="#388bfd" stroke-width="1" />
+  <rect x="58" y="453" width="242" height="20" rx="3" fill="#132338" />
+  <text x="64" y="467" font-size="10" font-family="monospace" font-weight="700" fill="#79c0ff">STATE 00: Intermediate (0)</text>
+
+  <!-- Schematic: Both switches open -->
+  <rect x="60" y="480" width="238" height="90" rx="4" fill="#0d1117" stroke="#30363D" stroke-width="1" />
+  <text x="70" y="497" font-size="9" font-family="monospace" fill="#8b949e">+110V DC Station Bus</text>
+  <line x1="70" y1="505" x2="280" y2="505" stroke="#79c0ff" stroke-width="1.5" />
+  
+  <!-- 52a Switch (Open in transit) -->
+  <text x="70" y="525" font-size="8.5" font-family="monospace" fill="#8b949e">52a (NO):</text>
+  <circle cx="125" cy="522" r="2.5" fill="#8b949e" />
+  <line x1="125" y1="522" x2="145" y2="515" stroke="#8b949e" stroke-width="1.5" />
+  <circle cx="150" cy="522" r="2.5" fill="#8b949e" />
+  <text x="160" y="525" font-size="8.5" font-family="monospace" fill="#8b949e">V_a = 0 V (Bit 0)</text>
+
+  <!-- 52b Switch (Open in transit) -->
+  <text x="70" y="550" font-size="8.5" font-family="monospace" fill="#8b949e">52b (NC):</text>
+  <circle cx="125" cy="547" r="2.5" fill="#8b949e" />
+  <line x1="125" y1="547" x2="145" y2="540" stroke="#8b949e" stroke-width="1.5" />
+  <circle cx="150" cy="547" r="2.5" fill="#8b949e" />
+  <text x="160" y="550" font-size="8.5" font-family="monospace" fill="#8b949e">V_b = 0 V (Bit 0)</text>
+
+  <!-- Status Info -->
+  <text x="65" y="590" font-size="10" font-weight="700" fill="#79c0ff">TRANSIT / MOVING</text>
+  <text x="65" y="606" font-size="9" fill="#c9d1d9">&#8226; Main operating shaft in motion</text>
+  <text x="65" y="620" font-size="9" fill="#c9d1d9">&#8226; Travel time: 40 to 120 ms</text>
+  <text x="65" y="635" font-size="9" fill="#8b949e">&#8226; HMI Blade: 45&#176; Tilted Cool Blue</text>
+  <rect x="60" y="650" width="238" height="26" rx="3" fill="#132338" />
+  <text x="68" y="667" font-size="8.5" font-family="monospace" fill="#79c0ff">Alarm if stuck &gt; 2.0 sec</text>
+
+  <!-- CARD 2: STATE 01 (Off / Open) -->
+  <rect x="326" y="445" width="258" height="245" rx="6" fill="#16191F" stroke="#3fb950" stroke-width="1" />
+  <rect x="334" y="453" width="242" height="20" rx="3" fill="#122619" />
+  <text x="340" y="467" font-size="10" font-family="monospace" font-weight="700" fill="#3fb950">STATE 01: Off / Open (1)</text>
+
+  <!-- Schematic: 52a open, 52b closed -->
+  <rect x="336" y="480" width="238" height="90" rx="4" fill="#0d1117" stroke="#30363D" stroke-width="1" />
+  <text x="346" y="497" font-size="9" font-family="monospace" fill="#8b949e">+110V DC Station Bus</text>
+  <line x1="346" y1="505" x2="556" y2="505" stroke="#79c0ff" stroke-width="1.5" />
+  
+  <!-- 52a Switch (Open) -->
+  <text x="346" y="525" font-size="8.5" font-family="monospace" fill="#8b949e">52a (NO):</text>
+  <circle cx="401" cy="522" r="2.5" fill="#8b949e" />
+  <line x1="401" y1="522" x2="421" y2="515" stroke="#8b949e" stroke-width="1.5" />
+  <circle cx="426" cy="522" r="2.5" fill="#8b949e" />
+  <text x="436" y="525" font-size="8.5" font-family="monospace" fill="#8b949e">V_a = 0 V (Bit 0)</text>
+
+  <!-- 52b Switch (Closed) -->
+  <text x="346" y="550" font-size="8.5" font-family="monospace" fill="#3fb950">52b (NC):</text>
+  <circle cx="401" cy="547" r="2.5" fill="#3fb950" />
+  <line x1="401" y1="547" x2="426" y2="547" stroke="#3fb950" stroke-width="2" />
+  <circle cx="426" cy="547" r="2.5" fill="#3fb950" />
+  <text x="436" y="550" font-size="8.5" font-family="monospace" font-weight="700" fill="#3fb950">V_b = 110 V (Bit 1)</text>
+
+  <!-- Status Info -->
+  <text x="341" y="590" font-size="10" font-weight="700" fill="#3fb950">ISOLATED / DE-ENERGIZED</text>
+  <text x="341" y="606" font-size="9" fill="#c9d1d9">&#8226; Main contacts physically parted</text>
+  <text x="341" y="620" font-size="9" fill="#c9d1d9">&#8226; Spring drive mechanism discharged</text>
+  <text x="341" y="635" font-size="9" fill="#8b949e">&#8226; HMI Blade: 90&#176; Vertical Muted Green</text>
+  <rect x="336" y="650" width="238" height="26" rx="3" fill="#122619" />
+  <text x="344" y="667" font-size="8.5" font-family="monospace" fill="#3fb950">&#10003; Safe for maintenance clearance</text>
+
+  <!-- CARD 3: STATE 10 (On / Closed) -->
+  <rect x="602" y="445" width="258" height="245" rx="6" fill="#16191F" stroke="#f85149" stroke-width="1" />
+  <rect x="610" y="453" width="242" height="20" rx="3" fill="#2d1519" />
+  <text x="616" y="467" font-size="10" font-family="monospace" font-weight="700" fill="#f85149">STATE 10: On / Closed (2)</text>
+
+  <!-- Schematic: 52a closed, 52b open -->
+  <rect x="612" y="480" width="238" height="90" rx="4" fill="#0d1117" stroke="#30363D" stroke-width="1" />
+  <text x="622" y="497" font-size="9" font-family="monospace" fill="#8b949e">+110V DC Station Bus</text>
+  <line x1="622" y1="505" x2="832" y2="505" stroke="#79c0ff" stroke-width="1.5" />
+  
+  <!-- 52a Switch (Closed) -->
+  <text x="622" y="525" font-size="8.5" font-family="monospace" fill="#f85149">52a (NO):</text>
+  <circle cx="677" cy="522" r="2.5" fill="#f85149" />
+  <line x1="677" y1="522" x2="702" y2="522" stroke="#f85149" stroke-width="2" />
+  <circle cx="702" cy="522" r="2.5" fill="#f85149" />
+  <text x="712" y="525" font-size="8.5" font-family="monospace" font-weight="700" fill="#f85149">V_a = 110 V (Bit 1)</text>
+
+  <!-- 52b Switch (Open) -->
+  <text x="622" y="550" font-size="8.5" font-family="monospace" fill="#8b949e">52b (NC):</text>
+  <circle cx="677" cy="547" r="2.5" fill="#8b949e" />
+  <line x1="677" y1="547" x2="697" y2="540" stroke="#8b949e" stroke-width="1.5" />
+  <circle cx="702" cy="547" r="2.5" fill="#8b949e" />
+  <text x="712" y="550" font-size="8.5" font-family="monospace" fill="#8b949e">V_b = 0 V (Bit 0)</text>
+
+  <!-- Status Info -->
+  <text x="617" y="590" font-size="10" font-weight="700" fill="#f85149">ENERGIZED / LIVE LOAD</text>
+  <text x="617" y="606" font-size="9" fill="#c9d1d9">&#8226; Contacts latched inside SF6 bottle</text>
+  <text x="617" y="620" font-size="9" fill="#c9d1d9">&#8226; Full bus current flowing through bay</text>
+  <text x="617" y="635" font-size="8.5" fill="#8b949e">&#8226; HMI Blade: 0&#176; Bridging Coral Red</text>
+  <rect x="612" y="650" width="238" height="26" rx="3" fill="#2d1519" />
+  <text x="620" y="667" font-size="8.5" font-family="monospace" fill="#f85149">High Voltage Active (&gt;110 kV)</text>
+
+  <!-- CARD 4: STATE 11 (Bad State) -->
+  <rect x="878" y="445" width="258" height="245" rx="6" fill="#16191F" stroke="#ff7b72" stroke-width="1" />
+  <rect x="886" y="453" width="242" height="20" rx="3" fill="#3d1519" />
+  <text x="892" y="467" font-size="10" font-family="monospace" font-weight="700" fill="#ff7b72">STATE 11: Bad State (3)</text>
+
+  <!-- Schematic: 52a AND 52b closed (Anomaly) -->
+  <rect x="888" y="480" width="238" height="90" rx="4" fill="#0d1117" stroke="#ff7b72" stroke-width="1" />
+  <text x="898" y="497" font-size="9" font-family="monospace" fill="#8b949e">+110V DC Station Bus</text>
+  <line x1="898" y1="505" x2="1108" y2="505" stroke="#79c0ff" stroke-width="1.5" />
+  
+  <!-- 52a Switch (Closed) -->
+  <text x="898" y="525" font-size="8.5" font-family="monospace" fill="#ff7b72">52a:</text>
+  <circle cx="943" cy="522" r="2.5" fill="#ff7b72" />
+  <line x1="943" y1="522" x2="968" y2="522" stroke="#ff7b72" stroke-width="2" />
+  <circle cx="968" cy="522" r="2.5" fill="#ff7b72" />
+  <text x="978" y="525" font-size="8.5" font-family="monospace" font-weight="700" fill="#ff7b72">V_a = 110 V (Bit 1)</text>
+
+  <!-- 52b Switch (Closed simultaneously) -->
+  <text x="898" y="550" font-size="8.5" font-family="monospace" fill="#ff7b72">52b:</text>
+  <circle cx="943" cy="547" r="2.5" fill="#ff7b72" />
+  <line x1="943" y1="547" x2="968" y2="547" stroke="#ff7b72" stroke-width="2" />
+  <circle cx="968" cy="547" r="2.5" fill="#ff7b72" />
+  <text x="978" y="550" font-size="8.5" font-family="monospace" font-weight="700" fill="#ff7b72">V_b = 110 V (Bit 1)</text>
+
+  <!-- Status Info -->
+  <text x="893" y="590" font-size="10" font-weight="700" fill="#ff7b72">SENSOR DISCREPANCY / DEFECT</text>
+  <text x="893" y="606" font-size="9" fill="#c9d1d9">&#8226; Broken mechanical auxiliary linkage</text>
+  <text x="893" y="620" font-size="9" fill="#c9d1d9">&#8226; Contact welding / water ingress short</text>
+  <text x="893" y="635" font-size="9" fill="#8b949e">&#8226; HMI: Flashing Red X Warning Glyph</text>
+  <rect x="888" y="650" width="238" height="26" rx="3" fill="#3d1519" stroke="#ff7b72" stroke-width="1" />
+  <text x="896" y="667" font-size="8.5" font-family="monospace" font-weight="700" fill="#ff7b72">&#10006; CRITICAL IED ALARM DISPATCHED</text>
+
+</svg>

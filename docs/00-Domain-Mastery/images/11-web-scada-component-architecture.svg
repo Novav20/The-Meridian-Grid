@@ -1,0 +1,239 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 540" width="100%" height="100%" style="background:#16191f; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  <style>
+    .title { fill: #f0f6fc; font-size: 17px; font-weight: 700; }
+    .subtitle { fill: #8b949e; font-size: 11.5px; }
+    .tier-box { fill: #0d1117; stroke: #30363d; stroke-width: 1.2; rx: 6; }
+    .comp-box { fill: #161b22; stroke: #388bfd; stroke-width: 1.2; rx: 4; }
+    .hdr { font-size: 11.5px; font-weight: 700; }
+    .comp-hdr { font-size: 10px; font-weight: 700; fill: #f0f6fc; }
+    .txt-body { font-size: 8.5px; fill: #8b949e; }
+    .txt-code { font-family: monospace; font-size: 8px; }
+    .stereotype { font-size: 7.5px; fill: #79c0ff; font-style: italic; }
+  </style>
+
+  <defs>
+    <marker id="arr-blue" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#58a6ff" />
+    </marker>
+    <marker id="arr-green" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#3fb950" />
+    </marker>
+  </defs>
+
+  <!-- Title & Subtitle -->
+  <text x="500" y="27" class="title" text-anchor="middle">Decoupled Web SCADA Component Architecture</text>
+  <text x="500" y="45" class="subtitle" text-anchor="middle">Four-Tier Loosely Coupled Topology: Presentation, Application/Gateway, Transport/Storage, and Edge</text>
+
+  <!-- ================= TIER 1: PRESENTATION TIER (BROWSER CLIENT SPA) ================= -->
+  <g transform="translate(25, 65)">
+    <rect x="0" y="0" width="220" height="450" class="tier-box" />
+    <text x="14" y="22" class="hdr" fill="#58a6ff">Tier 1: Presentation (Browser SPA)</text>
+    <text x="14" y="35" class="txt-body">Zero-install client in sandboxed web browser</text>
+
+    <!-- Component: Scene Graph Renderer -->
+    <g transform="translate(10, 48)">
+      <rect x="0" y="0" width="200" height="85" class="comp-box" />
+      <rect x="8" y="8" width="12" height="6" fill="#0d1117" stroke="#388bfd" />
+      <rect x="8" y="16" width="12" height="6" fill="#0d1117" stroke="#388bfd" />
+      <text x="26" y="14" class="stereotype">«component»</text>
+      <text x="26" y="26" class="comp-hdr">Scene Graph Renderer</text>
+      <text x="10" y="42" class="txt-body">• Declarative SVG Piping/Valves</text>
+      <text x="10" y="54" class="txt-body">• 60 FPS HTML5 Canvas Instrumentation</text>
+      <text x="10" y="66" class="txt-body">• Dynamic Retinal Velocity Clamping</text>
+      <text x="10" y="78" class="txt-code" fill="#79c0ff">Renderer: WebGL / 2D Canvas</text>
+    </g>
+
+    <!-- Component: Telemetry State Store -->
+    <g transform="translate(10, 145)">
+      <rect x="0" y="0" width="200" height="85" class="comp-box" />
+      <rect x="8" y="8" width="12" height="6" fill="#0d1117" stroke="#388bfd" />
+      <rect x="8" y="16" width="12" height="6" fill="#0d1117" stroke="#388bfd" />
+      <text x="26" y="14" class="stereotype">«component»</text>
+      <text x="26" y="26" class="comp-hdr">Telemetry State Store</text>
+      <text x="10" y="42" class="txt-body">• Reactive Signal-based State Tree</text>
+      <text x="10" y="54" class="txt-body">• Selective Dirty Node Invalidation</text>
+      <text x="10" y="66" class="txt-body">• Zero Global React/DOM Re-renders</text>
+      <text x="10" y="78" class="txt-code" fill="#79c0ff">Signals / Zustand In-Memory</text>
+    </g>
+
+    <!-- Component: Web Worker Demuxer -->
+    <g transform="translate(10, 242)">
+      <rect x="0" y="0" width="200" height="92" class="comp-box" />
+      <rect x="8" y="8" width="12" height="6" fill="#0d1117" stroke="#388bfd" />
+      <rect x="8" y="16" width="12" height="6" fill="#0d1117" stroke="#388bfd" />
+      <text x="26" y="14" class="stereotype">«component»</text>
+      <text x="26" y="26" class="comp-hdr">Web Worker Demuxer</text>
+      <text x="10" y="42" class="txt-body">• Dedicated Background Worker Thread</text>
+      <text x="10" y="54" class="txt-body">• Binary Protobuf Frame Decoding</text>
+      <text x="10" y="66" class="txt-body">• SharedArrayBuffer &amp; Atomics Mutex</text>
+      <text x="10" y="78" class="txt-body">• Eliminates Main UI Thread GC Jitter</text>
+      <text x="10" y="88" class="txt-code" fill="#79c0ff">OffscreenCanvas / Worker</text>
+    </g>
+
+    <!-- Component: Operator Action Handler -->
+    <g transform="translate(10, 345)">
+      <rect x="0" y="0" width="200" height="88" class="comp-box" />
+      <rect x="8" y="8" width="12" height="6" fill="#0d1117" stroke="#388bfd" />
+      <rect x="8" y="16" width="12" height="6" fill="#0d1117" stroke="#388bfd" />
+      <text x="26" y="14" class="stereotype">«component»</text>
+      <text x="26" y="26" class="comp-hdr">Operator Action Handler</text>
+      <text x="10" y="42" class="txt-body">• Two-Stage Arm-and-Execute Barrier</text>
+      <text x="10" y="54" class="txt-body">• Authenticated Command Dispatch</text>
+      <text x="10" y="66" class="txt-body">• Cryptographic Session Signing</text>
+      <text x="10" y="78" class="txt-code" fill="#79c0ff">HMAC-SHA256 Token Dispatch</text>
+    </g>
+  </g>
+
+  <!-- Connectors Tier 1 -> Tier 2 -->
+  <path d="M 245 200 L 275 200" stroke="#58a6ff" stroke-width="2" marker-end="url(#arr-blue)" />
+  <path d="M 245 390 L 275 390" stroke="#58a6ff" stroke-width="2" marker-end="url(#arr-blue)" />
+  <text x="260" y="192" fill="#79c0ff" font-size="7.5" font-family="monospace" text-anchor="middle">WSS</text>
+  <text x="260" y="382" fill="#79c0ff" font-size="7.5" font-family="monospace" text-anchor="middle">REST</text>
+
+  <!-- ================= TIER 2: APPLICATION & GATEWAY TIER ================= -->
+  <g transform="translate(280, 65)">
+    <rect x="0" y="0" width="220" height="450" class="tier-box" />
+    <text x="14" y="22" class="hdr" fill="#58a6ff">Tier 2: Gateway (Node.js IDMZ)</text>
+    <text x="14" y="35" class="txt-body">Lightweight headless microservices in IDMZ</text>
+
+    <!-- Component: WebSocket Streaming Engine -->
+    <g transform="translate(10, 48)">
+      <rect x="0" y="0" width="200" height="90" class="comp-box" />
+      <text x="10" y="15" class="stereotype">«component»</text>
+      <text x="10" y="28" class="comp-hdr">WebSocket Streaming Engine</text>
+      <text x="10" y="44" class="txt-body">• Fastify / uWebSockets.js Core</text>
+      <text x="10" y="56" class="txt-body">• Topic Scoped Client Subscriptions</text>
+      <text x="10" y="68" class="txt-body">• 2-Byte RFC 6455 Frame Packing</text>
+      <text x="10" y="80" class="txt-code" fill="#7ee787">Port 443 / WSS Ingress</text>
+    </g>
+
+    <!-- Component: Screen Layout Catalog -->
+    <g transform="translate(10, 148)">
+      <rect x="0" y="0" width="200" height="85" class="comp-box" />
+      <text x="10" y="15" class="stereotype">«component»</text>
+      <text x="10" y="28" class="comp-hdr">Screen Layout Catalog</text>
+      <text x="10" y="44" class="txt-body">• Structured JSON Layout Schemas</text>
+      <text x="10" y="56" class="txt-body">• SVG Dynamic Glyph Master Library</text>
+      <text x="10" y="68" class="txt-body">• Versioned Asset Distribution</text>
+      <text x="10" y="80" class="txt-code" fill="#7ee787">Hot Template Reloading</text>
+    </g>
+
+    <!-- Component: Security & RBAC Auth -->
+    <g transform="translate(10, 242)">
+      <rect x="0" y="0" width="200" height="85" class="comp-box" />
+      <text x="10" y="15" class="stereotype">«component»</text>
+      <text x="10" y="28" class="comp-hdr">Security &amp; RBAC Auth Provider</text>
+      <text x="10" y="44" class="txt-body">• JWT / OpenID Connect Validation</text>
+      <text x="10" y="56" class="txt-body">• Granular Tag Write Permissions</text>
+      <text x="10" y="68" class="txt-body">• Immutable Audit Log Dispatch</text>
+      <text x="10" y="80" class="txt-code" fill="#7ee787">IEC 62443 Security Level 3</text>
+    </g>
+
+    <!-- Component: Historian Query Proxy -->
+    <g transform="translate(10, 338)">
+      <rect x="0" y="0" width="200" height="95" class="comp-box" />
+      <text x="10" y="15" class="stereotype">«component»</text>
+      <text x="10" y="28" class="comp-hdr">Historian Query Proxy</text>
+      <text x="10" y="44" class="txt-body">• SQL Query Translation &amp; Caching</text>
+      <text x="10" y="56" class="txt-body">• LTTB Downsampling Algorithm</text>
+      <text x="10" y="68" class="txt-body">• Multi-Day Zoom &amp; Pan Pagination</text>
+      <text x="10" y="80" class="txt-body">• Protects DB from Client Storms</text>
+      <text x="10" y="90" class="txt-code" fill="#7ee787">HTTPS REST :8443 Proxy</text>
+    </g>
+  </g>
+
+  <!-- Connectors Tier 2 -> Tier 3 -->
+  <path d="M 500 100 L 530 100" stroke="#58a6ff" stroke-width="2" marker-end="url(#arr-blue)" />
+  <path d="M 500 390 L 530 390" stroke="#58a6ff" stroke-width="2" marker-end="url(#arr-blue)" />
+  <text x="515" y="92" fill="#79c0ff" font-size="7.5" font-family="monospace" text-anchor="middle">MQTT</text>
+  <text x="515" y="382" fill="#79c0ff" font-size="7.5" font-family="monospace" text-anchor="middle">SQL</text>
+
+  <!-- ================= TIER 3: TRANSPORT & STORAGE TIER ================= -->
+  <g transform="translate(535, 65)">
+    <rect x="0" y="0" width="210" height="450" class="tier-box" />
+    <text x="14" y="22" class="hdr" fill="#58a6ff">Tier 3: Transport &amp; Storage</text>
+    <text x="14" y="35" class="txt-body">Enterprise message bus &amp; historian</text>
+
+    <!-- Component: MQTT Event Broker (UNS) -->
+    <g transform="translate(10, 48)">
+      <rect x="0" y="0" width="190" height="175" class="comp-box" stroke="#8957e5" />
+      <text x="10" y="15" class="stereotype" fill="#d2a8ff">«component»</text>
+      <text x="10" y="28" class="comp-hdr" fill="#d2a8ff">UNS Message Broker (SSOT)</text>
+      <text x="10" y="46" class="txt-body">• Clustered EMQX / Mosquitto Core</text>
+      <text x="10" y="59" class="txt-body">• Sparkplug B State Machine</text>
+      <text x="10" y="72" class="txt-body">• Retained Birth Certificates</text>
+      <text x="10" y="85" class="txt-body">• Report-by-Exception (RBE)</text>
+      <text x="10" y="98" class="txt-body">• Topic Tree ISA-95 Namespace</text>
+      <text x="10" y="111" class="txt-body">• In-Memory Non-Blocking Queues</text>
+      <text x="10" y="124" class="txt-body">• 100,000+ msgs/sec Throughput</text>
+      <rect x="8" y="136" width="174" height="26" rx="2" fill="#211a36" stroke="#8957e5" />
+      <text x="95" y="152" fill="#d2a8ff" font-size="8" font-weight="700" text-anchor="middle">Decoupled Operational SSOT</text>
+    </g>
+
+    <!-- Component: Time-Series Historian -->
+    <g transform="translate(10, 240)">
+      <rect x="0" y="0" width="190" height="195" class="comp-box" />
+      <text x="10" y="15" class="stereotype">«component»</text>
+      <text x="10" y="28" class="comp-hdr">Time-Series Historian</text>
+      <text x="10" y="46" class="txt-body">• TimescaleDB / PostgreSQL</text>
+      <text x="10" y="59" class="txt-body">• Append-Only Time Partitioning</text>
+      <text x="10" y="72" class="txt-body">• Automatic Hypertable Chunking</text>
+      <text x="10" y="85" class="txt-body">• Gorilla XOR Float Compression</text>
+      <text x="10" y="98" class="txt-body">• Delta-of-Delta Timestamping</text>
+      <text x="10" y="111" class="txt-body">• 12:1 Storage Volume Reduction</text>
+      <text x="10" y="124" class="txt-body">• Continuous Aggregates (Rollups)</text>
+      <rect x="8" y="145" width="174" height="36" rx="2" fill="#162032" stroke="#388bfd" />
+      <text x="12" y="158" fill="#79c0ff" font-size="8" font-weight="700">Cold Path Persistence:</text>
+      <text x="12" y="170" class="txt-body">Batch COPY amortizes WAL locks &gt;95%</text>
+    </g>
+  </g>
+
+  <!-- Connectors Tier 4 -> Tier 3 -->
+  <path d="M 780 135 L 755 135" stroke="#3fb950" stroke-width="2" marker-end="url(#arr-green)" />
+  <text x="768" y="127" fill="#3fb950" font-size="7.5" font-family="monospace" text-anchor="middle">MQTTS</text>
+
+  <!-- ================= TIER 4: EDGE TIER (EON NODES) ================= -->
+  <g transform="translate(775, 65)">
+    <rect x="0" y="0" width="200" height="450" class="tier-box" />
+    <text x="14" y="22" class="hdr" fill="#3fb950">Tier 4: Edge (EoN Nodes)</text>
+    <text x="14" y="35" class="txt-body">Field protocol termination &amp; encoding</text>
+
+    <!-- Component: Field Ingestion Drivers -->
+    <g transform="translate(10, 48)">
+      <rect x="0" y="0" width="180" height="110" class="comp-box" stroke="#3fb950" />
+      <text x="10" y="15" class="stereotype" fill="#7ee787">«component»</text>
+      <text x="10" y="28" class="comp-hdr" fill="#7ee787">Field Ingestion Drivers</text>
+      <text x="10" y="44" class="txt-body">• Cyclic Modbus TCP / RTU Polling</text>
+      <text x="10" y="56" class="txt-body">• OPC UA Client Subscription</text>
+      <text x="10" y="68" class="txt-body">• EtherNet/IP &amp; PROFINET IO</text>
+      <text x="10" y="80" class="txt-body">• Serial RS-485 Bus Termination</text>
+      <text x="10" y="92" class="txt-code" fill="#7ee787">Scan Rate: 10 ms – 100 ms</text>
+    </g>
+
+    <!-- Component: Sparkplug B Encoder -->
+    <g transform="translate(10, 172)">
+      <rect x="0" y="0" width="180" height="110" class="comp-box" stroke="#3fb950" />
+      <text x="10" y="15" class="stereotype" fill="#7ee787">«component»</text>
+      <text x="10" y="28" class="comp-hdr" fill="#7ee787">Sparkplug B Encoder</text>
+      <text x="10" y="44" class="txt-body">• Google Protobuf Binary Serializer</text>
+      <text x="10" y="56" class="txt-body">• Monotonic Sequence Numbering</text>
+      <text x="10" y="68" class="txt-body">• Topic Canonicalization (ISA-95)</text>
+      <text x="10" y="80" class="txt-body">• NDATA / DDATA RBE Filtering</text>
+      <text x="10" y="92" class="txt-code" fill="#7ee787">Compression: &gt;70% vs JSON</text>
+    </g>
+
+    <!-- Component: Store & Forward Engine -->
+    <g transform="translate(10, 296)">
+      <rect x="0" y="0" width="180" height="135" class="comp-box" stroke="#3fb950" />
+      <text x="10" y="15" class="stereotype" fill="#7ee787">«component»</text>
+      <text x="10" y="28" class="comp-hdr" fill="#7ee787">Store &amp; Forward Engine</text>
+      <text x="10" y="44" class="txt-body">• Local NVMe Append-Only WAL</text>
+      <text x="10" y="56" class="txt-body">• Network Loss Dead-Band Cache</text>
+      <text x="10" y="68" class="txt-body">• Auto-Replay on Broker Reconnect</text>
+      <text x="10" y="80" class="txt-body">• Preserves Chronological SOE</text>
+      <text x="10" y="92" class="txt-body">• Zero Data Loss Invariant</text>
+      <rect x="8" y="105" width="164" height="20" rx="2" fill="#1b4725" stroke="#2ea043" />
+      <text x="90" y="118" fill="#3fb950" font-size="7.5" font-weight="700" text-anchor="middle">Guaranteed Edge Persistence</text>
+    </g>
+  </g>
+</svg>

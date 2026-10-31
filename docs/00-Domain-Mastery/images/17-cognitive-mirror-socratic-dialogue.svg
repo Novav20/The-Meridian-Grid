@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="830" viewBox="0 0 1200 830" role="img" aria-labelledby="title desc">
+  <title id="title">Socratic Cognitive Mirroring &amp; Decision Barrier</title>
+  <desc id="desc">The ALARMS Locutor Agent in action: Challenging operator tunnel vision and confirmation bias via Socratic dialectic, presenting fast-forward digital twin trajectories, and enforcing a two-stage arm-and-execute human override barrier.</desc>
+  <defs>
+  <marker id="arr-cyan" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+    <path d="M 0 1 L 10 5 L 0 9 z" fill="#79c0ff" />
+  </marker>
+  <marker id="arr-amber" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+    <path d="M 0 1 L 10 5 L 0 9 z" fill="#d29922" />
+  </marker>
+  <marker id="arr-green" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+    <path d="M 0 1 L 10 5 L 0 9 z" fill="#2ea043" />
+  </marker>
+</defs>
+  <rect x="0.0" y="0.0" width="1200.0" height="830.0" rx="12" fill="#16191F" stroke="none" stroke-width="1" />
+  <text x="600.0" y="38.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#FDFEFE" text-anchor="middle" >Socratic Cognitive Mirroring &amp; Human Override Barrier</text>
+  <text x="600.0" y="59.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#7E8B9B" text-anchor="middle" >Verdejo et al. (2026) · Metacognitive Dialogue, Digital Twin Trajectories &amp; Structural Action Barrier</text>
+  <rect x="30.0" y="76.0" width="1140.0" height="40.0" rx="4" fill="#16191F" stroke="#3A4154" stroke-width="1" />
+  <g><rect x="44.0" y="86.0" width="20" height="20" rx="4" fill="#E63946" stroke="#16191F" stroke-width="1"/><text x="54.0" y="100.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10.8" font-weight="900" fill="#FFFFFF" text-anchor="middle">1</text></g>
+  <text x="74.0" y="100.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="800" fill="#FDFEFE" text-anchor="start" >INCIDENT #2026-0819 · DISTILLATION UNIT 102 · REBOILER E-102</text>
+  <rect x="720.0" y="85.0" width="220.0" height="22.0" rx="3" fill="#1f3a5f" stroke="#388bfd" stroke-width="1" />
+  <text x="830.0" y="100.0" font-family="Cascadia Code, SF Mono, Consolas, DejaVu Sans Mono, monospace" font-size="9.5" font-weight="700" fill="#79c0ff" text-anchor="middle" >TIME ELAPSED: +00:03:42 UTC</text>
+  <rect x="955.0" y="85.0" width="205.0" height="22.0" rx="3" fill="#251b3a" stroke="#a78bfa" stroke-width="1" />
+  <text x="1058.0" y="100.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="9.5" font-weight="800" fill="#a78bfa" text-anchor="middle" >LOCUTOR: ACTIVE ADVISORY</text>
+  <rect x="30.0" y="126.0" width="560.0" height="295.0" rx="8" fill="#1E222B" stroke="#F4A261" stroke-width="1.5" />
+  <rect x="44.0" y="138.0" width="190.0" height="20.0" rx="3" fill="#2c210e" stroke="#F4A261" stroke-width="1" />
+  <text x="139.0" y="152.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="9" font-weight="800" fill="#F4A261" text-anchor="middle" >OPERATOR MENTAL MODEL</text>
+  <text x="244.0" y="152.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="9.5" font-weight="400" fill="#7E8B9B" text-anchor="start" >Cognitive Tunnel Vision &amp; Salience Bias</text>
+  <line x1="44.0" y1="164.0" x2="576.0" y2="164.0" stroke="#3A4154" stroke-width="1" />
+  <rect x="42.0" y="174.0" width="536.0" height="66.0" rx="6" fill="#16191F" stroke="#F4A261" stroke-width="1.5" />
+  <text x="56.0" y="195.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#F4A261" text-anchor="start" >Salient Sensor Observation (Level Surge)</text>
+  <text x="56.0" y="213.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#7E8B9B" text-anchor="start" >• Level transmitter LT-102 reading +4.8%/min rise (currently 82.4%)</text>
+  <text x="56.0" y="229.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#7E8B9B" text-anchor="start" >• High Level Pre-Alarm active; operator assumes liquid inventory surge</text>
+  <rect x="42.0" y="248.0" width="536.0" height="66.0" rx="6" fill="#16191F" stroke="#3A4154" stroke-width="1.5" />
+  <text x="56.0" y="269.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#FDFEFE" text-anchor="start" >Operator Immediate Action Intent</text>
+  <text x="56.0" y="287.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#7E8B9B" text-anchor="start" >• Intent: Manually throttle bottoms discharge valve LV-102 to retain head</text>
+  <text x="56.0" y="303.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#7E8B9B" text-anchor="start" >• Cognitive Heuristic: 'Level is high, so restrict drain to stabilize boiling'</text>
+  <rect x="42.0" y="322.0" width="536.0" height="86.0" rx="6" fill="#16191F" stroke="#E63946" stroke-width="1.5" />
+  <text x="56.0" y="343.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#E63946" text-anchor="start" >Cognitive Failure &amp; Latent Catastrophe</text>
+  <text x="56.0" y="361.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#7E8B9B" text-anchor="start" >• Ignored Context: Steam flow FT-101 flat; tube wall dT-104 dropped 14.2°C</text>
+  <text x="56.0" y="377.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#7E8B9B" text-anchor="start" >• Latent Phenomenon: False level due to vapor pocket collapse &amp; hydraulic stall</text>
+  <text x="56.0" y="393.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#7E8B9B" text-anchor="start" >• Consequence: Throttling LV-102 causes tube rupture in 3.2 min (Hydrocarbon fire)</text>
+  <rect x="610.0" y="126.0" width="560.0" height="295.0" rx="8" fill="#1E222B" stroke="#a78bfa" stroke-width="2" />
+  <rect x="624.0" y="138.0" width="185.0" height="20.0" rx="3" fill="#251b3a" stroke="#a78bfa" stroke-width="1" />
+  <text x="716.0" y="152.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="9" font-weight="800" fill="#a78bfa" text-anchor="middle" >LOCUTOR COGNITIVE MIRROR</text>
+  <text x="820.0" y="152.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="9.5" font-weight="400" fill="#7E8B9B" text-anchor="start" >Socratic Dialectic &amp; Metacognitive Reframe</text>
+  <line x1="624.0" y1="164.0" x2="1156.0" y2="164.0" stroke="#3A4154" stroke-width="1" />
+  <rect x="622.0" y="174.0" width="536.0" height="86.0" rx="4" fill="#1c162e" stroke="#a78bfa" stroke-width="1" />
+  <text x="632.0" y="192.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="9.5" font-weight="800" fill="#a78bfa" text-anchor="start" >SOCRATIC CHALLENGE PROMPT TO OPERATOR:</text>
+  <text x="632.0" y="210.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="9.5" font-weight="600" fill="#FDFEFE" text-anchor="start" >"You are observing high LT-102. Have you verified reboiler skin temperature dT-104?</text>
+  <text x="632.0" y="226.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="9.5" font-weight="600" fill="#FDFEFE" text-anchor="start" > Inlet FT-101 is flat (-0.1%), but dT-104 has plummeted 14.2°C in 90 s.</text>
+  <text x="632.0" y="242.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="9.5" font-weight="600" fill="#79c0ff" text-anchor="start" > Is this actual liquid accumulation, or is vapor-lock cavitation generating</text>
+  <text x="632.0" y="254.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="9.5" font-weight="600" fill="#79c0ff" text-anchor="start" > a false differential manometer level?"</text>
+  <rect x="622.0" y="268.0" width="536.0" height="66.0" rx="6" fill="#16191F" stroke="#388bfd" stroke-width="1.5" />
+  <text x="636.0" y="289.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#79c0ff" text-anchor="start" >Analytical Evidence &amp; Uncertainty Bounds (Anticipation Agent)</text>
+  <text x="636.0" y="307.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#7E8B9B" text-anchor="start" >• Sensor Divergence: dT-104 = -14.2°C (Confidence: 96.4% ± 1.8% bound)</text>
+  <text x="636.0" y="323.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#7E8B9B" text-anchor="start" >• Root Cause: Local vapor collapse causing frothing &amp; manometer false head</text>
+  <rect x="622.0" y="342.0" width="536.0" height="66.0" rx="6" fill="#16191F" stroke="#2A9D8F" stroke-width="1.5" />
+  <text x="636.0" y="363.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#2A9D8F" text-anchor="start" >Metacognitive Impact on Operator</text>
+  <text x="636.0" y="381.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#7E8B9B" text-anchor="start" >• Forces evaluation of secondary thermodynamic variables, breaking salience bias</text>
+  <text x="636.0" y="397.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#7E8B9B" text-anchor="start" >• Operator retains full agency: Prompted to reflect, verify, and decide</text>
+  <rect x="30.0" y="435.0" width="690.0" height="295.0" rx="8" fill="#1E222B" stroke="#3A4154" stroke-width="1" />
+  <rect x="44.0" y="447.0" width="260.0" height="20.0" rx="3" fill="#16191F" stroke="#3A4154" stroke-width="1" />
+  <text x="174.0" y="461.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="9" font-weight="800" fill="#FDFEFE" text-anchor="middle" >SIMULATION DIGITAL TWIN TRAJECTORIES</text>
+  <text x="314.0" y="461.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="9.5" font-weight="400" fill="#7E8B9B" text-anchor="start" >Fast-forward physical simulation (10× real-time)</text>
+  <line x1="44.0" y1="473.0" x2="706.0" y2="473.0" stroke="#3A4154" stroke-width="1" />
+  <rect x="44.0" y="483.0" width="662.0" height="70.0" rx="4" fill="#16191F" stroke="#3A4154" stroke-width="1" />
+  <circle cx="62.0" cy="505.0" r="8" fill="#16191F" stroke="#7E8B9B" stroke-width="1.5" />
+  <text x="80.0" y="501.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="800" fill="#FDFEFE" text-anchor="start" >Option A (Operator Heuristic)</text>
+  <rect x="310.0" y="490.0" width="190.0" height="18.0" rx="2" fill="#16191F" stroke="#E63946" stroke-width="1" />
+  <text x="405.0" y="502.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="8.5" font-weight="700" fill="#E63946" text-anchor="middle" >REJECTED BY RISK AGENT</text>
+  <rect x="515.0" y="490.0" width="175.0" height="18.0" rx="2" fill="#3d1418" stroke="#E63946" stroke-width="1" />
+  <text x="602.0" y="502.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="8.5" font-weight="700" fill="#E63946" text-anchor="middle" >Risk: 94% CATASTROPHIC</text>
+  <text x="80.0" y="521.0" font-family="Cascadia Code, SF Mono, Consolas, DejaVu Sans Mono, monospace" font-size="9.5" font-weight="600" fill="#FDFEFE" text-anchor="start" >Throttle bottom drain valve LV-102 by -30%</text>
+  <text x="690.0" y="521.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="9.5" font-weight="700" fill="#E63946" text-anchor="end" >⏱ T + 3.2 min to RUPTURE</text>
+  <text x="80.0" y="539.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="9" font-weight="400" fill="#7E8B9B" text-anchor="start" >Accelerates vapor collapse; tube dryout; exceeds design shell stress.</text>
+  <rect x="44.0" y="561.0" width="662.0" height="70.0" rx="4" fill="#142434" stroke="#58a6ff" stroke-width="1.8" />
+  <circle cx="62.0" cy="583.0" r="8" fill="#16191F" stroke="#58a6ff" stroke-width="1.5" />
+  <circle cx="62.0" cy="583.0" r="4.5" fill="#58a6ff" stroke="none" stroke-width="1" />
+  <text x="80.0" y="579.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="800" fill="#79c0ff" text-anchor="start" >Option B (Socratic Recommendation 1)</text>
+  <rect x="310.0" y="568.0" width="190.0" height="18.0" rx="2" fill="#16191F" stroke="#2A9D8F" stroke-width="1" />
+  <text x="405.0" y="580.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="8.5" font-weight="700" fill="#2A9D8F" text-anchor="middle" >RECOMMENDED MITIGATION</text>
+  <rect x="515.0" y="568.0" width="175.0" height="18.0" rx="2" fill="#102a22" stroke="#2A9D8F" stroke-width="1" />
+  <text x="602.0" y="580.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="8.5" font-weight="700" fill="#2A9D8F" text-anchor="middle" >Risk: 12% ACCEPTABLE</text>
+  <text x="80.0" y="599.0" font-family="Cascadia Code, SF Mono, Consolas, DejaVu Sans Mono, monospace" font-size="9.5" font-weight="600" fill="#FDFEFE" text-anchor="start" >Vent bypass valve V-109 &amp; trim steam valve FV-108 by -15%</text>
+  <text x="690.0" y="599.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="9.5" font-weight="700" fill="#79c0ff" text-anchor="end" >⏱ Stabilizes in 1.8 min</text>
+  <text x="80.0" y="617.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="9" font-weight="400" fill="#7E8B9B" text-anchor="start" >Clears vapor pocket; restores liquid seal; re-establishes heat transfer.</text>
+  <rect x="44.0" y="639.0" width="662.0" height="70.0" rx="4" fill="#16191F" stroke="#3A4154" stroke-width="1" />
+  <circle cx="62.0" cy="661.0" r="8" fill="#16191F" stroke="#7E8B9B" stroke-width="1.5" />
+  <text x="80.0" y="657.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="800" fill="#FDFEFE" text-anchor="start" >Option C (Socratic Recommendation 2)</text>
+  <rect x="310.0" y="646.0" width="190.0" height="18.0" rx="2" fill="#16191F" stroke="#E9C46A" stroke-width="1" />
+  <text x="405.0" y="658.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="8.5" font-weight="700" fill="#E9C46A" text-anchor="middle" >SAFE SHUTDOWN ALTERNATIVE</text>
+  <rect x="515.0" y="646.0" width="175.0" height="18.0" rx="2" fill="#2b2512" stroke="#E9C46A" stroke-width="1" />
+  <text x="602.0" y="658.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="8.5" font-weight="700" fill="#E9C46A" text-anchor="middle" >Risk: 18% TOLERABLE</text>
+  <text x="80.0" y="677.0" font-family="Cascadia Code, SF Mono, Consolas, DejaVu Sans Mono, monospace" font-size="9.5" font-weight="600" fill="#FDFEFE" text-anchor="start" >Trip reboiler steam supply entirely &amp; hold column reflux</text>
+  <text x="690.0" y="677.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="9.5" font-weight="700" fill="#E9C46A" text-anchor="end" >⏱ Safe idle in 2.6 min</text>
+  <text x="80.0" y="695.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="9" font-weight="400" fill="#7E8B9B" text-anchor="start" >Immediate fail-safe state; halts runaway; incurs 45-min column restart.</text>
+  <rect x="740.0" y="435.0" width="430.0" height="295.0" rx="8" fill="#1E222B" stroke="#2A9D8F" stroke-width="2" />
+  <rect x="754.0" y="447.0" width="175.0" height="20.0" rx="3" fill="#1b3a2a" stroke="#2A9D8F" stroke-width="1" />
+  <text x="841.0" y="461.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="9" font-weight="800" fill="#2A9D8F" text-anchor="middle" >STRUCTURAL ACTION BARRIER</text>
+  <text x="938.0" y="461.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="9.5" font-weight="400" fill="#7E8B9B" text-anchor="start" >Two-Stage Arm &amp; Confirm</text>
+  <line x1="754.0" y1="473.0" x2="1156.0" y2="473.0" stroke="#3A4154" stroke-width="1" />
+  <rect x="752.0" y="481.0" width="406.0" height="62.0" rx="6" fill="#16191F" stroke="#2A9D8F" stroke-width="1.5" />
+  <text x="766.0" y="502.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#2A9D8F" text-anchor="start" >Architectural Invariant (Verdejo et al., 2026)</text>
+  <text x="766.0" y="520.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#7E8B9B" text-anchor="start" >• AI models NEVER possess autonomous execution permissions.</text>
+  <text x="766.0" y="536.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#7E8B9B" text-anchor="start" >• Mitigations remain non-binding until explicit human arming.</text>
+  <rect x="754.0" y="551.0" width="402.0" height="40.0" rx="4" fill="#1f3a5f" stroke="#388bfd" stroke-width="1" />
+  <text x="955.0" y="568.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="800" fill="#79c0ff" text-anchor="middle" >1. ARM SELECTED ACTION [OPTION B]</text>
+  <text x="955.0" y="582.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="8.5" font-weight="400" fill="#7E8B9B" text-anchor="middle" >Stage 1: Pre-allocates command buffer &amp; validates interlocks</text>
+  <rect x="754.0" y="597.0" width="402.0" height="44.0" rx="4" fill="#1b3a2a" stroke="#2A9D8F" stroke-width="1.8" />
+  <rect x="754.0" y="597.0" width="210.0" height="44.0" rx="4" fill="#234e38" stroke="none" stroke-width="1" />
+  <text x="955.0" y="616.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="800" fill="#FFFFFF" text-anchor="middle" >2. CONFIRM &amp; EXECUTE (HOLD 3.0 s)</text>
+  <text x="955.0" y="630.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="8.5" font-weight="400" fill="#BAE6FD" text-anchor="middle" >Stage 2: Dispatches cryptographically signed SOE event</text>
+  <rect x="754.0" y="649.0" width="402.0" height="32.0" rx="4" fill="#2c1719" stroke="#E63946" stroke-width="1" />
+  <text x="955.0" y="669.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="9.5" font-weight="800" fill="#ff7b72" text-anchor="middle" >✕ VETO ALL AI ADVICE / TAKE MANUAL CONTROL</text>
+  <text x="955.0" y="703.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="8.5" font-weight="400" fill="#7E8B9B" text-anchor="middle" >All decisions &amp; vetoes cryptographically logged with rationale (IEC 62443)</text>
+  <rect x="30.0" y="752.0" width="1140.0" height="56.0" rx="6" fill="#16191F" stroke="#3A4154" stroke-width="1" />
+  <text x="46.0" y="772.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#2A9D8F" text-anchor="start" >✓</text>
+  <text x="62.0" y="772.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#FDFEFE" text-anchor="start" >Socratic Metacognitive Mirroring:</text>
+  <text x="275.0" y="772.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#7E8B9B" text-anchor="start" >Locutor challenges operator tunnel vision by reframing neglected thermodynamic variables (Verdejo et al., 2026)</text>
+  <text x="930.0" y="772.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#2A9D8F" text-anchor="start" >✓</text>
+  <text x="946.0" y="772.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#FDFEFE" text-anchor="start" >Vigilance Defense:</text>
+  <text x="1050.0" y="772.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#7E8B9B" text-anchor="start" >Prevents OOTLU deskilling</text>
+  <text x="46.0" y="794.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#2A9D8F" text-anchor="start" >✓</text>
+  <text x="62.0" y="794.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#FDFEFE" text-anchor="start" >Non-Binding Decision Support:</text>
+  <text x="260.0" y="794.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#7E8B9B" text-anchor="start" >Simulation digital twin evaluates candidate trajectories; operator retains exclusive control</text>
+  <text x="930.0" y="794.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#2A9D8F" text-anchor="start" >✓</text>
+  <text x="946.0" y="794.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#FDFEFE" text-anchor="start" >Action Barrier:</text>
+  <text x="1032.0" y="794.0" font-family="Segoe UI, Inter, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#7E8B9B" text-anchor="start" >Two-stage arm-execute gate</text>
+</svg>
