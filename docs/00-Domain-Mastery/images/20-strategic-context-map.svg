@@ -36,7 +36,7 @@
 
 <!-- Title & Subtitle -->
 <text x="490" y="27" class="title" text-anchor="middle">Strategic Domain-Driven Design Context Map</text>
-<text x="490" y="45" class="subtitle" text-anchor="middle">Subdomain Classification, Bounded Context Boundaries, and Cross-Context Invariants (Khononov, 2022; Koltsova et al., 2026)</text>
+<text x="490" y="45" class="subtitle" text-anchor="middle">Ownership, translation boundaries, and published-language direction (Khononov, 2022; Koltsova et al., 2026)</text>
 
 <!-- Subdomain Legend -->
 <g transform="translate(680, 14)">

@@ -111,7 +111,7 @@ As visualized in **Figure 12.2**, contrasting high-frequency wire traces for Reb
 
 <figure align="center">
   <img src="../images/12-http-polling-vs-ws-streaming.svg" alt="Network Wire Traffic: HTTP/1.1 Short Polling vs. WebSocket Streaming" style="max-width: 100%; height: auto;" />
-  <figcaption><em>Figure 12.2: Network Wire Traffic Comparison — High-Frequency Wire Trace for Reboiler Temperature Transmitter TI-102 (100 Hz Stream) under HTTP/1.1 Short Polling (1,504-Byte Header Tax, 100 ms Dead-Time Gap Missing Thermal Trip) vs. RFC 6455 WebSocket Streaming (2-Byte Framing, 66.7% Payload Efficiency, &lt;1.2 ms Instant Push).</em></figcaption>
+  <figcaption><em>Figure 12.2: Temporal Failure Comparison — Short polling creates a blind interval in which the thermal excursion is not delivered; a persistent stream delivers the same event while the connection remains established.</em></figcaption>
 </figure>
 
 ### Rejection of Server-Sent Events (SSE) in Industrial SCADA
@@ -295,7 +295,7 @@ As diagrammed in **Figure 12.5**, this heartbeat mechanism can prevent stateful 
 
 <figure align="center">
   <img src="../images/12-firewall-keepalive-conntrack.svg" alt="Stateful Firewall NAT Connection Tracking vs. RFC 6455 Ping/Pong Keep-Alives" style="max-width: 100%; height: auto;" />
-  <figcaption><em>Figure 12.5: Stateful Firewall NAT Connection Tracking (conntrack) vs. RFC 6455 Ping/Pong Keep-Alives — Silent Socket Pruning during Quiescent RBE (nf_conntrack Table Expiration &amp; Ingress Drop of PUMP_P101A_TRIP) vs. Deterministic 20s Keep-Alive Loop (2-Byte 0x89 0x00 Ping &amp; 6-Byte Auto-Pong in Browser C++ Stack).</em></figcaption>
+  <figcaption><em>Figure 12.5: Failure timeline for an idle connection — state expiry drops the next event, while periodic control traffic refreshes the middlebox state before the event occurs.</em></figcaption>
 </figure>
 
 ---

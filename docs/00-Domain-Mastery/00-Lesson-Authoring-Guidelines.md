@@ -145,6 +145,13 @@ Obsidian's vault-wide search scans HTML tag content identically to markdown text
 - Both `<figcaption>` text and `<img> alt` attributes are indexed.
 - Searching for specific vendors or models (e.g., `ControlLogix`, `S7-1500`, `WinCC`, `HASP dongle`, `Moxa DIN-rail`) in Obsidian immediately surfaces the exact figure and paragraph.
 
+### E. Visual Contribution & Non-Redundancy
+- Every figure MUST add a visual dimension that the surrounding prose does not convey by itself: spatial relationship, temporal sequence, causal mechanism, quantitative comparison, state transition, ownership boundary, or failure boundary.
+- Do not reproduce a paragraph as labels inside an SVG. Keep equations, exhaustive component lists, and detailed definitions in the lesson text; use the figure to show how those elements relate.
+- A figure may repeat a short label when necessary for orientation, but its dominant teaching purpose must be legible from the visual structure alone.
+- Captions MUST state the figure's teaching purpose, not restate every label. When the prose already derives a result, the figure should show the operational consequence or decision that follows from it.
+- Before accepting a figure, ask: **What can a learner infer from the image that they could not infer from the adjacent paragraphs?** If the answer is “nothing,” redesign or remove it.
+
 ---
 
 ## 4. SVG Visual Design & Semantic Color Standards (ANSI/ISA-101.01)

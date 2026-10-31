@@ -19,8 +19,8 @@
   <rect width="1180" height="700" rx="12" fill="#16191F" />
 
   <!-- Title & Subtitle -->
-  <text x="590" y="38" text-anchor="middle" font-size="20" font-weight="700" fill="#f0f6fc">IEC 61850 SCD to Declarative SVG Automated Synthesis Pipeline</text>
-  <text x="590" y="60" text-anchor="middle" font-size="12" fill="#8b949e">Programmatic transformation of authoritative substation engineering XML into decoupled SVG synoptics and runtime dynamization maps</text>
+  <text x="590" y="38" text-anchor="middle" font-size="20" font-weight="700" fill="#f0f6fc">From Authoritative SCD to Runtime Graphics</text>
+  <text x="590" y="60" text-anchor="middle" font-size="12" fill="#8b949e">The transformation boundary, validation points, and two generated artifacts</text>
 
   <!-- ==================== STAGE 1: AUTHORITATIVE SCL INGESTION ==================== -->
   <rect x="35" y="80" width="345" height="595" rx="8" fill="url(#cardGrad)" stroke="#30363D" stroke-width="1" />

@@ -152,7 +152,7 @@ As diagrammed in **Figure 13.3**, this automated compilation pipeline takes auth
 
 <figure align="center">
   <img src="../images/13-scd-to-svg-synthesis-pipeline.svg" alt="IEC 61850 SCD to Declarative SVG Automated Synthesis Pipeline" style="max-width: 100%; height: auto;" />
-  <figcaption><em>Figure 13.3: Automated Synthesis Pipeline — Transforming Authoritative IEC 61850 SCD XML into Dual-File Decoupled Mnemonic SVG Synoptics and Dynamization Maps.</em></figcaption>
+  <figcaption><em>Figure 13.3: Transformation boundary — authoritative SCD input is compiled into a visual artifact and a separate runtime binding map, making validation points explicit.</em></figcaption>
 </figure>
 
 ### [[../Glossary#Master Definition (`<defs>`) & Shadow Instantiation (`<use>`)|Master Symbol Library (`<defs>`) & Shadow Instantiation (`<use>`)]]

@@ -168,7 +168,7 @@ The complete strategic [[../Glossary#Context Map|context map]], showing bounded 
 
 ![[20-strategic-context-map.svg]]
 
-*Figure 20.2: Strategic Domain-Driven Design Context Map: Illustrating Subdomain classifications (Core, Generic, Supporting), Bounded Context perimeters, Customer-Supplier relationships with Open-Host Services (OHS), and the Anti-Corruption Layer isolating brownfield devices ([[Koltsova_et_al_2026]]; Khononov, 2022).*
+*Figure 20.2: Strategic Domain-Driven Design Context Map: The visual emphasis is on ownership and translation boundaries—where legacy data is normalized, where the published language is exposed, and where downstream contexts remain independent ([[Koltsova_et_al_2026]]; Khononov, 2022).*
 
 ---
 

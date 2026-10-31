@@ -25,8 +25,8 @@
   <rect width="1180" height="700" rx="12" fill="#16191F" />
 
   <!-- Title & Subtitle -->
-  <text x="590" y="38" text-anchor="middle" font-size="20" font-weight="700" fill="#f0f6fc">Stateful Firewall NAT Connection Tracking vs. RFC 6455 Ping/Pong Keep-Alives</text>
-  <text x="590" y="60" text-anchor="middle" font-size="12" fill="#8b949e">Preventing silent TCP socket termination during quiescent Report-by-Exception (RBE) operation across IDMZ middleboxes</text>
+  <text x="590" y="38" text-anchor="middle" font-size="20" font-weight="700" fill="#f0f6fc">What Happens to an Idle Connection</text>
+  <text x="590" y="60" text-anchor="middle" font-size="12" fill="#8b949e">A failure timeline: state expiry versus periodic liveness traffic across a middlebox</text>
 
   <!-- ==================== TOP COMPARISON: QUIESCENT RBE & SILENT EVICTION (FAILURE MODE) ==================== -->
   <rect x="35" y="80" width="1110" height="265" rx="8" fill="url(#cardGrad)" stroke="#30363D" stroke-width="1" />

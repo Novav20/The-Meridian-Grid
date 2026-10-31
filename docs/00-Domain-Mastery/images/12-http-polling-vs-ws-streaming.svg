@@ -11,8 +11,8 @@
     </marker>
   </defs>
   <rect width="1240" height="780" rx="12" fill="#16191F" stroke="#30363D" stroke-width="1.5" class="bg" />
-  <text x="620" y="36" fill="#F0F6FC" font-size="19" font-weight="700" text-anchor="middle">Network Wire Traffic: HTTP/1.1 Short Polling vs. WebSocket Streaming</text>
-  <text x="620" y="58" fill="#8B949E" font-size="12" text-anchor="middle">Concrete Wire Trace Comparison for Reboiler Temperature Transmitter TI-102 (100 Hz Telemetry Stream)</text>
+  <text x="620" y="36" fill="#F0F6FC" font-size="19" font-weight="700" text-anchor="middle">When the Thermal Event Reaches the Operator</text>
+  <text x="620" y="58" fill="#8B949E" font-size="12" text-anchor="middle">A temporal comparison of polling blind spots and persistent delivery</text>
   <rect x="30" y="82" width="575" height="635" rx="8" fill="#1E222B" stroke="#30363D" stroke-width="1.2" />
   <rect x="46" y="96" width="320" height="26" rx="4" fill="#16191F" stroke="#ff7b72" stroke-width="1.2" />
   <text x="54" y="113" fill="#ff7b72" font-size="11" font-weight="700">1. HTTP/1.1 SHORT POLLING (THE HEADER TAX)</text>
@@ -51,11 +51,11 @@
   <rect x="207" y="504" width="210" height="15" rx="2" fill="#1E222B" />
   <text x="312" y="515" fill="#ff7b72" font-size="8" font-weight="700" text-anchor="middle">T=140ms: Alarm finally arrives (+95ms late!)</text>
   <rect x="46" y="591" width="543" height="105" rx="6" fill="#16191F" stroke="#ff7b72" stroke-width="1.2" />
-  <text x="56" y="611" fill="#ff7b72" font-size="10.5" font-weight="700">HTTP Short Polling Operational Penalty (100 Hz Stream):</text>
-  <text x="56" y="629" fill="#C9D1D9" font-size="9.5">• Continuous Wire Bandwidth: <tspan fill="#ff7b72" font-weight="700">1,203 kbps (150.4 KB/s)</tspan> per connected HMI client.</text>
-  <text x="56" y="645" fill="#C9D1D9" font-size="9.5">• Payload Efficiency: <tspan fill="#ff7b72" font-weight="700">η = 0.26%</tspan> (99.74% of traffic is redundant header strings).</text>
-  <text x="56" y="661" fill="#C9D1D9" font-size="9.5">• Socket Exhaustion: Hundreds of TCP handshakes/sec exhaust edge gateway sockets.</text>
-  <text x="56" y="681" fill="#ff7b72" font-size="9.5" font-weight="700">✗ Unacceptable for sub-second industrial supervisory control (ISA-101).</text>
+  <text x="56" y="611" fill="#ff7b72" font-size="10.5" font-weight="700">Operational consequence:</text>
+  <text x="56" y="629" fill="#C9D1D9" font-size="9.5">• Each observation begins with a new request and response.</text>
+  <text x="56" y="645" fill="#C9D1D9" font-size="9.5">• The next request creates a blind interval after the previous response.</text>
+  <text x="56" y="661" fill="#C9D1D9" font-size="9.5">• The thermal event is delivered only when the next poll completes.</text>
+  <text x="56" y="681" fill="#ff7b72" font-size="9.5" font-weight="700">✗ The transport cadence controls when the operator can know.</text>
   <rect x="635" y="82" width="575" height="635" rx="8" fill="#1E222B" stroke="#30363D" stroke-width="1.2" />
   <rect x="651" y="96" width="340" height="26" rx="4" fill="#16191F" stroke="#3fb950" stroke-width="1.2" />
   <text x="659" y="113" fill="#3fb950" font-size="11" font-weight="700">2. WEBSOCKET STREAMING (RFC 6455)</text>
@@ -92,14 +92,13 @@
   <rect x="812" y="507" width="210" height="15" rx="2" fill="#1E222B" />
   <text x="917" y="518" fill="#79c0ff" font-size="8" text-anchor="middle">T=70ms: DUPLEX SETPOINT COMMAND (6B Masked)</text>
   <rect x="651" y="591" width="543" height="105" rx="6" fill="#16191F" stroke="#3fb950" stroke-width="1.2" />
-  <text x="661" y="611" fill="#3fb950" font-size="10.5" font-weight="700">WebSocket Operational Advantage (100 Hz Stream):</text>
-  <text x="661" y="629" fill="#C9D1D9" font-size="9.5">• Continuous Wire Bandwidth: <tspan fill="#3fb950" font-weight="700">4.8 kbps (0.6 KB/s)</tspan> per connected client.</text>
-  <text x="661" y="645" fill="#C9D1D9" font-size="9.5">• Payload Efficiency: <tspan fill="#3fb950" font-weight="700">η = 66.7%</tspan> (<tspan fill="#3fb950" font-weight="700">99.60% bandwidth reduction!</tspan>).</text>
-  <text x="661" y="661" fill="#C9D1D9" font-size="9.5">• Single Multiplexed TCP Connection: Zero connection churn; sub-millisecond duplex.</text>
-  <text x="661" y="681" fill="#3fb950" font-size="9.5" font-weight="700">✓ Foundational real-time transport pattern.</text>
+  <text x="661" y="611" fill="#3fb950" font-size="10.5" font-weight="700">Operational consequence:</text>
+  <text x="661" y="629" fill="#C9D1D9" font-size="9.5">• One established session remains available between observations.</text>
+  <text x="661" y="645" fill="#C9D1D9" font-size="9.5">• The field event crosses the same live path as soon as it occurs.</text>
+  <text x="661" y="661" fill="#C9D1D9" font-size="9.5">• The operator receives the excursion before the next display cycle.</text>
+  <text x="661" y="681" fill="#3fb950" font-size="9.5" font-weight="700">✓ The transport cadence no longer creates the blind interval.</text>
   <rect x="30" y="734" width="1180" height="32" rx="6" fill="#1E222B" stroke="#30363D" stroke-width="1" />
-  <text x="45" y="754" fill="#3fb950" font-size="10" font-weight="700">✓ Invariant: 99.6% Bandwidth Reduction</text>
-  <text x="280" y="754" fill="#8B949E" font-size="9.5">WebSocket replaces 1,500-byte HTTP header bloat with deterministic 2-byte binary framing</text>
-  <text x="860" y="754" fill="#ff7b72" font-size="10" font-weight="700">✗ Reject HTTP Polling &amp; SSE</text>
-  <text x="1040" y="754" fill="#8B949E" font-size="9.5">Eliminates dead-time intervals</text>
+  <text x="45" y="754" fill="#3fb950" font-size="10" font-weight="700">✓ Teaching point: delivery timing changes the failure mode</text>
+  <text x="860" y="754" fill="#ff7b72" font-size="10" font-weight="700">✗ Polling creates an observation gap</text>
+  <text x="1040" y="754" fill="#8B949E" font-size="9.5">The next poll controls visibility</text>
 </svg>
