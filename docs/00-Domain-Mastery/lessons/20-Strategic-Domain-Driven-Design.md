@@ -118,29 +118,12 @@ In accordance with Khononov's strategic taxonomy, the business capabilities of a
 The portfolio hierarchy separating Core, Generic, and Supporting capabilities is structured in the following strategic diagram:
 
 ```mermaid
-%%{init: {
-  'theme': 'base',
-  'themeVariables': {
-    'darkMode': true,
-    'primaryColor': '#1E222B',
-    'primaryTextColor': '#E6EDF3',
-    'primaryBorderColor': '#388BFD',
-    'lineColor': '#388BFD',
-    'secondaryColor': '#16191F',
-    'tertiaryColor': '#0D1117',
-    'edgeLabelBackground': '#16191F'
-  },
-  'themeCSS': '.edgeLabel { color: #E6EDF3 !important; } .edgeLabel rect { fill: #16191F !important; } .label { color: #E6EDF3 !important; } .cluster-label span { color: #E6EDF3 !important; }'
-}}%%
 graph TD
-    classDef core fill:#2d161a,stroke:#f85149,stroke-width:2px,color:#ff7b72
-    classDef generic fill:#162032,stroke:#388bfd,stroke-width:2px,color:#79c0ff
-    classDef supp fill:#211a36,stroke:#a371f7,stroke-width:2px,color:#d2a8ff
 
     subgraph Portfolio [Strategic Subdomain Portfolio]
-        C1["Core Subdomain:<br/>• Real-Time UNS Telemetry Routing Engine<br/>• Zero-Reflow Dynamic Web SVG/Canvas Engine<br/>• Symbiotic Cognitive Mirroring (ALARMS Framework)"]:::core
-        G1["Generic Subdomain:<br/>• TimescaleDB Append-Only Hypertables<br/>• Clustered MQTT Message Broker Fabric<br/>• TLS 1.3 / mTLS Cryptographic Transport"]:::generic
-        S1["Supporting Subdomain:<br/>• IEC 61850 SCL/SCD Configuration Parsers<br/>• Edge Node Hardware Provisioning Profiles<br/>• CSV / Excel Batch Export Utilities"]:::supp
+        C1["Core Subdomain:<br/>• Real-Time UNS Telemetry Routing Engine<br/>• Zero-Reflow Dynamic Web SVG/Canvas Engine<br/>• Symbiotic Cognitive Mirroring (ALARMS Framework)"]
+        G1["Generic Subdomain:<br/>• TimescaleDB Append-Only Hypertables<br/>• Clustered MQTT Message Broker Fabric<br/>• TLS 1.3 / mTLS Cryptographic Transport"]
+        S1["Supporting Subdomain:<br/>• IEC 61850 SCL/SCD Configuration Parsers<br/>• Edge Node Hardware Provisioning Profiles<br/>• CSV / Excel Batch Export Utilities"]
     end
 ```
 

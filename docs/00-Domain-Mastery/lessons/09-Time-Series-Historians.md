@@ -86,34 +86,17 @@ To maintain wire-speed ingestion while isolating live supervisory visualization 
 The architecture of this decoupled dual-path ingress pipeline is diagrammed below:
 
 ```mermaid
-%%{init: {
-  'theme': 'base',
-  'themeVariables': {
-    'darkMode': true,
-    'primaryColor': '#1E222B',
-    'primaryTextColor': '#E6EDF3',
-    'primaryBorderColor': '#388BFD',
-    'lineColor': '#388BFD',
-    'secondaryColor': '#16191F',
-    'tertiaryColor': '#0D1117',
-    'edgeLabelBackground': '#16191F'
-  },
-  'themeCSS': '.edgeLabel { color: #E6EDF3 !important; } .edgeLabel rect { fill: #16191F !important; } .label { color: #E6EDF3 !important; } .cluster-label span { color: #E6EDF3 !important; }'
-}}%%
 graph TD
-    classDef hot fill:#211517,stroke:#f85149,stroke-width:1.5px,color:#ff7b72
-    classDef cold fill:#161b22,stroke:#388bfd,stroke-width:1.5px,color:#79c0ff
-    classDef store fill:#14261c,stroke:#2ea043,stroke-width:1.5px,color:#3fb950
 
     Ingress["UNS Stream: MQTT Broker / Sparkplug B"]
     
     subgraph Hot_Path [Hot Path: In-Memory / Low-Latency]
-        RAM["Live Telemetry Cache<br/>(&lt;50ms, WebSocket Subscriptions)"]:::hot
+        RAM["Live Telemetry Cache<br/>(&lt;50ms, WebSocket Subscriptions)"]
     end
 
     subgraph Cold_Path [Cold Path: Relational Historian Engine]
-        Worker["Historian Ingestion Worker<br/>(Batch Accumulator)"]:::cold
-        Store["TimescaleDB / PostgreSQL<br/>- Hypertables (Chunking)<br/>- Row-to-Columnar Pivot<br/>- Delta-of-Delta &amp; Gorilla XOR<br/>- Continuous Aggregates"]:::store
+        Worker["Historian Ingestion Worker<br/>(Batch Accumulator)"]
+        Store["TimescaleDB / PostgreSQL<br/>- Hypertables (Chunking)<br/>- Row-to-Columnar Pivot<br/>- Delta-of-Delta &amp; Gorilla XOR<br/>- Continuous Aggregates"]
     end
 
     Ingress --> RAM

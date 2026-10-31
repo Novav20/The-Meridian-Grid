@@ -65,32 +65,13 @@ As diagrammed in **Figure 01.2**, this traditional pyramid architecture introduc
 *Figure 01.2: ANSI/ISA-95 Traditional Automation Pyramid (Purdue Enterprise Reference Architecture) — Five Hierarchical Functional Tiers, Vertical Polling Conduits, Time Horizon Granularity Cliffs, and Systemic Protocol Bottlenecks.*
 
 ```mermaid
-%%{init: {
-  'theme': 'base',
-  'themeVariables': {
-    'darkMode': true,
-    'primaryColor': '#1E222B',
-    'primaryTextColor': '#E6EDF3',
-    'primaryBorderColor': '#388BFD',
-    'lineColor': '#388BFD',
-    'secondaryColor': '#16191F',
-    'tertiaryColor': '#0D1117',
-    'edgeLabelBackground': '#16191F'
-  },
-  'themeCSS': '.edgeLabel { color: #E6EDF3 !important; } .edgeLabel rect { fill: #16191F !important; } .label { color: #E6EDF3 !important; } .cluster-label span { color: #E6EDF3 !important; }'
-}}%%
 graph TD
-    classDef l4 fill:#0d1117,stroke:#30363d,stroke-width:1.5px,color:#c9d1d9
-    classDef l3 fill:#0d1117,stroke:#30363d,stroke-width:1.5px,color:#c9d1d9
-    classDef l2 fill:#0d1117,stroke:#30363d,stroke-width:1.5px,color:#c9d1d9
-    classDef l1 fill:#0d1b2a,stroke:#388bfd,stroke-width:2px,color:#58a6ff
-    classDef l0 fill:#0d1117,stroke:#30363d,stroke-width:1.5px,color:#c9d1d9
 
-    L4["Level 4: Enterprise Resource Planning (ERP / Cloud BI)<br/><em>Days / Weeks • Relational SQL & Batch ETL</em>"]:::l4
-    L3["Level 3: Manufacturing Operations Management (MES / Historian)<br/><em>Hours / Shifts • OPC DA & Staging Databases</em>"]:::l3
-    L2["Level 2: Supervisory Control & HMI (SCADA Masters)<br/><em>Seconds • In-Process Tag Database & Cyclic Polling</em>"]:::l2
-    L1["Level 1: Basic Process Control (PLCs, PACs, RTUs)<br/><em>10–50 ms • Deterministic Logic Scans & Memory Registers</em>"]:::l1
-    L0["Level 0: Physical Process (Sensors, Actuators, Motors, VFDs)<br/><em>Microseconds • Continuous Physical Voltages & Currents</em>"]:::l0
+    L4["Level 4: Enterprise Resource Planning (ERP / Cloud BI)<br/><em>Days / Weeks • Relational SQL & Batch ETL</em>"]
+    L3["Level 3: Manufacturing Operations Management (MES / Historian)<br/><em>Hours / Shifts • OPC DA & Staging Databases</em>"]
+    L2["Level 2: Supervisory Control & HMI (SCADA Masters)<br/><em>Seconds • In-Process Tag Database & Cyclic Polling</em>"]
+    L1["Level 1: Basic Process Control (PLCs, PACs, RTUs)<br/><em>10–50 ms • Deterministic Logic Scans & Memory Registers</em>"]
+    L0["Level 0: Physical Process (Sensors, Actuators, Motors, VFDs)<br/><em>Microseconds • Continuous Physical Voltages & Currents</em>"]
 
     L4 <-->|Scheduled Batch ETL / Periodic REST| L3
     L3 <-->|OPC DA / Custom Staging Tables| L2
@@ -188,20 +169,6 @@ $$\text{Enterprise} \,/\, \text{Site} \,/\, \text{Area} \,/\, \text{Line} \,/\, 
 As depicted in the architectural diagram below, structuring telemetry within this equipment namespace allows producers to publish once while disparate subscribers independently consume metrics filtered to their exact operational scope:
 
 ```mermaid
-%%{init: {
-  'theme': 'base',
-  'themeVariables': {
-    'darkMode': true,
-    'primaryColor': '#1E222B',
-    'primaryTextColor': '#E6EDF3',
-    'primaryBorderColor': '#388BFD',
-    'lineColor': '#388BFD',
-    'secondaryColor': '#16191F',
-    'tertiaryColor': '#0D1117',
-    'edgeLabelBackground': '#16191F'
-  },
-  'themeCSS': '.edgeLabel { color: #E6EDF3 !important; } .edgeLabel rect { fill: #16191F !important; } .label { color: #E6EDF3 !important; } .cluster-label span { color: #E6EDF3 !important; }'
-}}%%
 flowchart TD
     subgraph TopicTaxonomy ["ISA-95 Hierarchical MQTT Topic Namespace"]
         UNS["Enterprise / Houston / PlasticsArea / ExtrusionLine2 / Extruder01"]
@@ -231,11 +198,6 @@ flowchart TD
     UNS ==>|MQTTS :8883| AI
     UNS ==>|REST / Webhook| ERP
 
-    classDef default fill:#161b22,stroke:#30363d,color:#e6edf3;
-    classDef highlight fill:#0d1b2a,stroke:#388bfd,color:#58a6ff;
-    classDef success fill:#162b1d,stroke:#2ea043,color:#3fb950;
-    class UNS highlight;
-    class SCADA,HIST,AI,ERP success;
 ```
 
 When telemetry is published under this taxonomy (formalized under the ISA-95 equipment hierarchy in [[08-ISA-95-Object-Models-Taxonomy|Lesson 08]]), any authorized consumer across the enterprise can subscribe to the precise slice of data it requires using MQTT wildcards (`+` single-level, `#` multi-level; see [[03-MQTT-Protocol-Internals|Lesson 03]] and [[06-Sparkplug-B-Specification|Lesson 06]]):

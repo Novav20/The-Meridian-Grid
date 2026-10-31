@@ -248,30 +248,12 @@ ANSI/ISA-101.01 organizes all operational graphics into a **4-Tier Display Hiera
 The progressive disclosure navigation structure between these four supervisory levels is mapped in the following state diagram:
 
 ```mermaid
-%%{init: {
-  'theme': 'base',
-  'themeVariables': {
-    'darkMode': true,
-    'primaryColor': '#1E222B',
-    'primaryTextColor': '#E6EDF3',
-    'primaryBorderColor': '#388BFD',
-    'lineColor': '#388BFD',
-    'secondaryColor': '#16191F',
-    'tertiaryColor': '#0D1117',
-    'edgeLabelBackground': '#16191F'
-  },
-  'themeCSS': '.edgeLabel { color: #E6EDF3 !important; } .edgeLabel rect { fill: #16191F !important; } .label { color: #E6EDF3 !important; } .cluster-label span { color: #E6EDF3 !important; }'
-}}%%
 graph TD
-    classDef l1 fill:#0d1b2a,stroke:#388bfd,stroke-width:2px,color:#e6edf3
-    classDef l2 fill:#161b22,stroke:#58a6ff,stroke-width:2px,color:#e6edf3
-    classDef l3 fill:#161b22,stroke:#8b949e,stroke-width:1.5px,color:#e6edf3
-    classDef l4 fill:#0d1117,stroke:#30363d,stroke-width:1px,color:#8b949e
 
-    L1["Level 1: Overview Display<br/>(Entire Facility / Macro KPIs / Zero Control)"]:::l1
-    L2["Level 2: Unit Control Display<br/>(Subsystem P&ID / Moving Bars / Primary Control)"]:::l2
-    L3["Level 3: Detail & Faceplate Display<br/>(Equipment Clusters / Interlocks / Real-Time Trends)"]:::l3
-    L4["Level 4: Diagnostic & Support Display<br/>(Instrument Loop Current / Raw Registers / Overrides)"]:::l4
+    L1["Level 1: Overview Display<br/>(Entire Facility / Macro KPIs / Zero Control)"]
+    L2["Level 2: Unit Control Display<br/>(Subsystem P&ID / Moving Bars / Primary Control)"]
+    L3["Level 3: Detail & Faceplate Display<br/>(Equipment Clusters / Interlocks / Real-Time Trends)"]
+    L4["Level 4: Diagnostic & Support Display<br/>(Instrument Loop Current / Raw Registers / Overrides)"]
 
     L1 -->|"1 Click (Select Unit)"| L2
     L2 -->|"1 Click (Select Equipment)"| L3

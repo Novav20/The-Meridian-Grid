@@ -176,7 +176,7 @@
   <!-- Performance Guarantees -->
   <text x="635" y="495" font-size="9" fill="#c9d1d9">&#8226; <tspan font-weight="700" fill="#3fb950">Execution Latency: &lt; 0.5 ms per update</tspan></text>
   <text x="635" y="513" font-size="9" fill="#c9d1d9">&#8226; Existing DOM tree and geometry preserved intact</text>
-  <text x="635" y="531" font-size="9" fill="#c9d1d9">&#8226; CSS transforms (`transform: rotate()`) execute directly on GPU compositor thread</text>
+  <text x="635" y="531" font-size="9" fill="#c9d1d9">&#8226; CSS transforms (<tspan font-family="monospace" fill="#79c0ff">transform: rotate()</tspan>) execute directly on GPU compositor thread</text>
   <text x="635" y="549" font-size="9" fill="#c9d1d9">&#8226; Main JavaScript thread remains 100% responsive for operator control inputs</text>
 
   <!-- Code Inset Box -->

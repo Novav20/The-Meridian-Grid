@@ -104,35 +104,6 @@ Transfer suits one-shot hand-offs (a history query result). A continuous stream 
 The ingestion worker (sole writer) appends samples to a fixed-size circular region. The render worker (sole reader) tracks its own read position. Because exactly one thread writes the head counter, no mutex is required: an atomic store/load pair is sufficient. A pre-allocated region also eliminates the allocation churn from Pitfall 2.
 
 ```mermaid
-%%{init: {
-  'theme': 'base',
-  'themeVariables': {
-    'darkMode': true,
-    'primaryColor': '#1E222B',
-    'primaryTextColor': '#E6EDF3',
-    'primaryBorderColor': '#388BFD',
-    'lineColor': '#388BFD',
-    'secondaryColor': '#16191F',
-    'tertiaryColor': '#0D1117',
-    'actorBkg': '#1E222B',
-    'actorBorder': '#388BFD',
-    'actorTextColor': '#E6EDF3',
-    'actorLineColor': '#388BFD',
-    'signalColor': '#388BFD',
-    'signalTextColor': '#E6EDF3',
-    'labelBoxBkgColor': '#1E222B',
-    'labelBoxBorderColor': '#388BFD',
-    'labelTextColor': '#E6EDF3',
-    'loopTextColor': '#E6EDF3',
-    'noteBorderColor': '#388BFD',
-    'noteBkgColor': '#1E222B',
-    'noteTextColor': '#E6EDF3',
-    'activationBorderColor': '#388BFD',
-    'activationBkgColor': '#1E222B',
-    'sequenceNumberColor': '#FFFFFF'
-  },
-  'themeCSS': 'text.actor { fill: #E6EDF3 !important; } .messageText { fill: #E6EDF3 !important; } .noteText { fill: #E6EDF3 !important; } .loopText { fill: #E6EDF3 !important; } .loopText > tspan { fill: #E6EDF3 !important; }'
-}}%%
 sequenceDiagram
     participant IW as Ingestion Worker (writer)
     participant SAB as SharedArrayBuffer

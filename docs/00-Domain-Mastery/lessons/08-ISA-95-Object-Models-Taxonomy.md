@@ -85,34 +85,14 @@ This fundamental architectural transition—moving from unstructured brownfield 
 Clause 5.3 of the ANSI/ISA-95.00.01 (IEC 62264-1) standard formalizes how industrial equipment and physical operations are organized into a strict role hierarchy:
 
 ```mermaid
-%%{init: {
-  'theme': 'base',
-  'themeVariables': {
-    'darkMode': true,
-    'primaryColor': '#1E222B',
-    'primaryTextColor': '#E6EDF3',
-    'primaryBorderColor': '#388BFD',
-    'lineColor': '#388BFD',
-    'secondaryColor': '#16191F',
-    'tertiaryColor': '#0D1117',
-    'edgeLabelBackground': '#16191F'
-  },
-  'themeCSS': '.edgeLabel { color: #E6EDF3 !important; } .edgeLabel rect { fill: #16191F !important; } .label { color: #E6EDF3 !important; } .cluster-label span { color: #E6EDF3 !important; }'
-}}%%
 graph TD
-    classDef ent fill:#161b22,stroke:#388bfd,stroke-width:1.5px,color:#58a6ff
-    classDef site fill:#161b22,stroke:#30363d,stroke-width:1.5px,color:#e6edf3
-    classDef area fill:#161b22,stroke:#30363d,stroke-width:1.5px,color:#e6edf3
-    classDef line fill:#161b22,stroke:#30363d,stroke-width:1.5px,color:#e6edf3
-    classDef cell fill:#161b22,stroke:#388bfd,stroke-width:1.5px,color:#79c0ff
-    classDef mod fill:#0d1117,stroke:#30363d,stroke-width:1.2px,color:#8b949e
 
-    E["Enterprise: Global Corporate Entity (MeridianCorp)"]:::ent
-    S["Site: Geographic Manufacturing Plant (Dallas_Plant)"]:::site
-    A["Area: Major Processing / Packaging Section (Packaging_Hall_02)"]:::area
-    L["Line / Work Center: Continuous Production Train (Bottling_Line_03)"]:::line
-    C["Work Cell / Equipment Unit: Standalone Machine (Rotary_Filler)"]:::cell
-    M["Control Module / Device: Instrument / Actuator (Flowmeter_FT101)"]:::mod
+    E["Enterprise: Global Corporate Entity (MeridianCorp)"]
+    S["Site: Geographic Manufacturing Plant (Dallas_Plant)"]
+    A["Area: Major Processing / Packaging Section (Packaging_Hall_02)"]
+    L["Line / Work Center: Continuous Production Train (Bottling_Line_03)"]
+    C["Work Cell / Equipment Unit: Standalone Machine (Rotary_Filler)"]
+    M["Control Module / Device: Instrument / Actuator (Flowmeter_FT101)"]
 
     E --> S
     S --> A

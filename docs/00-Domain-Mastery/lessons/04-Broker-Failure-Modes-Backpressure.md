@@ -57,33 +57,15 @@ The physical hardware extremes creating this operational velocity gap are illust
 The fundamental pub/sub vulnerability occurs when an individual subscriber's consumption rate falls below the ingress publish rate. This velocity mismatch is modeled in the architectural diagram below, contrasting fast ingestion against backpressure accumulation on slower consumers:
 
 ```mermaid
-%%{init: {
-  'theme': 'base',
-  'themeVariables': {
-    'darkMode': true,
-    'primaryColor': '#1E222B',
-    'primaryTextColor': '#E6EDF3',
-    'primaryBorderColor': '#388BFD',
-    'lineColor': '#388BFD',
-    'secondaryColor': '#16191F',
-    'tertiaryColor': '#0D1117',
-    'edgeLabelBackground': '#16191F'
-  },
-  'themeCSS': '.edgeLabel { color: #E6EDF3 !important; } .edgeLabel rect { fill: #16191F !important; } .label { color: #E6EDF3 !important; } .cluster-label span { color: #E6EDF3 !important; }'
-}}%%
 graph LR
-    classDef pub fill:#1b3a2a,stroke:#2ea043,stroke-width:2px,color:#fff
-    classDef broker fill:#0d1b2a,stroke:#388bfd,stroke-width:2px,color:#fff
-    classDef fast fill:#161b22,stroke:#388bfd,stroke-width:2px,color:#fff
-    classDef slow fill:#2c1517,stroke:#f85149,stroke-width:2px,color:#fff
 
-    P1["Edge Gateway 1<br/>(1,000 msg/s)"]:::pub
-    P2["Edge Gateway 2<br/>(2,500 msg/s)"]:::pub
+    P1["Edge Gateway 1<br/>(1,000 msg/s)"]
+    P2["Edge Gateway 2<br/>(2,500 msg/s)"]
     
-    B["MQTT Central Broker<br/>(In-Memory Dispatch Queues)"]:::broker
+    B["MQTT Central Broker<br/>(In-Memory Dispatch Queues)"]
 
-    S1["C++ Ingestion Worker<br/>(Drain: 5,000 msg/s)"]:::fast
-    S2["Slow Subscriber:<br/>Legacy Python ETL / Browser<br/>(Drain: 50 msg/s)"]:::slow
+    S1["C++ Ingestion Worker<br/>(Drain: 5,000 msg/s)"]
+    S2["Slow Subscriber:<br/>Legacy Python ETL / Browser<br/>(Drain: 50 msg/s)"]
 
     P1 --> B
     P2 --> B

@@ -28,35 +28,6 @@ In high-throughput industrial automation environments, traditional client-server
 On the plant floor, thousands of instrumentation points—including vibration transmitters, thermocouple banks, variable frequency drives (VFDs), and flowmeters—report dynamic physical states. Under legacy request-response polling architectures (such as Modbus TCP analyzed in [[02-Modbus-TCP-Mechanics|Lesson 02]]), a central SCADA server must execute a deterministic query-response loop for each device, reinforcing the rigid hierarchical coupling exposed in [[01-Purdue-vs-UNS|Lesson 01]] ([[Jaloudi_2019|Jaloudi, 2019]]):
 
 ```mermaid
-%%{init: {
-  'theme': 'base',
-  'themeVariables': {
-    'darkMode': true,
-    'primaryColor': '#1E222B',
-    'primaryTextColor': '#E6EDF3',
-    'primaryBorderColor': '#388BFD',
-    'lineColor': '#388BFD',
-    'secondaryColor': '#16191F',
-    'tertiaryColor': '#0D1117',
-    'actorBkg': '#1E222B',
-    'actorBorder': '#388BFD',
-    'actorTextColor': '#E6EDF3',
-    'actorLineColor': '#388BFD',
-    'signalColor': '#388BFD',
-    'signalTextColor': '#E6EDF3',
-    'labelBoxBkgColor': '#1E222B',
-    'labelBoxBorderColor': '#388BFD',
-    'labelTextColor': '#E6EDF3',
-    'loopTextColor': '#E6EDF3',
-    'noteBorderColor': '#388BFD',
-    'noteBkgColor': '#1E222B',
-    'noteTextColor': '#E6EDF3',
-    'activationBorderColor': '#388BFD',
-    'activationBkgColor': '#1E222B',
-    'sequenceNumberColor': '#FFFFFF'
-  },
-  'themeCSS': 'text.actor { fill: #E6EDF3 !important; } .messageText { fill: #E6EDF3 !important; } .noteText { fill: #E6EDF3 !important; } .loopText { fill: #E6EDF3 !important; } .loopText > tspan { fill: #E6EDF3 !important; }'
-}}%%
 sequenceDiagram
     autonumber
     participant Master as SCADA Master
@@ -216,35 +187,6 @@ The comparative packet flows, handshakes, and state tracking overheads across al
 *Figure 03.4: Comparative Packet Flows and State Tracking Overheads for MQTT QoS 0 (Fire & Forget), QoS 1 (Acknowledged Retransmission), and QoS 2 (4-Step Two-Phase Commit).*
 
 ```mermaid
-%%{init: {
-  'theme': 'base',
-  'themeVariables': {
-    'darkMode': true,
-    'primaryColor': '#1E222B',
-    'primaryTextColor': '#E6EDF3',
-    'primaryBorderColor': '#388BFD',
-    'lineColor': '#388BFD',
-    'secondaryColor': '#16191F',
-    'tertiaryColor': '#0D1117',
-    'actorBkg': '#1E222B',
-    'actorBorder': '#388BFD',
-    'actorTextColor': '#E6EDF3',
-    'actorLineColor': '#388BFD',
-    'signalColor': '#388BFD',
-    'signalTextColor': '#E6EDF3',
-    'labelBoxBkgColor': '#1E222B',
-    'labelBoxBorderColor': '#388BFD',
-    'labelTextColor': '#E6EDF3',
-    'loopTextColor': '#E6EDF3',
-    'noteBorderColor': '#388BFD',
-    'noteBkgColor': '#1E222B',
-    'noteTextColor': '#E6EDF3',
-    'activationBorderColor': '#388BFD',
-    'activationBkgColor': '#1E222B',
-    'sequenceNumberColor': '#FFFFFF'
-  },
-  'themeCSS': 'text.actor { fill: #E6EDF3 !important; } .messageText { fill: #E6EDF3 !important; } .noteText { fill: #E6EDF3 !important; } .loopText { fill: #E6EDF3 !important; } .loopText > tspan { fill: #E6EDF3 !important; }'
-}}%%
 sequenceDiagram
     autonumber
     participant Pub as Edge Publisher
@@ -310,29 +252,12 @@ For a $60\text{ s}$ Keep-Alive setting, if no packet arrives within $90\text{ s}
 To achieve deterministic fault notification without polling, MQTT introduces the **Last Will and Testament (LWT)** state machine. The state machine progression from initial connection to unexpected fault dispatch is mapped in the following flowchart:
 
 ```mermaid
-%%{init: {
-  'theme': 'base',
-  'themeVariables': {
-    'darkMode': true,
-    'primaryColor': '#1E222B',
-    'primaryTextColor': '#E6EDF3',
-    'primaryBorderColor': '#388BFD',
-    'lineColor': '#388BFD',
-    'secondaryColor': '#16191F',
-    'tertiaryColor': '#0D1117',
-    'edgeLabelBackground': '#16191F'
-  },
-  'themeCSS': '.edgeLabel { color: #E6EDF3 !important; } .edgeLabel rect { fill: #16191F !important; } .label { color: #E6EDF3 !important; } .cluster-label span { color: #E6EDF3 !important; }'
-}}%%
 flowchart TD
-    classDef step fill:#0d1b2a,stroke:#388bfd,stroke-width:1.5px,color:#e6edf3;
-    classDef normal fill:#161b22,stroke:#30363d,stroke-width:1.2px,color:#c9d1d9;
-    classDef fault fill:#2d161a,stroke:#f85149,stroke-width:1.5px,color:#ff7b72;
 
-    S1["<strong>1. CONNECT Handshake</strong><br/>Registers Will Topic: <code>spBv1.0/PlantA/NDEATH/EdgeGateway_01</code><br/>Registers Will Payload: <code>{online: false}</code> (QoS 1, Retain = 1)"]:::step
-    S2["<strong>2. Normal Telemetric Operations</strong><br/>Broker holds LWT message in memory buffer.<br/><em>Never published during active TCP session</em>"]:::normal
-    S3["<strong>3. Sudden Physical Severance / Failure</strong><br/>Physical cable cut, power loss, or 1.5× KeepAlive timeout expires.<br/>Broker detects half-open socket or receives TCP RST"]:::fault
-    S4["<strong>4. Automated Broker LWT Dispatch</strong><br/>Broker automatically publishes stored Will Message<br/>to all active subscribers across the Unified Namespace"]:::step
+    S1["<strong>1. CONNECT Handshake</strong><br/>Registers Will Topic: <code>spBv1.0/PlantA/NDEATH/EdgeGateway_01</code><br/>Registers Will Payload: <code>{online: false}</code> (QoS 1, Retain = 1)"]
+    S2["<strong>2. Normal Telemetric Operations</strong><br/>Broker holds LWT message in memory buffer.<br/><em>Never published during active TCP session</em>"]
+    S3["<strong>3. Sudden Physical Severance / Failure</strong><br/>Physical cable cut, power loss, or 1.5× KeepAlive timeout expires.<br/>Broker detects half-open socket or receives TCP RST"]
+    S4["<strong>4. Automated Broker LWT Dispatch</strong><br/>Broker automatically publishes stored Will Message<br/>to all active subscribers across the Unified Namespace"]
 
     S1 --> S2
     S2 -->|Ungraceful Link Failure| S3

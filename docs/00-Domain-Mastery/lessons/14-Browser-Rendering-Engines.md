@@ -67,32 +67,16 @@ The physical client display and computing hardware deployed across industrial in
 The foundational architectural divide in computer graphics lies between **[[../Glossary#Retained-Mode vs. Immediate-Mode Graphics|Retained-Mode]]** and **Immediate-Mode** graphics rendering, as categorized below:
 
 ```mermaid
-%%{init: {
-  'theme': 'base',
-  'themeVariables': {
-    'darkMode': true,
-    'primaryColor': '#1E222B',
-    'primaryTextColor': '#E6EDF3',
-    'primaryBorderColor': '#388BFD',
-    'lineColor': '#388BFD',
-    'secondaryColor': '#16191F',
-    'tertiaryColor': '#0D1117',
-    'edgeLabelBackground': '#16191F'
-  },
-  'themeCSS': '.edgeLabel { color: #E6EDF3 !important; } .edgeLabel rect { fill: #16191F !important; } .label { color: #E6EDF3 !important; } .cluster-label span { color: #E6EDF3 !important; }'
-}}%%
 graph TD
-    classDef retained fill:#0d1b2a,stroke:#388bfd,stroke-width:2px,color:#e6edf3
-    classDef immediate fill:#161b22,stroke:#8b949e,stroke-width:2px,color:#e6edf3
 
     subgraph Retained_Mode ["Retained-Mode Graphics (Tree-Based)"]
-        DOM["HTML DOM Nodes<br/>(div, span, table)"]:::retained
-        SVG["Scalable Vector Graphics<br/>(path, circle, rect)"]:::retained
+        DOM["HTML DOM Nodes<br/>(div, span, table)"]
+        SVG["Scalable Vector Graphics<br/>(path, circle, rect)"]
     end
 
     subgraph Immediate_Mode ["Immediate-Mode Graphics (Pixel-Based)"]
-        C2D["HTML5 Canvas 2D<br/>(Raster Pixel Surface)"]:::immediate
-        GL["WebGL / WebGPU<br/>(Hardware Shader Pipelines)"]:::immediate
+        C2D["HTML5 Canvas 2D<br/>(Raster Pixel Surface)"]
+        GL["WebGL / WebGPU<br/>(Hardware Shader Pipelines)"]
     end
 ```
 

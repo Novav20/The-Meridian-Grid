@@ -90,20 +90,6 @@ Polling an SQL database over HTTP REST introduces an immutable latency floor. Th
 To resolve this operational tension, modern industrial platforms enforce the **Dual-Path Architecture Bifurcation** ([[Grigat_et_al_2026|Grigat et al., 2026]]; [[Villamar_et_al_2025|Villamar et al., 2025]]):
 
 ```mermaid
-%%{init: {
-  'theme': 'base',
-  'themeVariables': {
-    'darkMode': true,
-    'primaryColor': '#1E222B',
-    'primaryTextColor': '#E6EDF3',
-    'primaryBorderColor': '#388BFD',
-    'lineColor': '#388BFD',
-    'secondaryColor': '#16191F',
-    'tertiaryColor': '#0D1117',
-    'edgeLabelBackground': '#16191F'
-  },
-  'themeCSS': '.edgeLabel { color: #E6EDF3 !important; } .edgeLabel rect { fill: #16191F !important; } .label { color: #E6EDF3 !important; } .cluster-label span { color: #E6EDF3 !important; }'
-}}%%
 graph LR
     Field["Field Ingress<br/>(Sparkplug B / MQTT)"]
     Broker["IDMZ Message Broker<br/>(In-Memory UNS Bus)"]
@@ -172,20 +158,6 @@ Deploying a dual-path telemetry architecture across an industrial enterprise req
 The enterprise Purdue zone mapping and firewall conduit layout for dual-path telemetry are diagrammed below:
 
 ```mermaid
-%%{init: {
-  'theme': 'base',
-  'themeVariables': {
-    'darkMode': true,
-    'primaryColor': '#1E222B',
-    'primaryTextColor': '#E6EDF3',
-    'primaryBorderColor': '#388BFD',
-    'lineColor': '#388BFD',
-    'secondaryColor': '#16191F',
-    'tertiaryColor': '#0D1117',
-    'edgeLabelBackground': '#16191F'
-  },
-  'themeCSS': '.edgeLabel { color: #E6EDF3 !important; } .edgeLabel rect { fill: #16191F !important; } .label { color: #E6EDF3 !important; } .cluster-label span { color: #E6EDF3 !important; }'
-}}%%
 flowchart TD
     subgraph L2 [Purdue Level 2: Physical Control Zone]
         PLC["Field PLCs & RTUs<br/>(Modbus TCP / EtherNet/IP)"]

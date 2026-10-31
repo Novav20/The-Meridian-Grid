@@ -62,40 +62,23 @@ The physical reality of this brownfield boundary is illustrated in **Figure 05.1
 The EoN gateway physically separates the deterministic OT control loop from the non-deterministic enterprise IT backbone. This architectural boundary and protocol separation are mapped in the diagram below:
 
 ```mermaid
-%%{init: {
-  'theme': 'base',
-  'themeVariables': {
-    'darkMode': true,
-    'primaryColor': '#1E222B',
-    'primaryTextColor': '#E6EDF3',
-    'primaryBorderColor': '#388BFD',
-    'lineColor': '#388BFD',
-    'secondaryColor': '#16191F',
-    'tertiaryColor': '#0D1117',
-    'edgeLabelBackground': '#16191F'
-  },
-  'themeCSS': '.edgeLabel { color: #E6EDF3 !important; } .edgeLabel rect { fill: #16191F !important; } .label { color: #E6EDF3 !important; } .cluster-label span { color: #E6EDF3 !important; }'
-}}%%
 graph LR
-    classDef ot fill:#1b3a2a,stroke:#2ea043,stroke-width:2px,color:#fff
-    classDef eon fill:#0d1b2a,stroke:#388bfd,stroke-width:2px,color:#fff
-    classDef it fill:#161b22,stroke:#388bfd,stroke-width:2px,color:#fff
 
     subgraph OT_Zone [Isolated OT Fieldbus Zone]
-        PLC1["Modbus RTU PLC<br/>(RS-485 Serial)"]:::ot
-        PLC2["Modbus TCP Drive<br/>(Port 502)"]:::ot
+        PLC1["Modbus RTU PLC<br/>(RS-485 Serial)"]
+        PLC2["Modbus TCP Drive<br/>(Port 502)"]
     end
 
     subgraph EoN_Gateway [Edge of Network Node]
         direction TB
-        NIC1["Physical NIC 1: OT Subnet<br/>(192.168.1.0/24)"]:::eon
-        Core["Driver & Transcoding Engine<br/>- Polling Scheduler<br/>- Protocol Parsing (IDataParser)<br/>- Sparkplug B Encoding<br/>- Local Spool (engine TBD)"]:::eon
-        NIC2["Physical NIC 2: Enterprise/IDMZ<br/>(10.0.10.0/24)"]:::eon
+        NIC1["Physical NIC 1: OT Subnet<br/>(192.168.1.0/24)"]
+        Core["Driver & Transcoding Engine<br/>- Polling Scheduler<br/>- Protocol Parsing (IDataParser)<br/>- Sparkplug B Encoding<br/>- Local Spool (engine TBD)"]
+        NIC2["Physical NIC 2: Enterprise/IDMZ<br/>(10.0.10.0/24)"]
         NIC1 --> Core --> NIC2
     end
 
     subgraph IT_Zone [Enterprise / Cloud UNS Zone]
-        Broker["Unified Namespace<br/>(MQTT Broker MQTTS:8883)"]:::it
+        Broker["Unified Namespace<br/>(MQTT Broker MQTTS:8883)"]
     end
 
     PLC1 -->|Serial RS-485| NIC1

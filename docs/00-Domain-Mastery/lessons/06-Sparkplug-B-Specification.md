@@ -115,35 +115,6 @@ The continuous state awareness, pre-registered Last Will contracts, and finite s
 The interaction among the Edge of Network (EoN) Node, the MQTT Broker, and the Primary SCADA Host Application follows a rigorous operational handshake:
 
 ```mermaid
-%%{init: {
-  'theme': 'base',
-  'themeVariables': {
-    'darkMode': true,
-    'primaryColor': '#1E222B',
-    'primaryTextColor': '#E6EDF3',
-    'primaryBorderColor': '#388BFD',
-    'lineColor': '#388BFD',
-    'secondaryColor': '#16191F',
-    'tertiaryColor': '#0D1117',
-    'actorBkg': '#1E222B',
-    'actorBorder': '#388BFD',
-    'actorTextColor': '#E6EDF3',
-    'actorLineColor': '#388BFD',
-    'signalColor': '#388BFD',
-    'signalTextColor': '#E6EDF3',
-    'labelBoxBkgColor': '#1E222B',
-    'labelBoxBorderColor': '#388BFD',
-    'labelTextColor': '#E6EDF3',
-    'loopTextColor': '#E6EDF3',
-    'noteBorderColor': '#388BFD',
-    'noteBkgColor': '#1E222B',
-    'noteTextColor': '#E6EDF3',
-    'activationBorderColor': '#388BFD',
-    'activationBkgColor': '#1E222B',
-    'sequenceNumberColor': '#FFFFFF'
-  },
-  'themeCSS': 'text.actor { fill: #E6EDF3 !important; } .messageText { fill: #E6EDF3 !important; } .noteText { fill: #E6EDF3 !important; } .loopText { fill: #E6EDF3 !important; } .loopText > tspan { fill: #E6EDF3 !important; }'
-}}%%
 sequenceDiagram
     autonumber
     participant EoN as Edge of Network Node (EoN)

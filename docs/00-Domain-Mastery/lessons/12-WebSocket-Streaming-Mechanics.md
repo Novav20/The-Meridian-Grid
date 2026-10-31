@@ -168,11 +168,11 @@ The `Sec-WebSocket-Accept` header is deterministically computed by concatenating
 - **Server-to-Client Frame Overhead:** Always unmasked (`MASK = 0`). For standard industrial telemetry updates ($\le 125\text{ bytes}$), framing overhead is strictly **2 bytes** (Byte 1: FIN + Opcode; Byte 2: 7-bit Payload Length).
 - **Client-to-Server Frame Overhead:** Always masked (`MASK = 1`), appending the 4-byte random XOR masking key, totaling **6 bytes** overhead.
 
-As diagrammed in **Figure 12.3**, RFC 6455 encodes this protocol efficiency into a compact 32-bit bitfield specification. Concrete hexadecimal wire dumps demonstrate that server-to-client telemetry pushes (Sparkplug B `DDATA` for Level Transmitter `LT-102`) require exactly 2 bytes of unmasked framing overhead (`0x82 0x14`), whereas client setpoint control commands (adjusting valve `FV-108`) include a 4-byte random XOR masking key totaling 6 bytes of overhead (`0x82 0x88 [4B XOR Mask]`), protecting intermediate proxy caches against cache poisoning attacks:
+As diagrammed in **Figure 12.3**, RFC 6455 starts with a fixed 16-bit base header, then appends optional extended-length bytes and, for client frames, a four-byte masking key before the payload. Concrete hexadecimal wire dumps demonstrate that server-to-client telemetry pushes (Sparkplug B `DDATA` for Level Transmitter `LT-102`) require exactly 2 bytes of unmasked framing overhead (`0x82 0x14`), whereas client setpoint control commands (adjusting valve `FV-108`) include a 4-byte random XOR masking key totaling 6 bytes of overhead (`0x82 0x88 [4B XOR Mask]`), protecting intermediate proxy caches against cache poisoning attacks:
 
 <figure align="center">
   <img src="../images/12-websocket-frame-layout.svg" alt="RFC 6455 WebSocket Frame Bit-Structure Breakdown" style="max-width: 100%; height: auto;" />
-  <figcaption><em>Figure 12.3: RFC 6455 WebSocket Frame Bit-Structure Breakdown — 32-Bit Frame Architecture with Concrete Byte Dumps for Server Telemetry Push (Sparkplug B DDATA for LT-102, 2-Byte Overhead, Unmasked) vs. Client Setpoint Command (Valve FV-108 Adjust, 6-Byte Overhead, 4-Byte XOR Masking Key).</em></figcaption>
+  <figcaption><em>Figure 12.3: RFC 6455 frame structure — the fixed 16-bit base header is followed conditionally by a 16- or 64-bit extended length, a client masking key when MASK=1, and payload bytes transformed by the repeating four-byte XOR key.</em></figcaption>
 </figure>
 
 ### RFC 6455 Opcodes Reference
@@ -235,35 +235,6 @@ To guarantee deterministic, race-condition-free state recovery upon reconnection
 As visualized in the sequence diagram below, these five stages coordinate the complete lifecycle from socket termination to verified, race-condition-free live synchronization:
 
 ```mermaid
-%%{init: {
-  'theme': 'base',
-  'themeVariables': {
-    'darkMode': true,
-    'primaryColor': '#1E222B',
-    'primaryTextColor': '#E6EDF3',
-    'primaryBorderColor': '#388BFD',
-    'lineColor': '#388BFD',
-    'secondaryColor': '#16191F',
-    'tertiaryColor': '#0D1117',
-    'actorBkg': '#1E222B',
-    'actorBorder': '#388BFD',
-    'actorTextColor': '#E6EDF3',
-    'actorLineColor': '#388BFD',
-    'signalColor': '#388BFD',
-    'signalTextColor': '#E6EDF3',
-    'labelBoxBkgColor': '#1E222B',
-    'labelBoxBorderColor': '#388BFD',
-    'labelTextColor': '#E6EDF3',
-    'loopTextColor': '#E6EDF3',
-    'noteBorderColor': '#388BFD',
-    'noteBkgColor': '#1E222B',
-    'noteTextColor': '#E6EDF3',
-    'activationBorderColor': '#388BFD',
-    'activationBkgColor': '#1E222B',
-    'sequenceNumberColor': '#FFFFFF'
-  },
-  'themeCSS': 'text.actor { fill: #E6EDF3 !important; } .messageText { fill: #E6EDF3 !important; } .noteText { fill: #E6EDF3 !important; } .loopText { fill: #E6EDF3 !important; } .loopText > tspan { fill: #E6EDF3 !important; }'
-}}%%
 sequenceDiagram
     autonumber
     actor HMI as Browser Client SPA (React / Zustand)

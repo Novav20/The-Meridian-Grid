@@ -36,35 +36,6 @@ Modbus operates on a strict, synchronous **Master/Slave** (in modern terminology
 The timing dynamics and silent slave vulnerability of this polling loop are illustrated in the sequence diagram below:
 
 ```mermaid
-%%{init: {
-  'theme': 'base',
-  'themeVariables': {
-    'darkMode': true,
-    'primaryColor': '#1E222B',
-    'primaryTextColor': '#E6EDF3',
-    'primaryBorderColor': '#388BFD',
-    'lineColor': '#388BFD',
-    'secondaryColor': '#16191F',
-    'tertiaryColor': '#0D1117',
-    'actorBkg': '#1E222B',
-    'actorBorder': '#388BFD',
-    'actorTextColor': '#E6EDF3',
-    'actorLineColor': '#388BFD',
-    'signalColor': '#388BFD',
-    'signalTextColor': '#E6EDF3',
-    'labelBoxBkgColor': '#1E222B',
-    'labelBoxBorderColor': '#388BFD',
-    'labelTextColor': '#E6EDF3',
-    'loopTextColor': '#E6EDF3',
-    'noteBorderColor': '#388BFD',
-    'noteBkgColor': '#1E222B',
-    'noteTextColor': '#E6EDF3',
-    'activationBorderColor': '#388BFD',
-    'activationBkgColor': '#1E222B',
-    'sequenceNumberColor': '#FFFFFF'
-  },
-  'themeCSS': 'text.actor { fill: #E6EDF3 !important; } .messageText { fill: #E6EDF3 !important; } .noteText { fill: #E6EDF3 !important; } .loopText { fill: #E6EDF3 !important; } .loopText > tspan { fill: #E6EDF3 !important; }'
-}}%%
 sequenceDiagram
     autonumber
     participant Master as Modbus Master / SCADA Client
@@ -276,20 +247,6 @@ The Modbus **Protocol Data Unit (PDU)** consists of an 8-bit **Function Code (FC
 The logical branch across these core function codes is mapped in the following flowchart:
 
 ```mermaid
-%%{init: {
-  'theme': 'base',
-  'themeVariables': {
-    'darkMode': true,
-    'primaryColor': '#1E222B',
-    'primaryTextColor': '#E6EDF3',
-    'primaryBorderColor': '#388BFD',
-    'lineColor': '#388BFD',
-    'secondaryColor': '#16191F',
-    'tertiaryColor': '#0D1117',
-    'edgeLabelBackground': '#16191F'
-  },
-  'themeCSS': '.edgeLabel { color: #E6EDF3 !important; } .edgeLabel rect { fill: #16191F !important; } .label { color: #E6EDF3 !important; } .cluster-label span { color: #E6EDF3 !important; }'
-}}%%
 flowchart TD
     PDU["Modbus Request PDU"] --> FC{"Function Code (FC)"}
     
@@ -299,9 +256,6 @@ flowchart TD
     FC -->|0x0F / 0x10| WriteMulti["Block Writes: Write Multiple Coils (0x0F) / Regs (0x10)<br/>Returns Start Address + Quantity written"]
     FC -->|0x17| AtomicRW["Atomic R/W: Read/Write Multiple Registers (0x17)<br/>Executes simultaneous write M and read N in one cycle"]
 
-    classDef default fill:#161b22,stroke:#30363d,color:#e6edf3;
-    classDef highlight fill:#0d1b2a,stroke:#388bfd,color:#58a6ff;
-    class PDU,FC highlight;
 ```
 
 #### Function Code 0x03: Read Holding Registers (`40001`–`49999`)
@@ -400,20 +354,6 @@ A pervasive architectural failure mode in industrial plants occurs when high-spe
 - The downstream field bus operates over **9600 to 115200 Baud Half-Duplex RS-485** (at 9600 baud, physical throughput is capped at $\approx 960\text{ bytes/sec}$).
 
 ```mermaid
-%%{init: {
-  'theme': 'base',
-  'themeVariables': {
-    'darkMode': true,
-    'primaryColor': '#1E222B',
-    'primaryTextColor': '#E6EDF3',
-    'primaryBorderColor': '#388BFD',
-    'lineColor': '#388BFD',
-    'secondaryColor': '#16191F',
-    'tertiaryColor': '#0D1117',
-    'edgeLabelBackground': '#16191F'
-  },
-  'themeCSS': '.edgeLabel { color: #E6EDF3 !important; } .edgeLabel rect { fill: #16191F !important; } .label { color: #E6EDF3 !important; } .cluster-label span { color: #E6EDF3 !important; }'
-}}%%
 flowchart LR
     subgraph EthernetLAN ["1 Gbps Full-Duplex Ethernet"]
         SCADA["SCADA Master / Historian"]
@@ -434,11 +374,6 @@ flowchart LR
     FIFO -.->|Wait 1000ms Timeout| S2
     FIFO -.->|Blocked in FIFO Queue| S3
 
-    classDef default fill:#161b22,stroke:#30363d,color:#e6edf3;
-    classDef highlight fill:#0d1b2a,stroke:#388bfd,color:#58a6ff;
-    classDef alert fill:#3d1519,stroke:#f85149,color:#ff7b72;
-    class SCADA highlight;
-    class S2,S3 alert;
 ```
 
 When multiple SCADA software threads or historian pollers issue asynchronous Modbus TCP requests to the gateway, the gateway buffers them in a FIFO queue. If Slave 2 is powered off or disconnected:
@@ -474,20 +409,6 @@ As analyzed by [[Narayanan_et_al_2026|Narayanan et al. (2026)]], an attacker wit
 Modern industrial architectures resolve Modbus scalability and security limitations by decoupling field polling from the enterprise network using the **Edge-of-Network (EoN) Gateway** design pattern ([[Huusom_et_al_2025|Huusom et al., 2025]]; see [[05-EoN-Nodes-Brownfield-Gateways|Lesson 05]]):
 
 ```mermaid
-%%{init: {
-  'theme': 'base',
-  'themeVariables': {
-    'darkMode': true,
-    'primaryColor': '#1E222B',
-    'primaryTextColor': '#E6EDF3',
-    'primaryBorderColor': '#388BFD',
-    'lineColor': '#388BFD',
-    'secondaryColor': '#16191F',
-    'tertiaryColor': '#0D1117',
-    'edgeLabelBackground': '#16191F'
-  },
-  'themeCSS': '.edgeLabel { color: #E6EDF3 !important; } .edgeLabel rect { fill: #16191F !important; } .label { color: #E6EDF3 !important; } .cluster-label span { color: #E6EDF3 !important; }'
-}}%%
 flowchart LR
     subgraph FieldLevel ["Field Level (OT Network)"]
         RTU["Modbus RTU Meters"] -->|RS-485 Daisy Chain| EON["Edge-of-Network (EoN) Gateway"]
@@ -509,11 +430,6 @@ flowchart LR
     BROKER -->|Sub: Enterprise/Site/Area/All| HIST
     BROKER -->|Sub: Enterprise/Site/Area/All| MES
 
-    classDef default fill:#161b22,stroke:#30363d,color:#e6edf3;
-    classDef highlight fill:#0d1b2a,stroke:#388bfd,color:#58a6ff;
-    classDef success fill:#162b1d,stroke:#2ea043,color:#3fb950;
-    class EON,BROKER highlight;
-    class SCADA,HIST,MES success;
 ```
 
 1. **Local High-Frequency Polling:** The EoN Gateway polls field Modbus registers locally over short, isolated RS-485 lines or private OT Ethernet VLANs at high frequency ($100\text{ ms}$).
