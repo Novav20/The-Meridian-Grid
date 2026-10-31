@@ -21,8 +21,8 @@
   </defs>
 
   <!-- Title & Subtitle -->
-  <text x="500" y="27" class="title" text-anchor="middle">Decoupled Web SCADA Component Architecture</text>
-  <text x="500" y="45" class="subtitle" text-anchor="middle">Four-Tier Loosely Coupled Topology: Presentation, Application/Gateway, Transport/Storage, and Edge</text>
+  <text x="500" y="27" class="title" text-anchor="middle">Where Web SCADA Coupling Stops</text>
+  <text x="500" y="45" class="subtitle" text-anchor="middle">Four tiers connected by narrow interfaces, with state and failure contained at each boundary</text>
 
   <!-- ================= TIER 1: PRESENTATION TIER (BROWSER CLIENT SPA) ================= -->
   <g transform="translate(25, 65)">

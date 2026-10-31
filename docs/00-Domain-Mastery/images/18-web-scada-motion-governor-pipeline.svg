@@ -11,8 +11,8 @@
     </marker>
   </defs>
   <rect width="1260" height="840" rx="12" fill="#16191F" stroke="#30363D" stroke-width="1.5" class="bg" />
-  <text x="630" y="36" fill="#F0F6FC" font-size="19" font-weight="700" text-anchor="middle">Web SCADA Motion Governor Architecture &amp; Retinal Scaling</text>
-  <text x="630" y="58" fill="#8B949E" font-size="12" text-anchor="middle">Real-Time Telemetry Normalization, Viewport Geometry Profiling &amp; Retinal Angular Velocity Clamping</text>
+  <text x="630" y="36" fill="#F0F6FC" font-size="19" font-weight="700" text-anchor="middle">From Raw Motion to a Safe Visual Signal</text>
+  <text x="630" y="58" fill="#8B949E" font-size="12" text-anchor="middle">A decision path from telemetry and viewport geometry to bounded motion or a discrete fallback</text>
   <rect x="30" y="82" width="1200" height="240" rx="8" fill="#1E222B" stroke="#30363D" stroke-width="1.2" />
   <rect x="46" y="96" width="340" height="26" rx="4" fill="#16191F" stroke="#388bfd" stroke-width="1.2" />
   <text x="54" y="113" fill="#79c0ff" font-size="11" font-weight="700">1. RETINAL VELOCITY GOVERNOR PIPELINE</text>

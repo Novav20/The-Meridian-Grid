@@ -139,7 +139,7 @@ The component interaction between these four decoupled tiers is diagrammed in **
 
 <figure align="center">
   <img src="../images/11-web-scada-component-architecture.svg" alt="Decoupled Web SCADA UML Component Architecture" style="max-width: 100%; height: auto;" />
-  <figcaption><em>Figure 11.4: Decoupled Web SCADA UML Component Architecture — Modular Presentation, Gateway, Event Bus, and Edge Tiers.</em></figcaption>
+  <figcaption><em>Figure 11.4: Coupling boundaries in a decoupled Web SCADA topology — each tier exposes a narrow interface so transport, storage, and edge failures do not become browser components.</em></figcaption>
 </figure>
 
 The physical edge hardware executing this protocol decoupling and store-and-forward caching is shown in **Figure 11.5**:

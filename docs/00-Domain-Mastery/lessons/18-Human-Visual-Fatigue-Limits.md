@@ -235,7 +235,7 @@ The multi-stage architecture and Web Worker execution pipeline of the motion gov
 
 ![[18-web-scada-motion-governor-pipeline.svg]]
 
-*Figure 18.5: Web SCADA Motion Governor Pipeline: Ingesting MQTT 4-level topics ([[Guo_et_al_2022]]) and Sparkplug B telemetry, profiling client viewport geometry ($D$ and $p$), clamping retinal angular velocity ($4^\circ/\text{s} \le \omega \le 12^\circ/\text{s}$), and offloading to an OffscreenCanvas GPU worker thread.*
+*Figure 18.5: Motion-governor decision path — viewport geometry converts raw movement into bounded presentation, while excessive motion crosses a visible fallback boundary instead of being reproduced literally.*
 
 ### Strict TypeScript Implementation: `RetinalMotionGovernor.ts`
 

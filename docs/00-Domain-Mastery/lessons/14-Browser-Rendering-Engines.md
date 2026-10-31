@@ -157,7 +157,7 @@ This hybrid viewport stacking architecture—combining resolution-independent SV
 
 ![[14-hybrid-scada-rendering-layers.svg]]
 
-*Figure 14.4: Hybrid Viewport Layering Architecture — Stacking Retained SVG Mimics, Immediate-Mode Canvas Overlays, and HTML DOM HUDs.*
+*Figure 14.4: Hybrid viewport layering — each rendering surface owns a different interaction concern, while pointer and update paths remain separated across the stack.*
 
 ---
 
