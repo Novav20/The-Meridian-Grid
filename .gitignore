@@ -57,3 +57,6 @@ Thumbs.db
 # Raw files
 *.pdf
 *.md.bak
+
+# Independently versioned domain mastery vault
+docs/00-Domain-Mastery/
